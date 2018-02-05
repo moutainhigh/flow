@@ -1,0 +1,12 @@
+[INFO ]2017-10-30 15:40:02  alive
+[INFO ]2017-10-30 21:15:06  submitTaskflow()
+[INFO ]2017-10-30 21:15:06  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":30,"day":1,"hours":21,"minutes":14,"month":9,"seconds":17,"time":1509369257284,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":8,"threadnum":1}
+[INFO ]2017-10-30 21:15:06  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_FTP_上传文件","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_FTP_上传文件","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_FTP_上传文件","taskAttrList":[],"taskID":14,"taskType":"Ftp","taskflow":null,"taskflowID":8},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":15,"taskType":"EMAIL","taskflow":null,"taskflowID":8}]
+[INFO ]2017-10-30 21:15:06  taskAttributeJsonStr=[{"attributeID":83,"key":"Shell_WorkDir","taskID":14,"value":"/bin"},{"attributeID":84,"key":"Shell_Name","taskID":14,"value":"pwd"},{"attributeID":99,"key":"USER","taskID":15,"value":"3116760687@qq.com"},{"attributeID":100,"key":"PASSWORD","taskID":15,"value":"lxcqbmpnxvmideif"},{"attributeID":101,"key":"FROM","taskID":15,"value":"3116760687@qq.com"},{"attributeID":102,"key":"TO","taskID":15,"value":"3116760687@qq.com"},{"attributeID":103,"key":"SUBJECT","taskID":15,"value":"remote:Mon Oct 30 21:14:17 CST 2017"},{"attributeID":104,"key":"CONTENT","taskID":15,"value":"CONTENT-1"},{"attributeID":98,"key":"SMTP_SERVER","taskID":15,"value":"smtp.qq.com"}]
+[INFO ]2017-10-30 21:15:06  linkJsonStr=[{"fromTaskID":14,"linkID":53,"toTaskID":15}]
+[INFO ]2017-10-30 21:15:06  josn 转换用时 ====>146
+[INFO ]2017-10-30 21:15:06  存入内存用时 ====>0
+[INFO ]2017-10-30 21:15:06  存入数据库用时 ====>70
+[INFO ]2017-10-30 21:15:06  startTaskflow Remote_Task_Flow
+[INFO ]2017-10-30 21:15:06  从数据库查出流程用时= 0
+[INFO ]2017-10-30 21:15:06  启动流程用时 ====>17

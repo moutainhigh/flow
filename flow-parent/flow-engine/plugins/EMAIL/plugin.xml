@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+    <name>EMAIL</name>
+    <description>邮件发送</description>
+    <category>网络插件</category>
+    <type>JAVA</type>
+    <classname>com.aspire.etl.plugins.Email</classname>
+    <library>Email.jar</library>
+</plugin>

@@ -1,0 +1,80 @@
+package com.aspire.etl.flowengine;
+
+import java.io.FileNotFoundException;
+import java.util.List;
+import java.util.Vector;
+
+import org.apache.curator.framework.CuratorFramework;
+import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.retry.ExponentialBackoffRetry;
+import org.dom4j.DocumentException;
+
+import com.aspire.etl.flowdefine.Taskflow;
+import com.aspire.etl.flowmetadata.MetaDataException;
+import com.aspire.etl.flowmetadata.dao.FlowMetaData;
+import com.aspire.etl.tool.XmlConfig;
+import com.aspire.flow.api.MasterSlaveApiFactory;
+import com.aspire.flow.api.data.MasterSlaveJobData;
+import com.aspire.flow.api.impl.MasterSlaveApiFactoryImpl;
+import com.aspire.flow.entity.MasterSlaveJobSummary;
+import com.aspire.flow.helper.LoggerHelper;
+import com.aspire.flow.helper.ReflectHelper;
+
+import net.sf.json.JSONObject;
+
+/**
+ * 将任务流注册到zk
+ * 
+ * @author chenhaitao
+ *
+ */
+public class RegisterFlow {
+	private static final String SERVER_XML = "./cfg/FlowEngine.xml";
+	static FlowMetaData flowMetaData = null;
+
+	public static void main(String[] args) throws FileNotFoundException, DocumentException {
+		XmlConfig config = new XmlConfig(SERVER_XML);
+		init(config.readSingleNodeValue("//config/jdbc/driver"), config.readSingleNodeValue("//config/jdbc/user"),
+				config.readSingleNodeValue("//config/jdbc/password"), config.readSingleNodeValue("//config/jdbc/url"));
+	}
+
+	public static void init(String dbDriver, String dbUser, String dbPassword, String dbURL) {
+		try {
+			FlowMetaData.init(dbDriver, dbUser, dbPassword, dbURL + "?useUnicode=true&amp;characterEncoding=utf-8");
+			flowMetaData = FlowMetaData.getInstance();
+			// 加载全部流程
+			flowMetaData.loadAllTaskflowInfo();
+			LoggerHelper.info("开始将数据库中的任务流添加到zk...");
+			LoggerHelper.info("从元数据库中搜索出未被禁用的流程。大纲组的流程除外。");
+			List<Taskflow> taskflowList = flowMetaData.queryAllSuspendNoTaskflowAndNotInOutlineGroup();
+			MasterSlaveJobSummary jobSummary = new MasterSlaveJobSummary();
+			CuratorFramework client = CuratorFrameworkFactory.newClient("192.168.98.143:2181", 60000, 15000, new ExponentialBackoffRetry(1000, Integer.MAX_VALUE));
+			client.start();
+			for (Taskflow taskflow : taskflowList) {
+				Vector<Object> populateParam = new Vector<Object>();
+				jobSummary.setFlowId(taskflow.getTaskflowID() + "");
+				jobSummary.setStatus(taskflow.getStatus() + "");
+				jobSummary.setGroupName(taskflow.getTaskflowID() + "");
+				jobSummary.setJobOperation("Start");
+				jobSummary.setExcuteStatus("start");
+				populateParam.add(JSONObject.fromObject(taskflow).toString());
+				jobSummary.setParams(populateParam);
+				MasterSlaveApiFactory masterSlaveApiFactory = new MasterSlaveApiFactoryImpl(client);
+				MasterSlaveJobData masterSlaveJobData = masterSlaveApiFactory.jobApi().getJob(jobSummary.getFlowId(), jobSummary.getJobName());
+		        MasterSlaveJobData.Data data;
+		        if (masterSlaveJobData == null) {
+		            data = new MasterSlaveJobData.Data();
+		        } else {
+		            data = masterSlaveJobData.getData();
+		        }
+		        ReflectHelper.copyFieldValuesSkipNull(jobSummary, data);
+		        masterSlaveApiFactory.jobApi().saveJob(jobSummary.getFlowId(), jobSummary.getJobName(), data);
+			}
+			LoggerHelper.info("任务流添加到zk结束...");
+		} catch (MetaDataException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

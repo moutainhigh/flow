@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GBK"?>
+<UserRoles>
+<UserRole>
+  <userID>admin</userID>
+  <roleID>1</roleID>
+</UserRole>
+</UserRoles>

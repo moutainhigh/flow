@@ -1,0 +1,90 @@
+[INFO ]2017-11-15 10:05:28  startTaskflow 12
+[INFO ]2017-11-15 10:08:41  startTaskflow 12
+[INFO ]2017-11-15 10:14:58  startTaskflow 12
+[INFO ]2017-11-15 10:18:07  startTaskflow 12
+[INFO ]2017-11-15 10:22:33  startTaskflow 10
+[INFO ]2017-11-15 10:22:33  从数据库查出流程用时= 0
+[INFO ]2017-11-15 10:22:33  线程:null
+[INFO ]2017-11-15 10:22:33  logger为: org.apache.log4j.Logger@18375ce7
+[INFO ]2017-11-15 10:22:33  appender为: null
+[INFO ]2017-11-15 10:22:36  startTaskflow 12
+[INFO ]2017-11-15 10:22:36  从数据库查出流程用时= 0
+[INFO ]2017-11-15 10:22:36  线程:null
+[INFO ]2017-11-15 10:22:36  logger为: org.apache.log4j.Logger@5dcb8e5b
+[INFO ]2017-11-15 10:22:36  appender为: null
+[INFO ]2017-11-15 10:22:36  startTaskflow 11
+[INFO ]2017-11-15 10:22:36  从数据库查出流程用时= 0
+[INFO ]2017-11-15 10:22:36  线程:null
+[INFO ]2017-11-15 10:22:36  logger为: org.apache.log4j.Logger@15c28386
+[INFO ]2017-11-15 10:22:36  appender为: null
+[INFO ]2017-11-15 10:25:56  startTaskflow 12
+[INFO ]2017-11-15 10:25:56  startTaskflow 12
+[INFO ]2017-11-15 10:25:56  从数据库查出流程用时= 0
+[INFO ]2017-11-15 10:25:56  线程:null
+[INFO ]2017-11-15 10:25:56  logger为: org.apache.log4j.Logger@41ebc7c8
+[INFO ]2017-11-15 10:25:56  appender为: null
+[INFO ]2017-11-15 11:16:39  startTaskflow 12
+[INFO ]2017-11-15 11:16:39  startTaskflow 12
+[INFO ]2017-11-15 11:16:39  从数据库查出流程用时= 0
+[INFO ]2017-11-15 11:16:39  线程:null
+[INFO ]2017-11-15 11:16:39  logger为: org.apache.log4j.Logger@14a582dc
+[INFO ]2017-11-15 11:16:39  appender为: null
+[INFO ]2017-11-15 11:17:49  stopTaskflow 12
+[INFO ]2017-11-15 11:29:25  startTaskflow 12
+[INFO ]2017-11-15 11:29:47  startTaskflow 12
+[INFO ]2017-11-15 11:29:47  从数据库查出流程用时= 0
+[INFO ]2017-11-15 11:29:47  线程:null
+[INFO ]2017-11-15 11:29:47  logger为: org.apache.log4j.Logger@52d39f42
+[INFO ]2017-11-15 11:29:47  appender为: null
+[INFO ]2017-11-15 11:30:41  stopTaskflow 12
+[INFO ]2017-11-15 11:31:09  stopTaskflow 12
+[INFO ]2017-11-15 11:41:03  startTaskflow 12
+[INFO ]2017-11-15 11:41:11  startTaskflow 12
+[INFO ]2017-11-15 11:41:11  从数据库查出流程用时= 0
+[INFO ]2017-11-15 11:41:11  线程:null
+[INFO ]2017-11-15 11:41:11  logger为: org.apache.log4j.Logger@7077668f
+[INFO ]2017-11-15 11:41:11  appender为: null
+[INFO ]2017-11-15 11:41:30  stopTaskflow 12
+[INFO ]2017-11-15 11:46:42  startTaskflow 12
+[INFO ]2017-11-15 11:46:52  startTaskflow 12
+[INFO ]2017-11-15 11:46:52  从数据库查出流程用时= 0
+[INFO ]2017-11-15 11:46:52  线程:null
+[INFO ]2017-11-15 11:46:52  logger为: org.apache.log4j.Logger@654327b0
+[INFO ]2017-11-15 11:46:52  appender为: null
+[INFO ]2017-11-15 11:47:17  stopTaskflow 12
+[INFO ]2017-11-15 11:49:59  startTaskflow 12
+[INFO ]2017-11-15 11:50:03  startTaskflow 12
+[INFO ]2017-11-15 11:50:03  从数据库查出流程用时= 0
+[INFO ]2017-11-15 11:50:03  线程:null
+[INFO ]2017-11-15 11:50:03  logger为: org.apache.log4j.Logger@1c4dc446
+[INFO ]2017-11-15 11:50:03  appender为: null
+[INFO ]2017-11-15 11:50:32  stopTaskflow 12
+[INFO ]2017-11-15 11:50:49  stopTaskflow 12
+[INFO ]2017-11-15 11:50:49  任务流status: 1
+[INFO ]2017-11-15 14:12:53  startTaskflow 12
+[INFO ]2017-11-15 14:12:58  startTaskflow 12
+[INFO ]2017-11-15 14:12:58  从数据库查出流程用时= 0
+[INFO ]2017-11-15 14:12:58  线程:null
+[INFO ]2017-11-15 14:12:58  logger为: org.apache.log4j.Logger@10df2b67
+[INFO ]2017-11-15 14:12:58  appender为: null
+[INFO ]2017-11-15 14:13:35  stopTaskflow 12
+[INFO ]2017-11-15 14:14:25  stopTaskflow 12
+[INFO ]2017-11-15 14:14:52  任务流status: 1
+[INFO ]2017-11-15 14:24:18  startTaskflow 12
+[INFO ]2017-11-15 14:24:18  startTaskflow 12
+[INFO ]2017-11-15 14:24:18  从数据库查出流程用时= 0
+[INFO ]2017-11-15 14:24:18  线程:null
+[INFO ]2017-11-15 14:24:18  logger为: org.apache.log4j.Logger@1ccc1a53
+[INFO ]2017-11-15 14:24:18  appender为: null
+[INFO ]2017-11-15 14:26:49  stopTaskflow 12
+[INFO ]2017-11-15 14:26:49  stopTaskflow 12
+[INFO ]2017-11-15 14:26:49  任务流status: 1
+[INFO ]2017-11-15 16:30:58  startTaskflow 12
+[INFO ]2017-11-15 16:30:58  startTaskflow 12
+[INFO ]2017-11-15 16:30:58  从数据库查出流程用时= 0
+[INFO ]2017-11-15 16:30:58  线程:null
+[INFO ]2017-11-15 16:30:58  logger为: org.apache.log4j.Logger@549ceac3
+[INFO ]2017-11-15 16:30:58  appender为: null
+[INFO ]2017-11-15 16:31:25  stopTaskflow 12
+[INFO ]2017-11-15 16:31:25  stopTaskflow 12
+[INFO ]2017-11-15 16:31:25  任务流status: 1

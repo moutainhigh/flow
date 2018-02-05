@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+"http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="engine">
+    <resultMap id="taskHistoryMap" class="com.aspire.etl.flowdefine.TaskHistory">
+        <result property="id" column="ID"/>
+        <result property="taskID" column="TASK_ID"/>
+        <result property="taskflowID" column="TASKFLOW_ID"/>
+        <result property="task" column="TASK"/>
+        <result property="taskType" column="TASK_TYPE"/>
+        <result property="status" column="STATUS"/>
+        <result property="startTime" column="START_TIME"/>
+        <result property="endTime" column="END_TIME"/>
+        <result property="file" column="FILE"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="createBy" column="CREATE_BY"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+    <resultMap id="taskMap" class="com.aspire.etl.flowdefine.Task">
+        <result property="taskID" column="ID_TASK"/>
+        <result property="taskflowID" column="ID_TASKFLOW"/>
+        <result property="task" column="TASK"/>
+        <result property="taskType" column="TASK_TYPE"/>
+        <result property="status" column="STATUS"/>
+        <result property="plantime" column="PLAN_TIME"/>
+        <result property="isRoot" column="IS_ROOT"/>
+        <result property="suspend" column="SUSPENDED"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="alertID" column="ALERT_ID"/>
+        <result property="performanceID" column="PERFORMANCE_ID"/>
+        <result property="XPos" column="X"/>
+        <result property="YPos" column="Y"/>
+        <result property="runStartTime" column="RUN_STARTTIME"/>
+        <result property="runEndTime" column="RUN_ENDTIME"/>
+        <result property="memo" column="MEMO"/>
+    </resultMap>
+    <resultMap id="taskflowMap" class="com.aspire.etl.flowdefine.Taskflow">
+		<result property="taskflowID" column="ID_TASKFLOW"/>
+		<result property="taskflow" column="TASKFLOW"/>
+		<result property="stepType" column="STEP_TYPE"/>
+		<result property="step" column="STEP"/>
+		<result property="statTime" column="STATTIME"/>
+		<result property="sceneStatTime" column="SCENE_STATTIME"/>
+		<result property="status" column="STATUS"/>
+		<result property="suspend" column="SUSPENDED"/>
+		<result property="description" column="DESCRIPTION"/>
+		<result property="redoFlag" column="REDO_FLAG"/>
+		<result property="redoStartTime" column="REDO_STARTTIME"/>
+		<result property="redoEndTime" column="REDO_ENDTIME"/>
+		<result property="threadnum" column="THREAD_NUM"/>
+		<result property="fileLogLevel" column="FILE_LOGLEVEL"/>
+		<result property="dbLogLevel" column="DB_LOGLEVEL"/>
+		<result property="runStartTime" column="RUN_STARTTIME"/>
+		<result property="runEndTime" column="RUN_ENDTIME"/>
+		<result property="groupID" column="ID_GROUP"/>
+    	<result property="memo" column="MEMO"/>
+    </resultMap>
+    <resultMap id="taskTypeMap" class="com.aspire.etl.flowdefine.TaskType">
+        <result property="taskTypeID" column="ID_TASK_TYPE"/>
+        <result property="taskType" column="TASK_TYPE"/>
+        <result property="enginePluginType" column="ENGINE_PLUGIN_TYPE"/>
+        <result property="enginePlugin" column="ENGINE_PLUGIN"/>
+        <result property="enginePluginJar" column="ENGINE_PLUGIN_JAR"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="smallIcon" column="SMALL_ICON"/>
+        <result property="largeIcon" column="LARGE_ICON"/>
+        <result property="categoryID" column="ID_CATEGORY"/>
+        <result property="designerPlugin" column="DESIGNER_PLUGIN"/>
+        <result property="designerPluginJar" column="DESIGNER_PLUGIN_JAR"/>        
+    </resultMap>
+    <resultMap id="stepTypeMap" class="com.aspire.etl.flowdefine.StepType">
+        <result property="stepType" column="STEP_TYPE"/>
+        <result property="stepName" column="NAME"/>
+        <result property="flag" column="FLAG"/>
+        <result property="order" column="ORDER_ID"/>
+    </resultMap>
+    <resultMap id="linkMap" class="com.aspire.etl.flowdefine.Link">
+        <result property="linkID" column="ID_LINK"/>
+        <result property="fromTaskID" column="ID_TASK_FROM"/>
+        <result property="toTaskID" column="ID_TASK_TO"/>
+    </resultMap>
+    <resultMap id="taskAttributeMap" class="com.aspire.etl.flowdefine.TaskAttribute">
+        <result property="attributeID" column="ID_ATTRIBUTE"/>
+        <result property="taskID" column="ID_TASK"/>
+        <result property="key" column="KEY_NAME"/>
+        <result property="value" column="VALUE"/>
+    </resultMap>
+    <resultMap id="sysConfigMap" class="com.aspire.etl.flowdefine.SysConfig">
+    	<result property="ID" column="ID_CONFIG"/>
+        <result property="configName" column="CONFIG_NAME"/>
+        <result property="configValue" column="CONFIG_VALUE"/>
+        <result property="configDesc" column="CONFIG_DESC"/>
+        <result property="stage" column="STAGE"/>
+        <result property="type" column="TYPE"/>
+    </resultMap>
+    <resultMap id="noteMap" class="com.aspire.etl.flowdefine.Note">
+        <result property="noteID" column="ID_NOTE"/>
+        <result property="taskflowID" column="ID_TASKFLOW"/>
+        <result property="value" column="STR_VALUE"/>
+        <result property="XPos" column="X"/>
+        <result property="YPos" column="Y"/>
+        <result property="width" column="WIDTH"/>
+        <result property="height" column="HEIGHT"/>
+    </resultMap>
+    <resultMap id="categoryMap" class="com.aspire.etl.flowdefine.Category">
+        <result property="ID" column="ID_CATEGORY"/>
+        <result property="name" column="CATEGORY_NAME"/>
+        <result property="order" column="CATEGORY_ORDER"/>
+    </resultMap>
+    <resultMap id="taskflowGroupMap" class="com.aspire.etl.flowdefine.TaskflowGroup">
+        <result property="groupID" column="ID_GROUP"/>
+        <result property="groupName" column="GROUP_NAME"/>
+        <result property="groupOrder" column="GROUP_ORDER"/>
+        <result property="groupDesc" column="DESCRIPTION"/>
+    </resultMap>
+    <resultMap id="userMap" class="com.aspire.etl.flowdefine.User">
+        <result property="ID" column="USERID"/>
+        <result property="name" column="NAME"/>
+        <result property="password" column="PASSWORD"/>
+    </resultMap>
+    <resultMap id="roleMap" class="com.aspire.etl.flowdefine.Role">
+        <result property="ID" column="ROLEID"/>
+        <result property="name" column="NAME"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+    <resultMap id="rightMap" class="com.aspire.etl.flowdefine.Right">
+        <result property="ID" column="RIGHTID"/>
+        <result property="name" column="NAME"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+    <resultMap id="userRoleMap" class="com.aspire.etl.flowdefine.UserRole">
+        <result property="userID" column="USERID"/>
+        <result property="roleID" column="ROLEID"/>
+    </resultMap>
+    <resultMap id="roleRightMap" class="com.aspire.etl.flowdefine.RoleRight">
+        <result property="roleID" column="ROLEID"/>
+        <result property="rightID" column="RIGHTID"/>
+    </resultMap>
+    <resultMap id="taskflowUserMap" class="com.aspire.etl.flowdefine.TaskflowUser">
+        <result property="taskflowID" column="ID_TASKFLOW"/>
+        <result property="userID" column="USERID"/>
+    </resultMap>
+    <statement id="addTaskflowUser" >
+      insert into RPT_TASKFLOWUSER (ID_TASKFLOW, USERID) values (#taskflowID:NUMERIC#, #userID:VARCHAR#)
+    </statement>    
+    <statement id="delTaskflowUser" >
+      delete from RPT_TASKFLOWUSER where ID_TASKFLOW=#taskflowID:NUMERIC#
+    </statement>
+    <statement id="delAllTaskflowUser" >
+      delete from RPT_TASKFLOWUSER
+    </statement>
+    <statement id="updateTaskflowUser" >
+      update RPT_TASKFLOWUSER set ID_TASKFLOW=#taskflowID:NUMERIC#, USERID=#userID:VARCHAR# where ID_TASKFLOW=#taskflowID:NUMERIC#
+    </statement>    
+    <statement id="getAllTaskflowUser" resultMap="taskflowUserMap">
+		select * from RPT_TASKFLOWUSER
+    </statement>
+    <statement id="addRoleRight" >
+      insert into RPT_ROLERIGHT (ROLEID, RIGHTID) values (#roleID:NUMERIC#, #rightID:NUMERIC#)
+    </statement>    
+    <statement id="delRoleRight" >
+      delete from RPT_ROLERIGHT where ROLEID=#roleID:NUMERIC# and RIGHTID=#rightID:NUMERIC#
+    </statement>
+    <statement id="delAllRoleRight" >
+      delete from RPT_ROLERIGHT
+    </statement>
+    <statement id="updateRoleRight" >
+      update RPT_ROLERIGHT set ROLEID=#roleID:NUMERIC#, RIGHTID=#rightID:NUMERIC#
+    </statement>
+    <statement id="getAllRoleRight" resultMap="roleRightMap">
+		select * from RPT_ROLERIGHT
+    </statement>
+    <statement id="addUserRole" >
+      insert into RPT_USERROLE (USERID, ROLEID) values (#userID:VARCHAR#, #roleID:NUMERIC#)
+    </statement>    
+    <statement id="delUserRole" >
+      delete from RPT_USERROLE where USERID=#userID:VARCHAR# and ROLEID=#roleID:NUMERIC#
+    </statement>
+    <statement id="delAllUserRole" >
+      delete from RPT_USERROLE
+    </statement>
+    <statement id="updateUserRole" >
+      update RPT_USERROLE set USERID=#userID:VARCHAR#, ROLEID=#roleID:NUMERIC#
+    </statement>
+    <statement id="getAllUserRole" resultMap="userRoleMap">
+		select * from RPT_USERROLE
+    </statement>
+    <statement id="addRight" >
+      insert into RPT_RIGHT (RIGHTID, NAME, DESCRIPTION) values (#ID:NUMERIC#, #name:VARCHAR#, #description:VARCHAR#)
+    </statement>    
+    <statement id="delRight" >
+      delete from RPT_RIGHT where RIGHTID=#ID#
+    </statement>
+    <statement id="delAllRight" >
+      delete from RPT_RIGHT
+    </statement>
+    <statement id="updateRight" >
+      update RPT_RIGHT set NAME=#name:VARCHAR#, DESCRIPTION=#description:VARCHAR# where RIGHTID=#ID:NUMERIC#
+    </statement>
+    <statement id="getAllRight" resultMap="rightMap">
+		select * from RPT_RIGHT
+    </statement>
+    <statement id="addRole" >
+      insert into RPT_ROLE (ROLEID, NAME, DESCRIPTION) values (#ID:NUMERIC#, #name:VARCHAR#, #description:VARCHAR#)
+    </statement>    
+    <statement id="delRole" >
+      delete from RPT_ROLE where ROLEID=#ID#
+    </statement>
+    <statement id="delAllRole" >
+      delete from RPT_ROLE
+    </statement>
+    <statement id="updateRole" >
+      update RPT_ROLE set NAME=#name:VARCHAR#, DESCRIPTION=#description:VARCHAR# where ROLEID=#ID:NUMERIC#
+    </statement>
+    <statement id="getAllRole" resultMap="roleMap">
+		select * from RPT_ROLE
+    </statement>
+    <statement id="addUser" >
+      insert into RPT_USER (USERID, NAME, PASSWORD) values (#ID:VARCHAR#, #name:VARCHAR#, #password:VARCHAR#)
+    </statement>    
+    <statement id="delUser" >
+      delete from RPT_USER where USERID=#ID#
+    </statement>
+    <statement id="delAllUser" >
+      delete from RPT_USER
+    </statement>
+    <statement id="updateUser" >
+      update RPT_USER set NAME=#name:VARCHAR#, PASSWORD=#password:VARCHAR# where USERID=#ID:VARCHAR#
+    </statement>
+    <statement id="getAllUser" resultMap="userMap">
+		select * from RPT_USER
+    </statement>
+    <statement id="addCategory" >
+      insert into RPT_CATEGORY (ID_CATEGORY, CATEGORY_NAME, CATEGORY_ORDER) values (#ID:NUMERIC#, #name:VARCHAR#, #order:NUMERIC#)
+    </statement>
+    <statement id="delCategory" >
+      delete from RPT_CATEGORY where ID_CATEGORY=#ID#
+    </statement>
+    <statement id="delAllCategory" >
+      delete from RPT_CATEGORY
+    </statement>
+    <statement id="updateCategory" >
+      update RPT_CATEGORY set CATEGORY_NAME=#name#, CATEGORY_ORDER=#order# where ID_CATEGORY=#ID#
+    </statement>
+    <statement id="addTaskflowGroup" >
+      insert into RPT_TASKFLOW_GROUP (ID_GROUP, GROUP_NAME, GROUP_ORDER, DESCRIPTION) values (#groupID:NUMERIC#, #groupName:VARCHAR#, #groupOrder:NUMERIC#,#groupDesc:VARCHAR#)
+    </statement>
+    <statement id="delTaskflowGroup" >
+      delete from RPT_TASKFLOW_GROUP where ID_GROUP=#groupID#
+    </statement>
+    <statement id="updateTaskflowGroup" >
+      update RPT_TASKFLOW_GROUP set GROUP_NAME=#groupName#, GROUP_ORDER=#groupOrder# where ID_GROUP=#groupID#
+    </statement>
+    <statement id="delAllTaskflowGroup" >
+      delete from RPT_TASKFLOW_GROUP
+    </statement>
+    <statement id="addLink" >
+      insert into RPT_LINK (ID_LINK, ID_TASK_FROM, ID_TASK_TO) values (#linkID:NUMERIC#, #fromTaskID:NUMERIC#, #toTaskID:NUMERIC#)
+    </statement>
+    <statement id="delLink" >
+      delete from RPT_LINK where ID_LINK=#linkID#
+    </statement>    
+    <statement id="delLinkOfTaskflow" >
+      delete from RPT_LINK where ID_TASK_FROM in (select ID_TASK from RPT_TASK where ID_TASKFLOW = #taskflowID#) or ID_TASK_TO in (select ID_TASK from RPT_TASK where ID_TASKFLOW = #taskflowID#)
+    </statement>
+    <statement id="updateLink" >
+      update RPT_LINK set ID_TASK_FROM=#fromTaskID#, ID_TASK_TO=#toTaskID# where ID_LINK=#linkID#
+    </statement>
+    
+    <statement id="addTaskTemplate" >
+      insert into RPT_TASK_TEMPLATE (ID_TASK, ID_TASKFLOW, TASK, TASK_TYPE, PLAN_TIME, IS_ROOT, DESCRIPTION, ALERT_ID, PERFORMANCE_ID, X, Y, MEMO) values (#taskID:NUMERIC#, #taskflowID:NUMERIC#, #task:VARCHAR#, #taskType:VARCHAR#, #plantime:NUMERIC#, #isRoot:NUMERIC#, #description:VARCHAR#, #alertID:VARCHAR#, #performanceID:VARCHAR#, #XPos:NUMERIC#, #YPos:NUMERIC#, #memo:VARCHAR#)
+    </statement>
+    <statement id="addTask" >
+      insert into RPT_TASK (ID_TASK, ID_TASKFLOW, STATUS, SUSPENDED, RUN_STARTTIME, RUN_ENDTIME) values (#taskID:NUMERIC#, #taskflowID:NUMERIC#, #status:NUMERIC#, #suspend:NUMERIC#, #runStartTime:DATE#, #runEndTime:DATE#)
+    </statement>
+    
+    <statement id="delTask" >
+      delete from RPT_TASK where ID_TASK=#taskID#
+    </statement>
+    <statement id="delTaskTemplate" >
+      delete from RPT_TASK_TEMPLATE where ID_TASK=#taskID#
+    </statement>
+    <statement id="delTaskOfTaskflow" >
+      delete from RPT_TASK where ID_TASKFLOW=#taskflowID#
+    </statement>    
+    <statement id="delTaskTemplateOfTaskflow" >
+      delete from RPT_TASK_TEMPLATE where ID_TASKFLOW=#taskflowID#
+    </statement>
+    
+    <statement id="updateTaskTemplate" >
+      update RPT_TASK_TEMPLATE set ID_TASKFLOW=#taskflowID#, TASK_TYPE=#taskType#, TASK=#task#, PLAN_TIME=#plantime#, IS_ROOT=#isRoot#, DESCRIPTION=#description#, ALERT_ID=#alertID#, PERFORMANCE_ID=#performanceID#, X=#XPos#, Y=#YPos#, MEMO=#memo# where ID_TASK=#taskID#
+    </statement>
+    <statement id="updateTask" >
+      update RPT_TASK set ID_TASKFLOW=#taskflowID#, STATUS=#status#, SUSPENDED=#suspend#, RUN_STARTTIME=#runStartTime:DATE#, RUN_ENDTIME=#runEndTime:DATE# where ID_TASK=#taskID#
+    </statement>
+    
+    <statement id="addNote" >
+      insert into RPT_NOTE (ID_NOTE, ID_TASKFLOW, STR_VALUE, X, Y, WIDTH, HEIGHT) values (#noteID:NUMERIC#, #taskflowID:NUMERIC#, #value:VARCHAR#, #XPos:NUMERIC#, #YPos:NUMERIC#, #width:NUMERIC#, #height:NUMERIC#)
+    </statement>
+    <statement id="delNote" >
+      delete from RPT_NOTE where ID_NOTE=#noteID#
+    </statement>
+    <statement id="updateNote" >
+      update RPT_NOTE set ID_TASKFLOW=#taskflowID#, STR_VALUE=#value#, X=#XPos#, Y=#YPos#, WIDTH=#width#, HEIGHT=#height# where ID_NOTE=#noteID#
+    </statement>
+    <statement id="addTaskType" >
+      insert into RPT_TASK_TYPE (ID_TASK_TYPE, TASK_TYPE, ENGINE_PLUGIN,ENGINE_PLUGIN_JAR, DESCRIPTION, SMALL_ICON, LARGE_ICON, ID_CATEGORY, DESIGNER_PLUGIN,DESIGNER_PLUGIN_JAR, ENGINE_PLUGIN_TYPE) values (#taskTypeID:NUMERIC#, #taskType:VARCHAR#, #enginePlugin:VARCHAR#,#enginePluginJar:VARCHAR#, #description:VARCHAR#, #smallIcon:VARCHAR#, #largeIcon:VARCHAR#, #categoryID:NUMERIC#, #designerPlugin:VARCHAR#,#designerPluginJar:VARCHAR#, #enginePluginType:VARCHAR#)
+    </statement>
+    <statement id="delTaskType" >
+      delete from RPT_TASK_TYPE where ID_TASK_TYPE=#taskTypeID#
+    </statement>
+    <statement id="delAllTaskType" >
+      delete from RPT_TASK_TYPE
+    </statement>
+    <statement id="updateTaskType" >
+      update RPT_TASK_TYPE set TASK_TYPE=#taskType#, ENGINE_PLUGIN=#enginePlugin#,ENGINE_PLUGIN_JAR=#enginePluginJar#, DESCRIPTION=#description#, SMALL_ICON=#smallIcon#, LARGE_ICON=#largeIcon#, ID_CATEGORY=#categoryID:NUMERIC#, DESIGNER_PLUGIN=#designerPlugin#,DESIGNER_PLUGIN_JAR=#designerPluginJar#, ENGINE_PLUGIN_TYPE=#enginePluginType# where ID_TASK_TYPE=#taskTypeID#
+    </statement>
+    <statement id="addStepType" >
+      insert into RPT_STEP_TYPE (STEP_TYPE, NAME, ORDER_ID, FLAG) values (#stepType:VARCHAR#, #stepName:VARCHAR#, #order:VARCHAR#, #flag:VARCHAR#)
+    </statement>
+    <statement id="delStepType" >
+      delete from RPT_STEP_TYPE where STEP_TYPE=#stepType#
+    </statement>
+    <statement id="delAllStepType" >
+      delete from RPT_STEP_TYPE
+    </statement>
+    <statement id="updateStepType" >
+      update RPT_STEP_TYPE set NAME=#stepName#, ORDER_ID=#order#, FLAG=#flag# where STEP_TYPE=#stepType#
+    </statement>    
+    <statement id="queryStepType" >
+      select * from RPT_STEP_TYPE where NAME=#stepName#
+    </statement>
+    <statement id="addSysConfig" >
+      insert into RPT_SYS_CONFIG (ID_CONFIG, CONFIG_NAME, CONFIG_VALUE, CONFIG_DESC, STAGE, TYPE) values (#ID:NUMERIC#, #configName:VARCHAR#, #configValue:VARCHAR#, #configDesc:VARCHAR#, #stage:VARCHAR#, #type:VARCHAR#)
+    </statement>
+    <statement id="delSysConfig" >
+      delete from RPT_SYS_CONFIG where ID_CONFIG=#ID#
+    </statement>
+    <statement id="delAllSysConfig" >
+      delete from RPT_SYS_CONFIG
+    </statement>
+    <statement id="updateSysConfig" >
+      update RPT_SYS_CONFIG set CONFIG_NAME=#configName#, CONFIG_VALUE=#configValue#, CONFIG_DESC=#configDesc#, STAGE=#stage:VARCHAR#, TYPE=#type:VARCHAR# where ID_CONFIG=#ID#
+    </statement>
+    <statement id="querySysConfigValue" resultClass="java.lang.String">
+      select CONFIG_VALUE from RPT_SYS_CONFIG WHERE CONFIG_NAME = #configName#
+    </statement>
+    <statement id="addTaskAttribute" >
+      insert into RPT_TASK_ATTRIBUTE (ID_ATTRIBUTE, ID_TASK, KEY_NAME, VALUE) values (#attributeID:NUMERIC#, #taskID:NUMERIC#, #key:VARCHAR#, #value:VARCHAR#)
+    </statement>
+    <statement id="delTaskAttribute" >
+      delete from RPT_TASK_ATTRIBUTE where ID_ATTRIBUTE=#attributeID#
+    </statement>
+    <statement id="delTaskAttributeOfTaskflow" >
+      delete from RPT_TASK_ATTRIBUTE where ID_TASK in (select ID_TASK from RPT_TASKFLOW where ID_TASKFLOW=#taskflowID#)
+    </statement>
+    <statement id="updateTaskAttribute" >
+      update RPT_TASK_ATTRIBUTE set ID_TASK=#taskID#, KEY_NAME=#key#, VALUE=#value# where ID_ATTRIBUTE=#attributeID#
+    </statement>
+    
+    <statement id="delTaskflow" >
+      delete from RPT_TASKFLOW_TEMPLATE where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="delTaskflowTemplate" >
+      delete from RPT_TASKFLOW where ID_TASKFLOW=#taskflowID#
+    </statement>
+
+    <statement id="queryTaskflowIDbyName" resultClass="java.lang.Integer">
+      select ID_TASKFLOW from RPT_TASKFLOW_TEMPLATE where TASKFLOW=#taskflow#
+    </statement>
+
+    <statement id="addTaskflowTemplate" >
+      insert into RPT_TASKFLOW_TEMPLATE 
+      (ID_TASKFLOW, TASKFLOW, STEP_TYPE, STEP, DESCRIPTION, MEMO, ID_GROUP) 
+      values (#taskflowID:NUMERIC#, #taskflow:VARCHAR#, #stepType:VARCHAR#, #step:NUMERIC#, #description:VARCHAR#, #memo:VARCHAR#,
+      nvl((SELECT ID_GROUP FROM RPT_TASKFLOW_GROUP WHERE ID_GROUP=#groupID:NUMERIC#),1) )
+      
+    </statement>
+    <statement id="addTaskflow" >
+      insert into RPT_TASKFLOW (ID_TASKFLOW, STATTIME, SCENE_STATTIME, STATUS, SUSPENDED, REDO_FLAG, REDO_STARTTIME, REDO_ENDTIME, THREAD_NUM, FILE_LOGLEVEL, DB_LOGLEVEL, RUN_STARTTIME, RUN_ENDTIME) values (#taskflowID:NUMERIC#, #statTime:DATE#, #sceneStatTime:DATE#, #status:NUMERIC#, #suspend:NUMERIC#, #redoFlag:NUMERIC#, #redoStartTime:DATE#, #redoEndTime:DATE#, #threadnum:NUMERIC#, #fileLogLevel:VARCHAR#, #dbLogLevel:VARCHAR#, #runStartTime:DATE#, #runEndTime:DATE#)
+    </statement>
+    
+    
+    <statement id="updateTaskflowStatus" >
+      update RPT_TASKFLOW set STATUS=#status# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateTaskflowTime" >
+      update RPT_TASKFLOW set STATTIME=#statTime# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    
+    <statement id="updateTaskflowTemplate" >
+      update RPT_TASKFLOW_TEMPLATE set TASKFLOW=#taskflow#, STEP_TYPE=#stepType#, STEP=#step#, DESCRIPTION=#description:VARCHAR#, ID_GROUP=nvl((SELECT ID_GROUP FROM RPT_TASKFLOW_GROUP WHERE ID_GROUP=#groupID:NUMERIC#),1), MEMO=#memo:VARCHAR# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateTaskflow" >
+      update RPT_TASKFLOW set STATTIME=#statTime:DATE#, SCENE_STATTIME=#sceneStatTime:DATE#, STATUS=#status#, SUSPENDED=#suspend#, REDO_FLAG=#redoFlag#, REDO_STARTTIME=#redoStartTime:DATE#, REDO_ENDTIME=#redoEndTime:DATE#, THREAD_NUM=#threadnum#, FILE_LOGLEVEL=#fileLogLevel#, DB_LOGLEVEL=#dbLogLevel#, RUN_STARTTIME=#runStartTime:DATE#, RUN_ENDTIME=#runEndTime:DATE# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    
+    <statement id="getAllTaskflow" resultMap="taskflowMap">
+		select t1.ID_TASKFLOW, t1.TASKFLOW, t1.STEP_TYPE, t1.STEP, t2.STATTIME, t2.SCENE_STATTIME, t2.STATUS, t2.SUSPENDED, t1.DESCRIPTION, t2.REDO_FLAG, t2.REDO_STARTTIME, t2.REDO_ENDTIME, t2.THREAD_NUM, t2.FILE_LOGLEVEL, t2.DB_LOGLEVEL, t2.RUN_STARTTIME, t2.RUN_ENDTIME, t1.ID_GROUP, t1.MEMO from RPT_TASKFLOW_TEMPLATE t1, RPT_TASKFLOW t2 where t1.ID_TASKFLOW = t2.ID_TASKFLOW order by t1.TASKFLOW
+    </statement>
+    <statement id="queryAllTaskflowName" resultClass="java.lang.String">
+		select TASKFLOW from RPT_TASKFLOW_TEMPLATE order by TASKFLOW
+    </statement>
+    <statement id="getTaskflow" resultMap="taskflowMap">
+		select t1.ID_TASKFLOW, t1.TASKFLOW, t1.STEP_TYPE, t1.STEP, t2.STATTIME, t2.SCENE_STATTIME, t2.STATUS, t2.SUSPENDED, t1.DESCRIPTION, t2.REDO_FLAG, t2.REDO_STARTTIME, t2.REDO_ENDTIME, t2.THREAD_NUM, t2.FILE_LOGLEVEL, t2.DB_LOGLEVEL, t2.RUN_STARTTIME, t2.RUN_ENDTIME, t1.ID_GROUP, t1.MEMO from RPT_TASKFLOW_TEMPLATE t1, RPT_TASKFLOW t2 where t1.ID_TASKFLOW = t2.ID_TASKFLOW and t1.ID_TASKFLOW=#taskflowID#
+    </statement>
+    
+    <statement id="getAllTask" resultMap="taskMap">
+		select t1.ID_TASK, t1.ID_TASKFLOW, t1.TASK, t1.TASK_TYPE, t2.STATUS, t1.PLAN_TIME, t1.IS_ROOT, t2.SUSPENDED, t1.DESCRIPTION, t1.ALERT_ID, t1.PERFORMANCE_ID, t1.X, t1.Y, t2.RUN_STARTTIME, t2.RUN_ENDTIME, t1.MEMO from RPT_TASK_TEMPLATE t1, RPT_TASK t2 where t1.ID_TASK = t2.ID_TASK
+    </statement>
+    
+    <statement id="getAllTaskByTaskflowId" resultMap="taskMap"  parameterClass="java.lang.Integer">
+		select t1.ID_TASK,
+		       t1.ID_TASKFLOW,
+		       t1.TASK,
+		       t1.TASK_TYPE,
+		       t2.STATUS,
+		       t1.PLAN_TIME,
+		       t1.IS_ROOT,
+		       t2.SUSPENDED,
+		       t1.DESCRIPTION,
+		       t1.ALERT_ID,
+		       t1.PERFORMANCE_ID,
+		       t1.X,
+		       t1.Y,
+		       t2.RUN_STARTTIME,
+		       t2.RUN_ENDTIME,
+		       t1.MEMO
+		  from RPT_TASK_TEMPLATE t1, RPT_TASK t2
+		 where t1.ID_TASK = t2.ID_TASK
+		   and t2.id_taskflow = #value#
+   </statement>
+    <statement id="getTask" resultMap="taskMap">
+		select t1.ID_TASK, t1.ID_TASKFLOW, t1.TASK, t1.TASK_TYPE, t2.STATUS, t1.PLAN_TIME, t1.IS_ROOT, t2.SUSPENDED, t1.DESCRIPTION, t1.ALERT_ID, t1.PERFORMANCE_ID, t1.X, t1.Y, t2.RUN_STARTTIME, t2.RUN_ENDTIME, t1.MEMO from RPT_TASK_TEMPLATE t1, RPT_TASK t2 where t1.ID_TASK = t2.ID_TASK and t1.ID_TASK=#taskID#
+    </statement>
+    <statement id="getTaskOfTaskFlow" resultMap="taskMap">
+		select t1.ID_TASK, t1.ID_TASKFLOW, t1.TASK, t1.TASK_TYPE, t2.STATUS, t1.PLAN_TIME, t1.IS_ROOT, t2.SUSPENDED, t1.DESCRIPTION, t1.ALERT_ID, t1.PERFORMANCE_ID, t1.X, t1.Y, t2.RUN_STARTTIME, t2.RUN_ENDTIME, t1.MEMO from RPT_TASK_TEMPLATE t1, RPT_TASK t2 where t1.ID_TASK = t2.ID_TASK and t1.ID_TASKFLOW=#taskflowID#
+    </statement>  
+    <statement id="queryTask" resultMap="taskMap">
+		select t1.ID_TASK, t1.ID_TASKFLOW, t1.TASK, t1.TASK_TYPE, t2.STATUS, t1.PLAN_TIME, t1.IS_ROOT, t2.SUSPENDED, t1.DESCRIPTION, t1.ALERT_ID, t1.PERFORMANCE_ID, t1.X, t1.Y, t2.RUN_STARTTIME, t2.RUN_ENDTIME, t1.MEMO from RPT_TASK_TEMPLATE t1, RPT_TASK t2 where t1.ID_TASK = t2.ID_TASK and t1.ID_TASK=#taskID#
+    </statement>
+    <statement id="getRootTask" resultMap="taskMap">
+		select t1.ID_TASK, t1.ID_TASKFLOW, t1.TASK, t1.TASK_TYPE, t2.STATUS, t1.PLAN_TIME, t1.IS_ROOT, t2.SUSPENDED, t1.DESCRIPTION, t1.ALERT_ID, t1.PERFORMANCE_ID, t1.X, t1.Y, t2.RUN_STARTTIME, t2.RUN_ENDTIME, t1.MEMO from RPT_TASK_TEMPLATE t1, RPT_TASK t2 where t1.ID_TASK = t2.ID_TASK and t1.IS_ROOT = 1 and t1.ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="getAllTaskType" resultMap="taskTypeMap">
+		select * from RPT_TASK_TYPE
+    </statement>
+    <statement id="getAllStepType" resultMap="stepTypeMap">
+		select * from RPT_STEP_TYPE
+    </statement>
+    <statement id="getAllLink" resultMap="linkMap">
+		select * from RPT_LINK
+    </statement>
+    
+    <statement id="getAllLinkByTaskflowId" resultMap="linkMap" parameterClass="java.lang.Integer">
+		select distinct a.*
+		  from RPT_LINK a,
+		       (select id_task from rpt_task where id_taskflow = #value#) b
+		 where a.id_task_from = b.id_task
+		    or a.id_task_to = b.id_task
+    </statement>
+    <statement id="getAllNote" resultMap="noteMap">
+		select * from RPT_NOTE
+    </statement>
+    
+    <statement id="getAllNoteByTaskflowId" resultMap="noteMap" parameterClass="java.lang.Integer">
+		select * from RPT_NOTE where id_taskflow = #value#
+    </statement>
+    
+    <statement id="getNote" resultMap="noteMap">
+		select * from RPT_NOTE where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="getLink" resultMap="linkMap">
+		select * from RPT_LINK where ID_LINK=#linkID#
+    </statement>
+    <statement id="getLinkOfTaskflow" resultMap="linkMap">
+	  	select * from RPT_LINK where ID_TASK_FROM IN (select ID_TASK from RPT_TASK where ID_TASKFLOW=#taskflowID#) or ID_TASK_TO IN (select ID_TASK from RPT_TASK where ID_TASKFLOW=#taskflowID#)
+    </statement>
+    <statement id="getAllTaskAttribute" resultMap="taskAttributeMap">
+		select * from RPT_TASK_ATTRIBUTE
+    </statement>
+    
+    <statement id="getAllTaskAttributeByTaskflowId" resultMap="taskAttributeMap" parameterClass="java.lang.Integer">
+		select *
+		  from RPT_TASK_ATTRIBUTE a, rpt_task b
+		 where a.id_task = b.id_task
+		   and b.id_taskflow = #value#
+    </statement>
+    
+    <statement id="queryTaskAttributeList" resultMap="taskAttributeMap">
+		select * from RPT_TASK_ATTRIBUTE where ID_TASK = #taskID#
+    </statement>
+    <statement id="getTaskAttribute" resultMap="taskAttributeMap">
+		select * from RPT_TASK_ATTRIBUTE where ID_ATTRIBUTE=#attributeID#
+    </statement>
+    <statement id="getAllSysConfig" resultMap="sysConfigMap">
+		select * from RPT_SYS_CONFIG
+    </statement>
+    <statement id="getAllCategory" resultMap="categoryMap">
+		select * from RPT_CATEGORY
+    </statement>
+	<statement id="getAllTaskflowGroup" resultMap="taskflowGroupMap">
+		select * from RPT_TASKFLOW_GROUP
+    </statement>    
+    <statement id="getFatherNodeNotSuccessed" resultMap="taskMap">
+		select * from RPT_TASK where STATUS != #status# and ID_TASK in(select ID_TASK_TO from RPT_LINK where ID_TASK_TO=#taskID#)
+    </statement>
+    <statement id="isAllNodeSuspened" resultMap="taskMap">
+		select * from (select * from RPT_TASK where STATUS != #status# and ID_TASKFLOW = #taskflowID#) where SUSPENDED = #suspend#
+    </statement>
+    <statement id="isAllTaskSuccess" resultMap="taskMap">
+		select * from RPT_TASK where STATUS != #status# and ID_TASKFLOW = #taskflowID#
+    </statement>
+    <statement id="queryAllChildTask" resultMap="taskMap">
+		select t1.ID_TASK, t1.ID_TASKFLOW, t1.TASK, t1.TASK_TYPE, t2.STATUS, t1.PLAN_TIME, t1.IS_ROOT, t2.SUSPENDED, t1.DESCRIPTION, t1.ALERT_ID, t1.PERFORMANCE_ID, t1.X, t1.Y, t2.RUN_STARTTIME, t2.RUN_ENDTIME, t1.MEMO from RPT_TASK_TEMPLATE t1, RPT_TASK t2 where t1.ID_TASK = t2.ID_TASK and t1.ID_TASK in(select ID_TASK_TO from RPT_LINK where ID_TASK_FROM=#taskID#)
+    </statement>
+    <statement id="getTaskflowByIDAndName" resultMap="taskflowMap">
+		select t1.ID_TASKFLOW, t1.TASKFLOW, t1.STEP_TYPE, t1.STEP, t2.STATTIME, t2.SCENE_STATTIME, t2.STATUS, t2.SUSPENDED, t1.DESCRIPTION, t2.REDO_FLAG, t2.REDO_STARTTIME, t2.REDO_ENDTIME, t2.THREAD_NUM, t2.FILE_LOGLEVEL, t2.DB_LOGLEVEL, t2.RUN_STARTTIME, t2.RUN_ENDTIME, t1.ID_GROUP, t1.MEMO from RPT_TASKFLOW_TEMPLATE t1, RPT_TASKFLOW t2 where t1.ID_TASKFLOW = t2.ID_TASKFLOW and t1.ID_TASKFLOW=#taskflowID# and t1.TASKFLOW=#taskflow#
+    </statement>
+    <statement id="updateStatTimeOfTaskflow" >
+      	update RPT_TASKFLOW set STATTIME=#statTime# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateThreadnumOfTaskflow" >
+      	update RPT_TASKFLOW set THREAD_NUM=#threadnum:NUMERIC# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateFileLogLevelOfTaskflow" >
+      	update RPT_TASKFLOW set FILE_LOGLEVEL=#fileLogLevel:VARCHAR# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateDbLogLevelOfTaskflow" >
+      	update RPT_TASKFLOW set DB_LOGLEVEL=#dbLogLevel:VARCHAR# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateRedoFlagOfTaskflow" >
+      	update RPT_TASKFLOW set REDO_FLAG=#redoFlag:NUMERIC# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateSceneStatTimeOfTaskflow" >
+      	update RPT_TASKFLOW set SCENE_STATTIME=#sceneStatTime# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateRedoStartTimeOfTaskflow" >
+      	update RPT_TASKFLOW set REDO_STARTTIME=#redoStartTime# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateRedoEndTimeOfTaskflow" >
+      	update RPT_TASKFLOW set REDO_ENDTIME=#redoEndTime# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateRunStartTimeOfTaskflow" >
+      	update RPT_TASKFLOW set RUN_STARTTIME=#runStartTime# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateRunStartTimeOfTask" >
+      	update RPT_TASK set RUN_STARTTIME=#runStartTime# where ID_TASK=#taskID#
+    </statement>
+    <statement id="updateRunEndTimeOfTaskflow" >
+      	update RPT_TASKFLOW set RUN_ENDTIME=#runEndTime# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateRunEndTimeOfTask" >
+      	update RPT_TASK set RUN_ENDTIME=#runEndTime# where ID_TASK=#taskID#
+    </statement>
+    <statement id="updateSuspendOfTaskflow" >
+      	update RPT_TASKFLOW set SUSPENDED=#suspend:NUMERIC# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="updateSuspendOfTask" >
+      	update RPT_TASK set SUSPENDED=#suspend:NUMERIC# where ID_TASK=#taskID#
+    </statement>
+    <statement id="updateStatusOfTask" >
+      	update RPT_TASK set STATUS=#status:NUMERIC# where ID_TASK=#taskID#
+    </statement>
+    <statement id="updateStatusOfTaskflow" >
+      	update RPT_TASKFLOW set STATUS=#status:NUMERIC# where ID_TASKFLOW=#taskflowID#
+    </statement>
+    <statement id="insertTaskHistory" >
+      <!-- insert into RPT_TASK_HISTORY (ID, TASK_ID, TASKFLOW_ID, TASK, TASK_TYPE, STATUS, START_TIME, END_TIME, FILE, DESCRIPTION) values (#id:NUMERIC#, #taskID:NUMERIC#, #taskflowID:NUMERIC#, #task:VARCHAR#, #taskType:VARCHAR#, #status:VARCHAR#, #startTime:TIMESTAMEP#, #endTime:TIMESTAMEP#, #file:VARCHAR#, #description:VARCHAR#) -->
+      insert into RPT_TASK_HISTORY (ID, TASK_ID, TASKFLOW_ID, TASK, TASK_TYPE, STATUS, START_TIME, END_TIME, FILE, DESCRIPTION, STAT_TIME, END_STAT_TIME, NEXT_STAT_TIME) values (#id:NUMERIC#, #taskID:NUMERIC#, #taskflowID:NUMERIC#, #task:VARCHAR#, #taskType:VARCHAR#, #status:VARCHAR#, #startTime:TIMESTAMEP#, #endTime:TIMESTAMEP#, #file:VARCHAR#, #description:VARCHAR#, #statTime:VARCHAR#, #endStatTime:VARCHAR#, #nextStatTime:VARCHAR#)
+    </statement>
+    <statement id="updateStatusOfTaskHistory" >
+      	<!-- update RPT_TASK_HISTORY set STATUS=#status:CHAR#, FILE=#file:VARCHAR#, END_TIME=#endTime:TIMESTAMEP# where ID=#id# -->
+      	update RPT_TASK_HISTORY set STATUS=#status:CHAR#, FILE=#file:VARCHAR#, END_TIME=#endTime:TIMESTAMEP#, STAT_TIME=#statTime:VARCHAR#, END_STAT_TIME=#endStatTime:VARCHAR#, NEXT_STAT_TIME=#nextStatTime:VARCHAR# where ID=#id#
+    </statement>
+    <statement id="getAllTaskHistoryByTaskflowId" resultMap="taskHistoryMap" parameterClass="java.lang.Integer">
+		select * from RPT_TASK_HISTORY
+		  where TASKFLOW_ID = #value# 
+		  ORDER BY CREATE_TIME DESC LIMIT 100
+    </statement>
+    <!-- hqw -->
+    <statement id="getCountTaskHistoryByTaskflowId" resultClass="java.lang.Integer" parameterClass="java.lang.Integer">
+	select count(1) from RPT_TASK_HISTORY a ,rpt_task b,rpt_taskflow c
+		  where  a.TASKFLOW_ID = #value#  and (a.status='F' or a.status='R') and a.TASK_ID =b.ID_TASK and c.ID_TASKFLOW =b.ID_TASKFLOW and c.REDO_FLAG=0
+    
+    </statement>
+    
+     <statement id="getTaskHistoryByFlowIdAndStartTime" resultMap="taskHistoryMap" parameterClass="java.util.Map">
+		select * from RPT_TASK_HISTORY
+		  where TASKFLOW_ID = #FLOW_ID# order by start_time desc limit 1;
+    </statement>
+    <statement id="getTaskHistoryNumByFlowId" resultClass="java.lang.Integer" parameterClass="java.util.Map">
+		select count(1) from RPT_TASK_HISTORY
+		  where TASKFLOW_ID = #FLOW_ID# and (status = 'C' or status = 'R');
+    </statement>
+    
+</sqlMap>

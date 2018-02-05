@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="GBK"?>
+<Rights>
+<Right>
+  <ID>1</ID>
+  <name>CONSOLE_RUN_STOP</name>
+  <description>命令行监控器_启动_停止</description>
+</Right>
+<Right>
+  <ID>2</ID>
+  <name>CONSOLE_EDIT</name>
+  <description>命令行监控器_修改</description>
+</Right>
+<Right>
+  <ID>3</ID>
+  <name>MONITOR_RUN_STOP</name>
+  <description>图形监控器_启动_停止</description>
+</Right>
+<Right>
+  <ID>4</ID>
+  <name>MONITOR_EDIT</name>
+  <description>图形监控器_修改</description>
+</Right>
+<Right>
+  <ID>5</ID>
+  <name>METADATA_DBCONN</name>
+  <description>元数据管理_数据库连接配置</description>
+</Right>
+<Right>
+  <ID>6</ID>
+  <name>METADATA_COMMON</name>
+  <description>元数据管理_系统公共参数管理</description>
+</Right>
+<Right>
+  <ID>7</ID>
+  <name>METADATA_TASKTYPE</name>
+  <description>元数据管理_任务节点管理</description>
+</Right>
+<Right>
+  <ID>8</ID>
+  <name>METADATA_CATEGORY</name>
+  <description>元数据管理_组件面板管理</description>
+</Right>
+<Right>
+  <ID>9</ID>
+  <name>METADATA_TASKFLOWGROUP</name>
+  <description>元数据管理_流程分组管理</description>
+</Right>
+<Right>
+  <ID>10</ID>
+  <name>METADATA_STEPTYPE</name>
+  <description>元数据管理_步长周期管理</description>
+</Right>
+<Right>
+  <ID>11</ID>
+  <name>METADATA_DELTASKFLOW</name>
+  <description>元数据管理_删除流程</description>
+</Right>
+<Right>
+  <ID>12</ID>
+  <name>METADATA_ROLE</name>
+  <description>元数据管理_角色管理</description>
+</Right>
+<Right>
+  <ID>13</ID>
+  <name>METADATA_USER</name>
+  <description>元数据管理_用户管理</description>
+</Right>
+<Right>
+  <ID>14</ID>
+  <name>METADATA_PASSWORD</name>
+  <description>元数据管理_修改密码</description>
+</Right>
+<Right>
+  <ID>15</ID>
+  <name>DESIGNER_NEW</name>
+  <description>流程设计器_新建流程</description>
+</Right>
+<Right>
+  <ID>17</ID>
+  <name>DESIGNER_XML_IMPORT</name>
+  <description>流程设计器_从XML导入流程</description>
+</Right>
+<Right>
+  <ID>16</ID>
+  <name>DESIGNER_OPEN</name>
+  <description>流程设计器_打开流程</description>
+</Right>
+<Right>
+  <ID>19</ID>
+  <name>DESIGNER_DELETE</name>
+  <description>流程设计器_删除</description>
+</Right>
+<Right>
+  <ID>18</ID>
+  <name>DESIGNER_XML_EXPORT</name>
+  <description>流程设计器_导出流程为XML</description>
+</Right>
+<Right>
+  <ID>21</ID>
+  <name>DESIGNER_PASTE</name>
+  <description>流程设计器_粘贴</description>
+</Right>
+<Right>
+  <ID>20</ID>
+  <name>DESIGNER_COPY</name>
+  <description>流程设计器_复制</description>
+</Right>
+<Right>
+  <ID>23</ID>
+  <name>DESIGNER_SAVE</name>
+  <description>流程设计器_保存</description>
+</Right>
+<Right>
+  <ID>22</ID>
+  <name>DESIGNER_EDIT</name>
+  <description>流程设计器_编辑</description>
+</Right>
+<Right>
+  <ID>24</ID>
+  <name>DESIGNER_UNDO_REDO</name>
+  <description>流程设计器_撤消_恢复</description>
+</Right>
+</Rights>

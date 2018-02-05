@@ -1,0 +1,10 @@
+com/daoeee/test/xmlrcp/IF1Submit.class
+com/daoeee/test/xmlrcp/IF2Redo.class
+com/daoeee/test/xmlrcp/IF3QueryFlow.class
+com/daoeee/test/xmlrcp/Constants.class
+com/daoeee/test/xmlrcp/IF1SubmitAdHoc.class
+com/daoeee/test/xmlrcp/IF5SubmitCircle.class
+com/daoeee/test/xmlrcp/IF4QueryTaskHistory.class
+com/daoeee/test/xmlrcp/IF1SubmitFormProperties.class
+com/daoeee/test/xmlrcp/Step2Start.class
+com/daoeee/test/xmlrcp/DBTools.class

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+    <name>TIMER</name>
+    <description>定时器</description>
+    <category>第三方插件</category>
+    <type>JAVA</type>
+    <classname>com.aspire.etl.plugins.Timer</classname>
+    <library>Timer.jar</library>
+</plugin>

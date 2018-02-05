@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+    <name>Manager</name>
+    <description>引擎管理</description>
+    <category>常用JAVA插件</category>
+    <type>JAVA</type>
+    <classname>com.aspire.etl.plugins.Manager</classname>
+    <library>manager.jar</library>
+</plugin>

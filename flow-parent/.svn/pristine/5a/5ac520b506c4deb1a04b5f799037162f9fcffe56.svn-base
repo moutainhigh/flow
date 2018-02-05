@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+    <name>Ftp</name>
+    <description>Ftp上传文件</description>
+    <category>常用JAVA插件</category>
+    <type>JAVA</type>
+    <classname>com.aspire.etl.plugins.Scp</classname>
+    <library>Ftp.jar</library>
+</plugin>

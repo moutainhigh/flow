@@ -1,0 +1,1770 @@
+[INFO ]2017-09-14 11:41:44-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 11:41:44-[], 线程启动。
+[INFO ]2017-09-14 11:41:44-[], 当前流程状态为RUNNING
+[INFO ]2017-09-14 11:41:44-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-09-14 11:41:44-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 11:41:44-[], isDone=false
+[DEBUG]2017-09-14 11:41:44-[], 正常执行:
+[DEBUG]2017-09-14 11:41:44-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:41:44
+[DEBUG]2017-09-14 11:41:44-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:41:44-[], 将流程的状态置为RUNNING
+[WARN ]2017-09-14 11:41:44-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1697)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:397)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.saveHistory(DBDaoImpl.java:832)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1695)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[DEBUG]2017-09-14 11:42:44-[], isDone=false
+[DEBUG]2017-09-14 11:42:44-[], 正常执行:
+[DEBUG]2017-09-14 11:42:44-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:42:44
+[DEBUG]2017-09-14 11:42:44-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = RUNNING
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:42:44-[], 将流程的状态置为RUNNING
+[WARN ]2017-09-14 11:42:44-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1697)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:397)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.saveHistory(DBDaoImpl.java:832)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1695)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[DEBUG]2017-09-14 11:43:44-[], isDone=false
+[DEBUG]2017-09-14 11:43:44-[], 正常执行:
+[DEBUG]2017-09-14 11:43:44-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:43:44
+[DEBUG]2017-09-14 11:43:44-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = RUNNING
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:43:44-[], 将流程的状态置为RUNNING
+[WARN ]2017-09-14 11:43:44-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1697)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:397)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.saveHistory(DBDaoImpl.java:832)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1695)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[DEBUG]2017-09-14 11:44:44-[], isDone=false
+[DEBUG]2017-09-14 11:44:44-[], 正常执行:
+[DEBUG]2017-09-14 11:44:44-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:44:44
+[DEBUG]2017-09-14 11:44:44-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = RUNNING
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:44:44-[], 将流程的状态置为RUNNING
+[WARN ]2017-09-14 11:44:44-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1697)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:397)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.saveHistory(DBDaoImpl.java:832)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1695)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[DEBUG]2017-09-14 11:45:44-[], isDone=false
+[DEBUG]2017-09-14 11:45:44-[], 正常执行:
+[DEBUG]2017-09-14 11:45:44-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:45:44
+[DEBUG]2017-09-14 11:45:44-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = RUNNING
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:45:44-[], 将流程的状态置为RUNNING
+[WARN ]2017-09-14 11:45:44-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1697)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:397)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.saveHistory(DBDaoImpl.java:832)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1695)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'TASK_TYPE' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[DEBUG]2017-09-14 11:46:44-[], isDone=false
+[DEBUG]2017-09-14 11:46:44-[], 正常执行:
+[DEBUG]2017-09-14 11:46:44-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:46:44
+[DEBUG]2017-09-14 11:46:44-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = RUNNING
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:46:44-[], 将流程的状态置为RUNNING
+[WARN ]2017-09-14 11:46:44-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'STAT_TIME' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1697)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:397)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'STAT_TIME' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.saveHistory(DBDaoImpl.java:832)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1695)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'STAT_TIME' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[INFO ]2017-09-14 11:48:15-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 11:48:15-[], 线程启动。
+[INFO ]2017-09-14 11:48:15-[], 当前流程状态为RUNNING
+[INFO ]2017-09-14 11:48:15-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-09-14 11:48:15-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 11:48:15-[], isDone=false
+[DEBUG]2017-09-14 11:48:15-[], 正常执行:
+[DEBUG]2017-09-14 11:48:15-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:48:15
+[DEBUG]2017-09-14 11:48:15-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:48:15-[], 将流程的状态置为RUNNING
+[WARN ]2017-09-14 11:48:15-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'STAT_TIME' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1697)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:397)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'STAT_TIME' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.saveHistory(DBDaoImpl.java:832)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveHistory(FlowMetaData.java:1695)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'STAT_TIME' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[INFO ]2017-09-14 11:51:06-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 11:51:06-[], 线程启动。
+[INFO ]2017-09-14 11:51:06-[], 当前流程状态为RUNNING
+[INFO ]2017-09-14 11:51:06-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-09-14 11:51:06-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 11:51:06-[], isDone=false
+[DEBUG]2017-09-14 11:51:06-[], 正常执行:
+[DEBUG]2017-09-14 11:51:06-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:51:06
+[DEBUG]2017-09-14 11:51:06-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:51:06-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 11:51:06-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 11:51:06-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 11:51:06-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 11:51:06-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 11:51:06-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 11:51:06-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 11:51:06-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 11:51:06-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 11:51:06-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 11:51:06-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 11:51:06-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 11:51:06-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 11:51:06-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 11:51:06-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 11:51:06-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 11:51:06-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000200, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000000, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 11:51:08-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 11:51:36-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 11:51:36-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 11:51:36-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[WARN ]2017-09-14 11:51:36-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the updateStatusOfTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'FILE' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.updateHistoryStatus(FlowMetaData.java:1708)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:483)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the updateStatusOfTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'FILE' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.updateHistoryStatus(DBDaoImpl.java:803)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.updateHistoryStatus(FlowMetaData.java:1706)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'FILE' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[DEBUG]2017-09-14 11:52:36-[], isDone=false
+[DEBUG]2017-09-14 11:52:36-[], 正常执行:
+[DEBUG]2017-09-14 11:52:36-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:52:36
+[DEBUG]2017-09-14 11:52:36-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = RUNNING
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:52:36-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 11:52:36-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 11:52:36-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 11:52:36-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[WARN ]2017-09-14 11:52:36-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the updateStatusOfTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'FILE' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.updateHistoryStatus(FlowMetaData.java:1708)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:483)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the updateStatusOfTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'FILE' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.updateHistoryStatus(DBDaoImpl.java:803)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.updateHistoryStatus(FlowMetaData.java:1706)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'FILE' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[DEBUG]2017-09-14 11:53:36-[], isDone=false
+[DEBUG]2017-09-14 11:53:36-[], 正常执行:
+[DEBUG]2017-09-14 11:53:36-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:53:36
+[DEBUG]2017-09-14 11:53:36-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = RUNNING
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:53:36-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 11:53:36-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 11:53:36-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 11:53:36-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[WARN ]2017-09-14 11:53:36-[], 操作元数据库发生异常！
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the updateStatusOfTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'FILE' at row 1
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.updateHistoryStatus(FlowMetaData.java:1708)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:483)
+	at com.aspire.etl.flowengine.TaskflowThread.run(TaskflowThread.java:178)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the updateStatusOfTaskHistory-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'FILE' at row 1
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.updateHistoryStatus(DBDaoImpl.java:803)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.updateHistoryStatus(FlowMetaData.java:1706)
+	... 2 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'FILE' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4206)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 8 more
+[DEBUG]2017-09-14 11:54:36-[], isDone=false
+[DEBUG]2017-09-14 11:54:36-[], 正常执行:
+[DEBUG]2017-09-14 11:54:36-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:54:36
+[DEBUG]2017-09-14 11:54:36-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = RUNNING
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:54:36-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 11:54:36-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 11:54:36-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 11:54:36-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[INFO ]2017-09-14 11:54:36-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:02:00
+[DEBUG]2017-09-14 11:54:36-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[INFO ]2017-09-14 11:56:04-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 11:56:04-[], 线程启动。
+[INFO ]2017-09-14 11:56:04-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 11:56:04-[], isDone=false
+[DEBUG]2017-09-14 11:56:04-[], 正常执行:
+[DEBUG]2017-09-14 11:56:04-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 11:56:04
+[DEBUG]2017-09-14 11:56:04-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:56:04-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 11:56:04-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 11:56:04-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 11:56:04-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 11:56:04-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 11:56:04-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 11:56:04-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 11:56:04-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 11:56:04-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 11:56:04-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 11:56:04-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 11:56:04-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 11:56:04-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 11:56:04-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 11:56:04-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 11:56:04-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 11:56:04-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000200, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000000, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 11:56:05-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 11:56:34-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 11:56:34-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 11:56:34-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[INFO ]2017-09-14 11:56:34-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:02:00
+[DEBUG]2017-09-14 11:56:34-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:57:34-[], isDone=false
+[DEBUG]2017-09-14 11:57:34-[], 正常执行:
+[DEBUG]2017-09-14 11:57:34-[], 统计结束时间:2017-09-12 00:04:00小于当前系统时间：2017-09-14 11:57:34
+[DEBUG]2017-09-14 11:57:34-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:57:34-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 11:57:34-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 11:57:34-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 11:57:34-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 11:57:34-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 11:57:34-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 11:57:34-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 11:57:34-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 11:57:34-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 11:57:34-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 11:57:34-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 11:57:34-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 11:57:34-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 11:57:34-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 11:57:34-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 11:57:34-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 11:57:34-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000400, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000200, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 11:57:36-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 11:58:04-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 11:58:04-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 11:58:04-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:02:00
+[INFO ]2017-09-14 11:58:04-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:04:00
+[DEBUG]2017-09-14 11:58:04-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:59:04-[], isDone=false
+[DEBUG]2017-09-14 11:59:04-[], 正常执行:
+[DEBUG]2017-09-14 11:59:04-[], 统计结束时间:2017-09-12 00:06:00小于当前系统时间：2017-09-14 11:59:04
+[DEBUG]2017-09-14 11:59:04-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 11:59:04-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 11:59:04-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 11:59:04-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 11:59:04-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 11:59:04-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 11:59:04-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 11:59:04-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 11:59:04-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 11:59:04-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 11:59:04-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 11:59:04-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 11:59:04-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 11:59:04-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 11:59:04-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 11:59:04-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 11:59:04-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 11:59:04-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 11:59:06-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 11:59:34-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 11:59:34-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 11:59:34-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:04:00
+[INFO ]2017-09-14 11:59:34-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:06:00
+[DEBUG]2017-09-14 11:59:34-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:06:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[INFO ]2017-09-14 15:04:58-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 15:04:58-[], 线程启动。
+[INFO ]2017-09-14 15:04:58-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 15:04:58-[], isDone=false
+[DEBUG]2017-09-14 15:04:58-[], 正常执行:
+[DEBUG]2017-09-14 15:04:58-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 15:04:58
+[DEBUG]2017-09-14 15:04:58-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:04:58-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 15:04:58-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 15:04:58-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 15:04:58-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 15:04:58-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 15:04:58-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 15:04:58-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 15:04:58-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 15:04:58-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 15:04:58-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 15:04:58-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 15:04:58-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 15:04:58-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 15:04:58-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 15:04:58-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:04:58-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 15:04:58-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000200, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000000, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 15:05:00-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:05:28-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 15:05:28-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 15:05:28-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[INFO ]2017-09-14 15:05:28-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:02:00
+[DEBUG]2017-09-14 15:05:28-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:06:28-[], isDone=false
+[DEBUG]2017-09-14 15:06:28-[], 正常执行:
+[DEBUG]2017-09-14 15:06:28-[], 统计结束时间:2017-09-12 00:04:00小于当前系统时间：2017-09-14 15:06:28
+[DEBUG]2017-09-14 15:06:28-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:06:28-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 15:06:28-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 15:06:28-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 15:06:28-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 15:06:28-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 15:06:28-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 15:06:28-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 15:06:28-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 15:06:28-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 15:06:28-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 15:06:28-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 15:06:28-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 15:06:28-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 15:06:28-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 15:06:28-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:06:28-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 15:06:28-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000400, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000200, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 15:06:29-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:06:58-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 15:06:58-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 15:06:58-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:02:00
+[INFO ]2017-09-14 15:06:58-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:04:00
+[DEBUG]2017-09-14 15:06:58-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:07:58-[], isDone=false
+[DEBUG]2017-09-14 15:07:58-[], 正常执行:
+[DEBUG]2017-09-14 15:07:58-[], 统计结束时间:2017-09-12 00:06:00小于当前系统时间：2017-09-14 15:07:58
+[DEBUG]2017-09-14 15:07:58-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:07:58-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 15:07:58-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 15:07:58-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 15:07:58-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 15:07:58-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 15:07:58-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 15:07:58-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 15:07:58-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 15:07:58-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 15:07:58-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 15:07:58-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 15:07:58-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 15:07:58-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 15:07:58-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 15:07:58-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:07:58-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 15:07:58-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 15:07:59-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-09-14 15:11:49-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 15:11:49-[], 线程启动。
+[INFO ]2017-09-14 15:11:49-[], 当前流程状态为RUNNING
+[INFO ]2017-09-14 15:11:49-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-09-14 15:11:49-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 15:11:49-[], isDone=false
+[DEBUG]2017-09-14 15:11:49-[], 正常执行:
+[DEBUG]2017-09-14 15:11:49-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 15:11:49
+[DEBUG]2017-09-14 15:11:49-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:11:49-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 15:11:49-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 15:11:49-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 15:11:49-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[INFO ]2017-09-14 15:11:49-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:02:00
+[DEBUG]2017-09-14 15:11:49-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[INFO ]2017-09-14 15:12:30-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 15:12:30-[], 线程启动。
+[INFO ]2017-09-14 15:12:30-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 15:12:30-[], isDone=false
+[DEBUG]2017-09-14 15:12:30-[], 正常执行:
+[DEBUG]2017-09-14 15:12:30-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 15:12:30
+[DEBUG]2017-09-14 15:12:30-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:12:30-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 15:12:31-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 15:12:31-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 15:12:31-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 15:12:31-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 15:12:31-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 15:12:31-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 15:12:31-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 15:12:31-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 15:12:31-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 15:12:31-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 15:12:31-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 15:12:31-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 15:12:31-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 15:12:31-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:12:31-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 15:12:31-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000200, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000000, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 15:12:32-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:13:01-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 15:13:01-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 15:13:01-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[INFO ]2017-09-14 15:13:01-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:02:00
+[DEBUG]2017-09-14 15:13:01-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[INFO ]2017-09-14 15:13:08-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 15:13:09-[], 线程启动。
+[INFO ]2017-09-14 15:13:09-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 15:13:09-[], isDone=false
+[DEBUG]2017-09-14 15:13:09-[], 正常执行:
+[DEBUG]2017-09-14 15:13:09-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 15:13:09
+[DEBUG]2017-09-14 15:13:09-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:13:09-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 15:13:09-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 15:13:09-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 15:13:09-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 15:13:09-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 15:13:09-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 15:13:09-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 15:13:09-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 15:13:09-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 15:13:09-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 15:13:09-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 15:13:09-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 15:13:09-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 15:13:09-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 15:13:09-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:13:09-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 15:13:09-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000200, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000000, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 15:13:10-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:13:39-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 15:13:39-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 15:13:39-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[INFO ]2017-09-14 15:13:39-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:02:00
+[DEBUG]2017-09-14 15:13:39-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:14:01-[], isDone=false
+[DEBUG]2017-09-14 15:14:01-[], 正常执行:
+[DEBUG]2017-09-14 15:14:01-[], 统计结束时间:2017-09-12 00:04:00小于当前系统时间：2017-09-14 15:14:01
+[DEBUG]2017-09-14 15:14:01-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:14:01-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 15:14:01-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 15:14:01-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 15:14:01-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 15:14:01-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 15:14:01-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 15:14:01-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 15:14:01-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 15:14:01-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 15:14:01-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 15:14:01-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 15:14:01-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 15:14:01-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 15:14:01-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 15:14:01-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:14:01-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 15:14:01-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000400, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000200, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 15:14:02-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:14:31-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 15:14:31-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 15:14:31-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:02:00
+[INFO ]2017-09-14 15:14:31-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:04:00
+[DEBUG]2017-09-14 15:14:31-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:14:39-[], isDone=false
+[DEBUG]2017-09-14 15:14:39-[], 正常执行:
+[DEBUG]2017-09-14 15:14:39-[], 统计结束时间:2017-09-12 00:04:00小于当前系统时间：2017-09-14 15:14:39
+[DEBUG]2017-09-14 15:14:39-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:14:39-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 15:14:39-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 15:14:39-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 15:14:39-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 15:14:39-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 15:14:39-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 15:14:39-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 15:14:39-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 15:14:39-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 15:14:39-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 15:14:39-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 15:14:39-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 15:14:39-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 15:14:39-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 15:14:39-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:14:39-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 15:14:39-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000400, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000200, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 15:14:40-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:15:09-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 15:15:09-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 15:15:09-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:02:00
+[INFO ]2017-09-14 15:15:09-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:04:00
+[DEBUG]2017-09-14 15:15:09-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[INFO ]2017-09-14 15:22:58-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 15:22:58-[], 线程启动。
+[INFO ]2017-09-14 15:22:58-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 15:22:58-[], isDone=false
+[DEBUG]2017-09-14 15:22:58-[], 正常执行:
+[DEBUG]2017-09-14 15:22:58-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 15:22:58
+[DEBUG]2017-09-14 15:22:58-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 15:22:58-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 15:22:58-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 15:22:58-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 15:22:58-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 15:22:58-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 15:22:58-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 15:22:58-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 15:22:58-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 15:22:58-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 15:22:58-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 15:22:58-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 15:22:58-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 15:22:58-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 15:22:58-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 15:22:58-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:22:58-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 15:22:58-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000200, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000000, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 15:23:00-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 15:23:28-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 15:23:28-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 15:23:28-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[INFO ]2017-09-14 15:23:28-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:02:00
+[DEBUG]2017-09-14 15:23:28-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[INFO ]2017-09-14 16:37:03-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 16:37:03-[], 线程启动。
+[INFO ]2017-09-14 16:37:03-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 16:37:03-[], isDone=false
+[DEBUG]2017-09-14 16:37:03-[], 正常执行:
+[DEBUG]2017-09-14 16:37:03-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 16:37:03
+[DEBUG]2017-09-14 16:37:03-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:37:03-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 16:37:03-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 16:37:03-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 16:37:03-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 16:37:03-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 16:37:03-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 16:37:03-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 16:37:03-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 16:37:03-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 16:37:03-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 16:37:03-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 16:37:03-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 16:37:03-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 16:37:03-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 16:37:03-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:37:03-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 16:37:03-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000200, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000000, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 16:37:05-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:37:33-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 16:37:33-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 16:37:33-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[INFO ]2017-09-14 16:37:33-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:02:00
+[DEBUG]2017-09-14 16:37:33-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:38:33-[], isDone=false
+[DEBUG]2017-09-14 16:38:33-[], 正常执行:
+[DEBUG]2017-09-14 16:38:33-[], 统计结束时间:2017-09-12 00:04:00小于当前系统时间：2017-09-14 16:38:33
+[DEBUG]2017-09-14 16:38:33-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:38:33-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 16:38:33-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 16:38:33-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 16:38:33-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 16:38:33-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 16:38:33-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 16:38:33-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 16:38:33-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 16:38:33-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 16:38:33-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 16:38:33-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 16:38:33-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 16:38:33-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 16:38:33-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 16:38:33-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:38:33-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 16:38:33-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000400, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000200, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 16:38:35-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:39:03-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 16:39:03-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 16:39:03-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:02:00
+[INFO ]2017-09-14 16:39:03-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:04:00
+[DEBUG]2017-09-14 16:39:03-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:40:03-[], isDone=false
+[DEBUG]2017-09-14 16:40:03-[], 正常执行:
+[DEBUG]2017-09-14 16:40:03-[], 统计结束时间:2017-09-12 00:06:00小于当前系统时间：2017-09-14 16:40:03
+[DEBUG]2017-09-14 16:40:03-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:40:03-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 16:40:03-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 16:40:03-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 16:40:03-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 16:40:03-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 16:40:03-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 16:40:03-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 16:40:03-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 16:40:03-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 16:40:03-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 16:40:03-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 16:40:03-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 16:40:03-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 16:40:03-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 16:40:03-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:40:03-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 16:40:03-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 16:40:05-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:40:33-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 16:40:33-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 16:40:33-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:04:00
+[INFO ]2017-09-14 16:40:33-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:06:00
+[DEBUG]2017-09-14 16:40:33-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:06:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:41:33-[], isDone=false
+[DEBUG]2017-09-14 16:41:33-[], 正常执行:
+[DEBUG]2017-09-14 16:41:33-[], 统计结束时间:2017-09-12 00:08:00小于当前系统时间：2017-09-14 16:41:33
+[DEBUG]2017-09-14 16:41:33-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:06:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:41:33-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 16:41:33-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 16:41:33-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 16:41:33-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 16:41:33-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 16:41:33-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 16:41:33-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 16:41:33-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 16:41:33-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 16:41:33-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 16:41:33-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 16:41:33-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 16:41:33-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 16:41:33-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 16:41:33-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:41:33-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 16:41:33-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000800, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000600, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 16:41:34-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:42:03-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 16:42:03-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 16:42:03-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:06:00
+[INFO ]2017-09-14 16:42:03-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:08:00
+[DEBUG]2017-09-14 16:42:03-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:08:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:43:03-[], isDone=false
+[DEBUG]2017-09-14 16:43:03-[], 正常执行:
+[DEBUG]2017-09-14 16:43:03-[], 统计结束时间:2017-09-12 00:10:00小于当前系统时间：2017-09-14 16:43:03
+[DEBUG]2017-09-14 16:43:03-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:08:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:43:03-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 16:43:03-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 16:43:03-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 16:43:03-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 16:43:03-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 16:43:03-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 16:43:03-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 16:43:03-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 16:43:03-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 16:43:03-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 16:43:03-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 16:43:03-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 16:43:03-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 16:43:03-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 16:43:03-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:43:03-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 16:43:03-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912001000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 16:43:05-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:43:33-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 16:43:33-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 16:43:33-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:08:00
+[INFO ]2017-09-14 16:43:33-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:10:00
+[DEBUG]2017-09-14 16:43:33-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:10:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:44:33-[], isDone=false
+[DEBUG]2017-09-14 16:44:33-[], 正常执行:
+[DEBUG]2017-09-14 16:44:33-[], 统计结束时间:2017-09-12 00:12:00小于当前系统时间：2017-09-14 16:44:33
+[DEBUG]2017-09-14 16:44:33-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:10:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:44:33-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 16:44:33-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 16:44:33-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 16:44:33-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 16:44:33-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 16:44:33-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 16:44:33-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 16:44:33-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 16:44:33-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 16:44:33-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 16:44:33-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 16:44:33-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 16:44:33-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 16:44:33-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 16:44:33-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:44:33-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 16:44:33-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912001200, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912001000, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 16:44:35-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:45:03-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 16:45:03-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 16:45:03-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:10:00
+[INFO ]2017-09-14 16:45:03-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:12:00
+[DEBUG]2017-09-14 16:45:03-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:12:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[INFO ]2017-09-14 16:45:43-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-14 16:45:43-[], 线程启动。
+[INFO ]2017-09-14 16:45:43-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-14 16:45:43-[], isDone=false
+[DEBUG]2017-09-14 16:45:43-[], 正常执行:
+[DEBUG]2017-09-14 16:45:43-[], 统计结束时间:2017-09-12 00:02:00小于当前系统时间：2017-09-14 16:45:43
+[DEBUG]2017-09-14 16:45:43-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:45:43-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 16:45:43-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 16:45:43-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 16:45:43-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 16:45:43-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 16:45:43-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 16:45:43-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 16:45:43-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 16:45:43-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 16:45:43-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 16:45:43-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 16:45:43-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 16:45:43-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 16:45:43-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 16:45:43-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:45:43-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 16:45:43-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912000200, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912000000, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 16:45:45-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:46:03-[], isDone=false
+[DEBUG]2017-09-14 16:46:03-[], 正常执行:
+[DEBUG]2017-09-14 16:46:03-[], 统计结束时间:2017-09-12 00:14:00小于当前系统时间：2017-09-14 16:46:03
+[DEBUG]2017-09-14 16:46:03-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:12:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:46:03-[], 将流程的状态置为RUNNING
+[INFO ]2017-09-14 16:46:03-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-14 16:46:03-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-14 16:46:03-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-14 16:46:03-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-14 16:46:03-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-09-14 16:46:03-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-14 16:46:03-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-14 16:46:03-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-09-14 16:46:03-[Remote_Sell_提数], Shell_WorkDir:/bin
+[DEBUG]2017-09-14 16:46:03-[Remote_Sell_提数], command:[/bin/pwd]
+[DEBUG]2017-09-14 16:46:03-[Remote_Sell_提数], ErrorStream>
+[DEBUG]2017-09-14 16:46:03-[Remote_Sell_提数], InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-14 16:46:03-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-09-14 16:46:03-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:46:03-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-14 16:46:03-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170912001400, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170912001200, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 12 16:15:57 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-14 16:46:04-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-14 16:46:13-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 16:46:13-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 16:46:13-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:00:00
+[INFO ]2017-09-14 16:46:13-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:02:00
+[DEBUG]2017-09-14 16:46:13-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:02:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-14 16:46:33-[], 接着再选可运行的任务
+[DEBUG]2017-09-14 16:46:33-[], ======  MEMO:  Meno: Remote_Task
+[INFO ]2017-09-14 16:46:33-[], Remote_Task_Flow [DESC: Remote_Task]流程执行完成！统计时间:2017-09-12 00:12:00
+[INFO ]2017-09-14 16:46:33-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task]" 2017-09-12 00:14:00
+[DEBUG]2017-09-14 16:46:33-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-12 00:14:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+

@@ -1,0 +1,338 @@
+[INFO ]2017-10-17 16:56:12-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-17 16:56:13-[], 线程启动。
+[INFO ]2017-10-17 16:56:13-[], 当前流程状态为RUNNING
+[INFO ]2017-10-17 16:56:13-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-10-17 16:56:13-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-10-17 16:56:13-[], isDone=false
+[DEBUG]2017-10-17 16:56:13-[], 正常执行:
+[DEBUG]2017-10-17 16:56:13-[], 统计结束时间:2017-10-11 00:06:00小于当前系统时间：2017-10-17 16:56:13
+[DEBUG]2017-10-17 16:56:13-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-10-11 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-17 16:56:13-[], 将流程的状态置为RUNNING
+[INFO ]2017-10-17 16:56:13-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-10-17 16:56:13-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-17 16:56:13-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-17 16:56:13-[], 任务Remote_邮件通知放入线程池排队
+[INFO ]2017-10-17 16:56:13-[Remote_邮件通知], 开始执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 16:56:13-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-17 16:56:24-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20171011000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20171011000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=7, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=13, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Wed Oct 11 16:11:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-17 16:56:24-[Remote_邮件通知], catch (Exception e): 
+javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:153)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:103)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-17 16:56:24-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-17 16:56:24-[Remote_邮件通知], javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+[INFO ]2017-10-17 16:56:24-[Remote_邮件通知], 完成执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 16:56:43-[], 接着再选可运行的任务
+[DEBUG]2017-10-17 16:56:43-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-17 16:56:43-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-17 16:56:43-[], 任务Remote_邮件通知放入线程池排队
+[INFO ]2017-10-17 16:56:43-[Remote_邮件通知], 开始执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 16:56:43-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-17 16:57:00-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20171011000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20171011000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=7, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=13, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Wed Oct 11 16:11:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-17 16:57:01-[Remote_邮件通知], catch (Exception e): 
+javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:153)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:103)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-17 16:57:01-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-17 16:57:01-[Remote_邮件通知], javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+[INFO ]2017-10-17 16:57:01-[Remote_邮件通知], 完成执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 16:57:13-[], 接着再选可运行的任务
+[DEBUG]2017-10-17 16:57:13-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-17 16:57:13-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-17 16:57:13-[], 任务Remote_邮件通知放入线程池排队
+[INFO ]2017-10-17 16:57:13-[Remote_邮件通知], 开始执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 16:57:13-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-17 16:57:13-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20171011000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20171011000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=7, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=13, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Wed Oct 11 16:11:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-17 16:57:13-[Remote_邮件通知], catch (Exception e): 
+javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:153)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:103)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-17 16:57:13-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-17 16:57:13-[Remote_邮件通知], javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+[INFO ]2017-10-17 16:57:13-[Remote_邮件通知], 完成执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-17 17:31:55-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-17 17:31:55-[], 线程启动。
+[INFO ]2017-10-17 17:31:55-[], 当前流程状态为RUNNING
+[INFO ]2017-10-17 17:31:55-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-10-17 17:31:55-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-10-17 17:31:55-[], isDone=false
+[DEBUG]2017-10-17 17:31:55-[], 正常执行:
+[DEBUG]2017-10-17 17:31:55-[], 统计结束时间:2017-10-11 00:06:00小于当前系统时间：2017-10-17 17:31:55
+[DEBUG]2017-10-17 17:31:55-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-10-11 00:04:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-17 17:31:55-[], 将流程的状态置为RUNNING
+[INFO ]2017-10-17 17:31:55-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-10-17 17:31:55-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-17 17:31:55-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-17 17:31:55-[], 任务Remote_邮件通知放入线程池排队
+[INFO ]2017-10-17 17:31:55-[Remote_邮件通知], 开始执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:31:55-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-17 17:31:55-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20171011000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20171011000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=7, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=13, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Wed Oct 11 16:11:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-17 17:31:56-[Remote_邮件通知], catch (Exception e): 
+javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:153)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:103)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-17 17:31:56-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-17 17:31:56-[Remote_邮件通知], javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+[INFO ]2017-10-17 17:31:56-[Remote_邮件通知], 完成执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:32:25-[], 接着再选可运行的任务
+[DEBUG]2017-10-17 17:32:25-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-17 17:32:25-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-17 17:32:25-[], 任务Remote_邮件通知放入线程池排队
+[INFO ]2017-10-17 17:32:25-[Remote_邮件通知], 开始执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:32:25-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-17 17:32:25-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20171011000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20171011000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=7, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=13, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Wed Oct 11 16:11:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-17 17:32:26-[Remote_邮件通知], catch (Exception e): 
+javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:153)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:103)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-17 17:32:26-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-17 17:32:26-[Remote_邮件通知], javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+[INFO ]2017-10-17 17:32:26-[Remote_邮件通知], 完成执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:32:55-[], 接着再选可运行的任务
+[DEBUG]2017-10-17 17:32:55-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-17 17:32:55-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-17 17:32:55-[], 任务Remote_邮件通知放入线程池排队
+[INFO ]2017-10-17 17:32:55-[Remote_邮件通知], 开始执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:32:55-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-17 17:32:55-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20171011000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20171011000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=7, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=13, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Wed Oct 11 16:11:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-17 17:32:56-[Remote_邮件通知], catch (Exception e): 
+javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:153)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:103)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-17 17:32:56-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-17 17:32:56-[Remote_邮件通知], javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+[INFO ]2017-10-17 17:32:56-[Remote_邮件通知], 完成执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:33:25-[], 接着再选可运行的任务
+[DEBUG]2017-10-17 17:33:25-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-17 17:33:25-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-17 17:33:25-[], 任务Remote_邮件通知放入线程池排队
+[INFO ]2017-10-17 17:33:25-[Remote_邮件通知], 开始执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:33:25-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-17 17:33:25-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20171011000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20171011000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=7, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=13, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Wed Oct 11 16:11:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-17 17:33:26-[Remote_邮件通知], catch (Exception e): 
+javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:153)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:103)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-17 17:33:26-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-17 17:33:26-[Remote_邮件通知], javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+[INFO ]2017-10-17 17:33:26-[Remote_邮件通知], 完成执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:33:55-[], 接着再选可运行的任务
+[DEBUG]2017-10-17 17:33:55-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-17 17:33:55-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-17 17:33:55-[], 任务Remote_邮件通知放入线程池排队
+[INFO ]2017-10-17 17:33:55-[Remote_邮件通知], 开始执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:33:55-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-17 17:33:55-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20171011000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20171011000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=7, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=13, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Wed Oct 11 16:11:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-17 17:33:56-[Remote_邮件通知], catch (Exception e): 
+javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:153)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:103)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-17 17:33:56-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-17 17:33:56-[Remote_邮件通知], javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+[INFO ]2017-10-17 17:33:56-[Remote_邮件通知], 完成执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:34:25-[], 接着再选可运行的任务
+[DEBUG]2017-10-17 17:34:25-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-17 17:34:25-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-17 17:34:25-[], 任务Remote_邮件通知放入线程池排队
+[INFO ]2017-10-17 17:34:25-[Remote_邮件通知], 开始执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-17 17:34:25-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-17 17:34:25-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20171011000600, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20171011000400, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=7, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=13, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Wed Oct 11 16:11:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-17 17:34:26-[Remote_邮件通知], catch (Exception e): 
+javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:826)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:761)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:685)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:153)
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:103)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-17 17:34:26-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-17 17:34:26-[Remote_邮件通知], javax.mail.AuthenticationFailedException: 535 Error: ?????????¨?????????ê?é????: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+[INFO ]2017-10-17 17:34:26-[Remote_邮件通知], 完成执行任务：ID="13",name="Remote_邮件通知",DESC:Remote_邮件通知"

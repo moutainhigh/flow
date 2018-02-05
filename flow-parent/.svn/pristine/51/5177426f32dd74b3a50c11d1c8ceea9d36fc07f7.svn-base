@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<config>
+  <jdbc>
+    <driver>com.mysql.jdbc.Driver</driver>
+    <user>flowengine</user>
+    <password>flowengine</password>
+    <url>jdbc:mysql://10.200.65.64:3306/flowengine</url>
+  </jdbc>
+  <!-- 服务器日志级别 -->
+  <level>DEBUG</level>
+</config>

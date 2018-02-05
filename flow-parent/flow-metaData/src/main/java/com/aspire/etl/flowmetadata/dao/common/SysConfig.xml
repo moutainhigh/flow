@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="GBK"?>
+<SysConfigs>
+<SysConfig>
+  <ID>1</ID>
+  <configName>SYS_LOG_TO_OAM</configName>
+  <configValue>1</configValue>
+  <configDesc>为1时为OAM写告警日志，为0时不写日志到OAM(def:0)</configDesc>
+  <stage>SYS</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>2</ID>
+  <configName>SYS_LOG_PATH</configName>
+  <configValue>./log</configValue>
+  <configDesc>日志文件的路径,LogToFile为1时有效(def:./log)</configDesc>
+  <stage>SYS</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>3</ID>
+  <configName>SYS_INTERVAL</configName>
+  <configValue>0</configValue>
+  <configDesc>时间间隔(秒),如果为0,则扫描一遍后退出，如果大于0,则休眠后再重新开始</configDesc>
+  <stage>SYS</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>4</ID>
+  <configName>SYS_RUN_FLAG</configName>
+  <configValue>0</configValue>
+  <configDesc>是否要判断程序已运行，0时不需要，1时需要(def:1)</configDesc>
+  <stage>SYS</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>5</ID>
+  <configName>SYS_COMPUTER_IP</configName>
+  <configValue>10.1.3.105</configValue>
+  <configDesc>ETL_BAS引擎部署机器的IP</configDesc>
+  <stage>SYS</stage>
+  <type>DEPLOY</type>
+</SysConfig>
+<SysConfig>
+  <ID>6</ID>
+  <configName>XMLRPC_PORT</configName>
+  <configValue>4040</configValue>
+  <configDesc>ETL_BAS引擎的监控端口</configDesc>
+  <stage>SYS</stage>
+  <type>DEPLOY</type>
+</SysConfig>
+<SysConfig>
+  <ID>7</ID>
+  <configName>SYS_PROG_PATH</configName>
+  <configValue>/data1/user/dasc/spms/etl_bas</configValue>
+  <configDesc>ETL_BAS的部署目录</configDesc>
+  <stage>SYS</stage>
+  <type>PROGRAM</type>
+</SysConfig>
+<SysConfig>
+  <ID>8</ID>
+  <configName>SYS_PROVINCE</configName>
+  <configValue>ETL_BAS</configValue>
+  <configDesc>站点名称</configDesc>
+  <stage>SYS</stage>
+  <type>DEPLOY</type>
+</SysConfig>
+<SysConfig>
+  <ID>9</ID>
+  <configName>SYS_GSS_IP</configName>
+  <configValue>10.1.3.105</configValue>
+  <configDesc>代理服务器部署的IP</configDesc>
+  <stage>SYS</stage>
+  <type>DEPLOY</type>
+</SysConfig>
+<SysConfig>
+  <ID>10</ID>
+  <configName>SYS_SECURE_PORT</configName>
+  <configValue>4000</configValue>
+  <configDesc>密码安全管理代理的端口</configDesc>
+  <stage>SYS</stage>
+  <type>DEPLOY</type>
+</SysConfig>
+<SysConfig>
+  <ID>11</ID>
+  <configName>SYS_LOG_PORT</configName>
+  <configValue>4001</configValue>
+  <configDesc>日志代理服务的端口</configDesc>
+  <stage>SYS</stage>
+  <type>DEPLOY</type>
+</SysConfig>
+<SysConfig>
+  <ID>12</ID>
+  <configName>DB_CONNINFO_PORT</configName>
+  <configValue>4002</configValue>
+  <configDesc>数据源配置代理的端口</configDesc>
+  <stage>SYS</stage>
+  <type>DEPLOY</type>
+</SysConfig>
+<SysConfig>
+  <ID>13</ID>
+  <configName>SYS_DB_ALIAS</configName>
+  <configValue>REPORT</configValue>
+  <configDesc>报表业务数据库别名</configDesc>
+  <stage>SYS</stage>
+  <type>DEPLOY</type>
+</SysConfig>
+<SysConfig>
+  <ID>14</ID>
+  <configName>CONSOLE_LEVEL</configName>
+  <configValue>INFO</configValue>
+  <configDesc>直接输出到控制台日志级别</configDesc>
+  <stage>ENGINE</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>15</ID>
+  <configName>CONSOLE_LAYOUT</configName>
+  <configValue>[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n</configValue>
+  <configDesc>直接输出到控制台的日志Layout</configDesc>
+  <stage>ENGINE</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>17</ID>
+  <configName>JDBC_LAYOUT</configName>
+  <configValue>insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values (&apos;%X{TASKFLOW}&apos;, &apos;%X{TASK}&apos;, %X{REDO_FLAG},&apos;%.5p&apos;, &apos;%m&apos;, to_date(&apos;%X{STATTIME}&apos;, &apos;yyyy-mm-dd hh24:mi:ss&apos;), to_date(&apos;%X{ENDTIME}&apos;, &apos;yyyy-mm-dd hh24:mi:ss&apos;),sysdate)</configValue>
+  <configDesc>输出到数据库的日志Layout</configDesc>
+  <stage>ENGINE</stage>
+  <type>DESIGN</type>
+</SysConfig>
+<SysConfig>
+  <ID>16</ID>
+  <configName>FILE_LAYOUT</configName>
+  <configValue>[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n</configValue>
+  <configDesc>输出到文件的日志Layout</configDesc>
+  <stage>ENGINE</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>19</ID>
+  <configName>FLOW_SLEEP_TIME</configName>
+  <configValue>60</configValue>
+  <configDesc>流程运行的间隔时间(单位秒)</configDesc>
+  <stage>ENGINE</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>18</ID>
+  <configName>OAM_JDBC_LAYOUT</configName>
+  <configValue>insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values (&apos;%X{HOSTIP}&apos;, &apos;%X{SOURCE}&apos;, &apos;%X{APPENDID}&apos;, &apos;%m&apos;, sysdate, %X{CURRENTLY})</configValue>
+  <configDesc>输出到数据库的OAM信息Layout</configDesc>
+  <stage>ENGINE</stage>
+  <type>DESIGN</type>
+</SysConfig>
+<SysConfig>
+  <ID>21</ID>
+  <configName>TASK_SLEEP_TIME</configName>
+  <configValue>1</configValue>
+  <configDesc>任务运行的间隔时间(单位秒)</configDesc>
+  <stage>ENGINE</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>20</ID>
+  <configName>TASK_TRY_SLEEP_TIME</configName>
+  <configValue>60</configValue>
+  <configDesc>任务重试间隔时间(单位秒)</configDesc>
+  <stage>ENGINE</stage>
+  <type>RUN</type>
+</SysConfig>
+<SysConfig>
+  <ID>22</ID>
+  <configName>DB_ALIAS_LIST</configName>
+  <configValue>ETL_BAS,REPORT,MISC_DB</configValue>
+  <configDesc>数据库别名列表</configDesc>
+  <stage>SYS</stage>
+  <type>PROGRAM</type>
+</SysConfig>
+</SysConfigs>

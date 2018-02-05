@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<config>
+	<!-- 元数据配置文件路径 -->	
+	<metadataConfigFile>../FlowMetaData/cfg/metadata.xml</metadataConfigFile>
+	
+	<!-- 服务器日志级别 -->
+	<level>INFO</level>
+	
+	
+</config>

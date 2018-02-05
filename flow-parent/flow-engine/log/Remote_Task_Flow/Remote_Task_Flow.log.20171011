@@ -1,0 +1,865 @@
+[INFO ]2017-10-11 14:41:51-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 14:41:52-[], 线程启动。
+[INFO ]2017-10-11 14:41:52-[], 当前流程状态为RUNNING
+[INFO ]2017-10-11 14:41:52-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-10-11 14:41:52-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-10-11 14:41:52-[], isDone=false
+[DEBUG]2017-10-11 14:41:52-[], 正常执行:
+[DEBUG]2017-10-11 14:41:52-[], 统计结束时间:2017-09-19 00:38:00小于当前系统时间：2017-10-11 14:41:52
+[DEBUG]2017-10-11 14:41:52-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task1
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-19 00:36:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-11 14:41:52-[], 将流程的状态置为RUNNING
+[INFO ]2017-10-11 14:41:52-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-10-11 14:41:52-[], ======  MEMO:  Meno: Remote_Task1
+[INFO ]2017-10-11 14:41:52-[], Remote_Task_Flow [DESC: Remote_Task1]流程执行完成！统计时间:2017-09-19 00:36:00
+[INFO ]2017-10-11 14:42:10-[], 下一个ETL流程实例"Remote_Task_Flow [DESC: Remote_Task1]" 2017-09-19 00:38:00
+[DEBUG]2017-10-11 14:42:10-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task1
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-19 00:38:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-11 14:43:10-[], isDone=false
+[DEBUG]2017-10-11 14:43:10-[], 正常执行:
+[DEBUG]2017-10-11 14:43:10-[], 统计结束时间:2017-09-19 00:40:00小于当前系统时间：2017-10-11 14:43:10
+[DEBUG]2017-10-11 14:43:10-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task1
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-19 00:38:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-11 14:43:10-[], 将流程的状态置为RUNNING
+[INFO ]2017-10-11 14:43:10-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-10-11 14:43:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 14:43:10-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-10-11 14:43:10-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-10-11 14:43:10-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-10-11 14:43:10-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 14:43:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:43:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:44:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:44:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:44:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:44:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 14:45:08-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-10-11 14:45:09-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 14:45:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:45:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:45:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:45:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:46:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:46:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:46:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:46:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:47:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:47:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:47:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:47:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:48:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:48:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:48:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:48:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:49:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:49:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:49:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:49:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:50:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:50:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:50:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:50:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:51:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:51:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:51:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:51:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:52:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:52:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:52:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:52:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:53:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:53:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:53:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:53:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:54:10-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:54:10-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:54:40-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:54:40-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:55:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:55:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:55:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:55:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:56:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:56:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:56:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:56:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:57:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:57:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:57:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:57:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:58:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:58:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:58:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:58:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:59:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:59:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 14:59:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 14:59:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:00:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:00:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:00:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:00:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:01:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:01:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:01:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:01:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:02:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:02:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:02:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:02:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:03:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:03:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:03:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:03:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:04:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:04:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:04:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:04:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:05:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:05:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:05:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:05:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:06:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:06:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:06:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:06:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:07:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:07:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:07:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:07:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:08:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:08:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:08:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:08:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:09:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:09:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:09:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:09:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:10:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:10:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:10:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:10:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:11:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:11:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:11:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:11:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:12:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:12:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:12:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:12:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:13:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:13:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:13:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:13:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:14:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:14:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:14:41-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:14:41-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 15:15:11-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 15:15:11-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 16:50:45-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:50:45-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:50:45-[], 线程启动。
+[INFO ]2017-10-11 16:50:45-[], 线程启动。
+[INFO ]2017-10-11 16:50:45-[], 当前流程状态为RUNNING
+[INFO ]2017-10-11 16:50:45-[], 当前流程状态为RUNNING
+[INFO ]2017-10-11 16:50:45-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-10-11 16:50:45-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-10-11 16:50:45-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[INFO ]2017-10-11 16:50:45-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-10-11 16:50:45-[], isDone=false
+[DEBUG]2017-10-11 16:50:45-[], isDone=false
+[DEBUG]2017-10-11 16:50:45-[], 正常执行:
+[DEBUG]2017-10-11 16:50:45-[], 正常执行:
+[DEBUG]2017-10-11 16:50:45-[], 统计结束时间:2017-09-19 00:40:00小于当前系统时间：2017-10-11 16:50:45
+[DEBUG]2017-10-11 16:50:45-[], 统计结束时间:2017-09-19 00:40:00小于当前系统时间：2017-10-11 16:50:45
+[DEBUG]2017-10-11 16:50:45-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task1
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-19 00:38:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-11 16:50:45-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task1
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-19 00:38:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-11 16:50:45-[], 将流程的状态置为RUNNING
+[DEBUG]2017-10-11 16:50:45-[], 将流程的状态置为RUNNING
+[INFO ]2017-10-11 16:50:45-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[INFO ]2017-10-11 16:50:45-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-10-11 16:50:45-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 16:50:45-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 16:50:45-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[INFO ]2017-10-11 16:50:45-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-10-11 16:50:45-[], 任务Remote_Sell_提数放入线程池排队
+[DEBUG]2017-10-11 16:50:45-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-10-11 16:50:45-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:50:45-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:50:45-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:50:45-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-10-11 16:50:45-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:50:45-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:50:45-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:50:45-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:50:45-[Remote_Sell_提数], Shell_WorkDir:null
+[DEBUG]2017-10-11 16:50:45-[Remote_Sell_提数], Shell_WorkDir:null
+[ERROR]2017-10-11 16:50:45-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR]2017-10-11 16:50:45-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:50:45-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:50:45-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:50:45-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:50:45-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:50:45-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:50:45-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:50:45-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:50:45-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:50:45-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[DEBUG]2017-10-11 16:50:45-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:50:45-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:50:45-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:50:45-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:50:45-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:50:45-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:50:45-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:50:45-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:50:45-[], 初始化任务线程池,最大并发任务数：1
+[DEBUG]2017-10-11 16:51:15-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:51:15-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:51:15-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 16:51:15-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 16:51:15-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[INFO ]2017-10-11 16:51:15-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-10-11 16:51:15-[], 任务Remote_Sell_提数放入线程池排队
+[DEBUG]2017-10-11 16:51:15-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-10-11 16:51:15-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:51:15-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:51:15-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:51:15-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-10-11 16:51:15-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:51:15-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:51:15-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:51:15-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:51:15-[Remote_Sell_提数], Shell_WorkDir:null
+[DEBUG]2017-10-11 16:51:15-[Remote_Sell_提数], Shell_WorkDir:null
+[ERROR]2017-10-11 16:51:15-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR]2017-10-11 16:51:15-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:51:15-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:51:15-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:51:15-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:51:15-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:51:15-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:51:15-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:51:15-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:51:15-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:51:15-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[DEBUG]2017-10-11 16:51:15-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:51:15-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:51:15-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:51:15-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:51:15-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:51:15-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:51:15-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:51:45-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:51:45-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:51:45-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 16:51:45-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 16:51:45-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[INFO ]2017-10-11 16:51:45-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-10-11 16:51:45-[], 任务Remote_Sell_提数放入线程池排队
+[DEBUG]2017-10-11 16:51:45-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-10-11 16:51:45-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:51:45-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:51:45-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:51:45-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-10-11 16:51:45-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:51:45-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:51:45-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:51:45-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:51:45-[Remote_Sell_提数], Shell_WorkDir:null
+[DEBUG]2017-10-11 16:51:45-[Remote_Sell_提数], Shell_WorkDir:null
+[ERROR]2017-10-11 16:51:45-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR]2017-10-11 16:51:45-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:51:45-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:51:45-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:51:45-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:51:45-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:51:45-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:51:45-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:51:45-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:51:45-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:51:45-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[DEBUG]2017-10-11 16:51:45-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:51:45-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:51:45-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:51:45-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:51:45-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:51:45-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:51:45-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:52:15-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:52:15-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:52:15-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 16:52:15-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 16:52:15-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[INFO ]2017-10-11 16:52:15-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-10-11 16:52:15-[], 任务Remote_Sell_提数放入线程池排队
+[DEBUG]2017-10-11 16:52:15-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-10-11 16:52:15-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:52:15-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:52:15-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:52:15-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-10-11 16:52:15-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:52:15-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:52:15-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:52:15-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:52:15-[Remote_Sell_提数], Shell_WorkDir:null
+[DEBUG]2017-10-11 16:52:15-[Remote_Sell_提数], Shell_WorkDir:null
+[ERROR]2017-10-11 16:52:15-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR]2017-10-11 16:52:15-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:52:15-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:52:15-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:52:15-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:52:15-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:52:15-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:52:15-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:52:15-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:52:15-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:52:15-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[DEBUG]2017-10-11 16:52:15-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:52:15-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:52:15-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:52:15-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:52:15-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:52:15-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:52:15-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:52:45-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:52:45-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:52:45-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 16:52:45-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 16:52:45-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[INFO ]2017-10-11 16:52:45-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-10-11 16:52:45-[], 任务Remote_Sell_提数放入线程池排队
+[DEBUG]2017-10-11 16:52:45-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-10-11 16:52:45-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:52:45-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:52:45-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:52:45-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-10-11 16:52:45-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:52:45-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:52:45-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:52:45-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:52:45-[Remote_Sell_提数], Shell_WorkDir:null
+[DEBUG]2017-10-11 16:52:45-[Remote_Sell_提数], Shell_WorkDir:null
+[ERROR]2017-10-11 16:52:45-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR]2017-10-11 16:52:45-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:52:45-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:52:45-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:52:45-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:52:45-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:52:45-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:52:45-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:52:45-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:52:45-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:52:45-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[DEBUG]2017-10-11 16:52:45-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:52:45-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:52:45-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:52:45-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:52:45-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:52:45-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:52:45-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:53:15-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:53:15-[], 接着再选可运行的任务
+[DEBUG]2017-10-11 16:53:15-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 16:53:15-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 16:53:15-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[INFO ]2017-10-11 16:53:15-[], 将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-10-11 16:53:15-[], 任务Remote_Sell_提数放入线程池排队
+[DEBUG]2017-10-11 16:53:15-[], 任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-10-11 16:53:15-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:53:15-[], 将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[INFO ]2017-10-11 16:53:15-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:53:15-[Remote_Sell_提数], 开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-10-11 16:53:15-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:53:15-[Remote_Sell_提数], 将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-10-11 16:53:15-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:53:15-[], 任务Remote_邮件通知放入线程池排队
+[DEBUG]2017-10-11 16:53:15-[Remote_Sell_提数], Shell_WorkDir:null
+[DEBUG]2017-10-11 16:53:15-[Remote_Sell_提数], Shell_WorkDir:null
+[ERROR]2017-10-11 16:53:15-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR]2017-10-11 16:53:15-[Remote_Sell_提数], 
+java.lang.NullPointerException
+	at com.aspire.etl.plugins.Shell.execute(Shell.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:53:15-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:53:15-[Remote_Sell_提数], 完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[INFO ]2017-10-11 16:53:15-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:53:15-[Remote_邮件通知], 开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-10-11 16:53:15-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:53:15-[Remote_邮件通知], 将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-10-11 16:53:15-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:53:15-[Remote_邮件通知], Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[DEBUG]2017-10-11 16:53:15-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[DEBUG]2017-10-11 16:53:15-[Remote_邮件通知], catch (Exception e): 
+java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+	at com.aspire.etl.plugins.QQMailUtil.sendMail(QQMailUtil.java:100)
+	at com.aspire.etl.plugins.Email.execute(Email.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.aspire.etl.flowengine.taskcontext.JavaContext.call(JavaContext.java:83)
+	at com.aspire.etl.flowengine.TaskContext.run(TaskContext.java:59)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at com.aspire.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ]2017-10-11 16:53:15-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:53:15-[Remote_邮件通知],  Email.execute() 邮件未发送，请检查邮件服务器地址、端口、用户名和密码是否正确！  
+[INFO ]2017-10-11 16:53:15-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:53:15-[Remote_邮件通知], java.lang.IllegalArgumentException: {OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919004000, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, FILELOGLEVEL=DEBUG, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task1, STATTIME=20170919003800, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-10-11 16:53:15-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:53:15-[Remote_邮件通知], 完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-10-11 16:54:31-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:54:31-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:54:31-[], 线程启动。
+[INFO ]2017-10-11 16:54:31-[], 线程启动。
+[INFO ]2017-10-11 16:54:31-[], 当前流程状态为RUNNING
+[INFO ]2017-10-11 16:54:31-[], 当前流程状态为RUNNING
+[INFO ]2017-10-11 16:54:31-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:54:31-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:54:31-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-10-11 16:54:31-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-10-11 16:54:31-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[INFO ]2017-10-11 16:54:31-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-10-11 16:54:31-[], isDone=false
+[DEBUG]2017-10-11 16:54:31-[], isDone=false
+[DEBUG]2017-10-11 16:54:31-[], 正常执行:
+[DEBUG]2017-10-11 16:54:31-[], 正常执行:
+[DEBUG]2017-10-11 16:54:31-[], 统计结束时间:2017-09-19 00:40:00小于当前系统时间：2017-10-11 16:54:31
+[DEBUG]2017-10-11 16:54:31-[], 统计结束时间:2017-09-19 00:40:00小于当前系统时间：2017-10-11 16:54:31
+[DEBUG]2017-10-11 16:54:31-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task1
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-19 00:38:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-11 16:54:31-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task1
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-19 00:38:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-11 16:54:31-[], 将流程的状态置为RUNNING
+[DEBUG]2017-10-11 16:54:31-[], 将流程的状态置为RUNNING
+[INFO ]2017-10-11 16:54:31-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[INFO ]2017-10-11 16:54:31-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-10-11 16:54:31-[], 查出当前流程中所有满足可运行条件的任务列表
+[DEBUG]2017-10-11 16:54:31-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 16:57:26-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:57:26-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:57:26-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:57:26-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:57:26-[], 线程启动。
+[INFO ]2017-10-11 16:57:26-[], 线程启动。
+[INFO ]2017-10-11 16:57:26-[], 当前流程状态为RUNNING
+[INFO ]2017-10-11 16:57:26-[], 当前流程状态为RUNNING
+[INFO ]2017-10-11 16:59:08-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 16:59:08-[], 线程启动。
+[INFO ]2017-10-11 16:59:08-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-10-11 16:59:08-[], isDone=false
+[DEBUG]2017-10-11 16:59:08-[], 正常执行:
+[DEBUG]2017-10-11 16:59:08-[], 统计结束时间:2017-10-11 00:02:00小于当前系统时间：2017-10-11 16:59:08
+[DEBUG]2017-10-11 16:59:08-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-10-11 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-11 16:59:08-[], 将流程的状态置为RUNNING
+[INFO ]2017-10-11 16:59:08-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[INFO ]2017-10-11 17:19:44-[], 初始化任务线程池,最大并发任务数：1
+[INFO ]2017-10-11 17:19:44-[], 线程启动。
+[INFO ]2017-10-11 17:19:44-[], 当前流程状态为RUNNING
+[INFO ]2017-10-11 17:19:44-[], 上次运行引擎应该是被异常中断的，将流程本身，以及它里面所有状态为RUNNING和QUEUE的任务改为READY
+[INFO ]2017-10-11 17:19:44-[], 按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-10-11 17:19:44-[], isDone=false
+[DEBUG]2017-10-11 17:19:44-[], 正常执行:
+[DEBUG]2017-10-11 17:19:44-[], 统计结束时间:2017-10-11 00:02:00小于当前系统时间：2017-10-11 17:19:44
+[DEBUG]2017-10-11 17:19:44-[], 
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-10-11 00:00:00
+|suspend     = 0
+|status      = READY
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-10-11 17:19:44-[], 将流程的状态置为RUNNING
+[INFO ]2017-10-11 17:19:44-[], 开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-10-11 17:19:51-[], 查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-10-11 17:19:55-[], 将任务"DESC:Remote_FTP_上传文件"的状态标示为QUEUE
+[DEBUG]2017-10-11 17:19:55-[], 任务Remote_FTP_上传文件放入线程池排队
+[INFO ]2017-10-11 17:20:05-[Remote_FTP_上传文件], 开始执行任务：ID="12",name="Remote_FTP_上传文件",DESC:Remote_FTP_上传文件"
+[DEBUG]2017-10-11 17:20:05-[Remote_FTP_上传文件], 将任务"DESC:Remote_FTP_上传文件"的状态标示为running
+[ERROR]2017-10-11 17:20:05-[Remote_FTP_上传文件], 执行任务出错:java.lang.NullPointerException

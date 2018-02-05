@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<categorys>
+  <category>
+    <id>1</id>
+    <name>常用C++插件</name>
+    <order>2</order>
+  </category>
+  <category>
+    <id>2</id>
+    <name>网络插件</name>
+    <order>3</order>
+  </category>
+  <category>
+    <id>3</id>
+    <name>常用JAVA插件</name>
+    <order>1</order>
+  </category>
+</categorys>

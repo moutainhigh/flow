@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<config>
+  <!-- 通过密码安全管理服务连接ETL_BAS平台元数据库存储 -->
+  <!-- 192.168.1.100/localhost -->
+  <jdbc>
+    <driver>com.mysql.jdbc.Driver</driver>
+    <user>root</user>
+    <password>root</password>
+    <url>jdbc:mysql://localhost:3306/taskflow_test</url>
+  </jdbc>
+  <!-- 服务器日志级别 -->
+  <level>INFO</level>
+  <redoTimes>0</redoTimes>
+  <logDir>/Users/chenhaitao/Desktop/log/</logDir>
+  <!--工程模式：从metadataPath目录加载元数据来运行引擎 ，需要配置了此项，则忽略其他连接元数据的配置  
+  <metadataPath>D:/work/ETL_BAS/release/FlowEngine/ETL_All_TASKFLOW</metadataPath>  
+  -->
+</config>

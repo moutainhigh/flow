@@ -1,0 +1,8 @@
+[INFO ]2017-11-06 20:19:20  startTaskflow {"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":{"date":1,"day":3,"hours":11,"minutes":4,"month":10,"seconds":39,"time":1509505479000,"timezoneOffset":-480,"year":117},"sceneStatTime":null,"statTime":{"date":1,"day":3,"hours":0,"minutes":0,"month":10,"seconds":0,"time":1509465600000,"timezoneOffset":-480,"year":117},"status":1,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":8,"threadnum":1}
+[INFO ]2017-11-06 20:19:20  从数据库查出流程用时= 0
+[INFO ]2017-11-06 20:24:22  startTaskflow {"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":{"date":1,"day":3,"hours":11,"minutes":4,"month":10,"seconds":39,"time":1509505479000,"timezoneOffset":-480,"year":117},"sceneStatTime":null,"statTime":{"date":1,"day":3,"hours":0,"minutes":0,"month":10,"seconds":0,"time":1509465600000,"timezoneOffset":-480,"year":117},"status":1,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":8,"threadnum":1}
+[INFO ]2017-11-06 20:28:29  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-06 20:28:29  从数据库查出流程用时= 0
+[INFO ]2017-11-06 20:28:29  线程:null
+[INFO ]2017-11-06 20:28:29  logger为: org.apache.log4j.Logger@22a742fd
+[INFO ]2017-11-06 20:28:29  appender为: null

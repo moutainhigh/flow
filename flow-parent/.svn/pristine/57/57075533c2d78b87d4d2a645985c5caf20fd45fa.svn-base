@@ -1,0 +1,173 @@
+[INFO ]2017-09-12 14:23:57  alive
+[INFO ]2017-09-12 14:25:41  submitTaskflow()
+[INFO ]2017-09-12 14:25:41  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":12,"day":2,"hours":14,"minutes":25,"month":8,"seconds":32,"time":1505197532398,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-12 14:25:41  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_Sell_提数","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_Sell_提数","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_Sell_提数","taskAttrList":[],"taskID":8,"taskType":"Shell","taskflow":null,"taskflowID":5},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":9,"taskType":"EMAIL","taskflow":null,"taskflowID":5}]
+[INFO ]2017-09-12 14:25:41  taskAttributeJsonStr=[{"attributeID":81,"key":"Shell_WorkDir","taskID":8,"value":"/bin"},{"attributeID":82,"key":"Shell_Name","taskID":8,"value":"pwd"},{"attributeID":91,"key":"USER","taskID":9,"value":"3116760687@qq.com"},{"attributeID":92,"key":"PASSWORD","taskID":9,"value":"lxcqbmpnxvmideif"},{"attributeID":93,"key":"FROM","taskID":9,"value":"3116760687@qq.com"},{"attributeID":94,"key":"TO","taskID":9,"value":"3116760687@qq.com"},{"attributeID":95,"key":"SUBJECT","taskID":9,"value":"remote:Tue Sep 12 14:25:32 CST 2017"},{"attributeID":96,"key":"CONTENT","taskID":9,"value":"CONTENT-1"},{"attributeID":97,"key":"SMTP_SERVER","taskID":9,"value":"smtp.qq.com"}]
+[INFO ]2017-09-12 14:25:41  linkJsonStr=[{"fromTaskID":8,"linkID":51,"toTaskID":9}]
+[ERROR]2017-09-12 14:25:42  submitTaskflow  :
+com.alibaba.fastjson.JSONException: syntax error, expect }, actual ,
+	at com.alibaba.fastjson.parser.DefaultJSONParser.accept(DefaultJSONParser.java:1317)
+	at com.alibaba.fastjson.parser.deserializer.AbstractDateDeserializer.deserialze(AbstractDateDeserializer.java:75)
+	at Fastjson_ASM_Taskflow_1.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:551)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:251)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:227)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:186)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:304)
+	at com.aspire.etl.flowengine.xmlrpc.Command.submitTaskflow(Command.java:1286)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.invoke(ReflectiveXmlRpcHandler.java:112)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.execute(ReflectiveXmlRpcHandler.java:103)
+	at org.apache.xmlrpc.server.XmlRpcServerWorker.execute(XmlRpcServerWorker.java:43)
+	at org.apache.xmlrpc.server.XmlRpcServer.execute(XmlRpcServer.java:83)
+	at org.apache.xmlrpc.server.XmlRpcStreamServer.execute(XmlRpcStreamServer.java:191)
+	at org.apache.xmlrpc.webserver.XmlRpcServletServer.execute(XmlRpcServletServer.java:104)
+	at org.apache.xmlrpc.webserver.XmlRpcServlet.doPost(XmlRpcServlet.java:191)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at org.apache.xmlrpc.webserver.ServletConnection.run(ServletConnection.java:53)
+	at org.apache.xmlrpc.util.ThreadPool$Poolable$1.run(ThreadPool.java:63)
+[INFO ]2017-09-12 14:44:16  alive
+[INFO ]2017-09-12 14:44:54  submitTaskflow()
+[INFO ]2017-09-12 14:44:54  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":12,"day":2,"hours":14,"minutes":44,"month":8,"seconds":46,"time":1505198686711,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-12 14:44:54  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_Sell_提数","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_Sell_提数","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_Sell_提数","taskAttrList":[],"taskID":8,"taskType":"Shell","taskflow":null,"taskflowID":5},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":9,"taskType":"EMAIL","taskflow":null,"taskflowID":5}]
+[INFO ]2017-09-12 14:44:54  taskAttributeJsonStr=[{"attributeID":81,"key":"Shell_WorkDir","taskID":8,"value":"/bin"},{"attributeID":82,"key":"Shell_Name","taskID":8,"value":"pwd"},{"attributeID":91,"key":"USER","taskID":9,"value":"3116760687@qq.com"},{"attributeID":92,"key":"PASSWORD","taskID":9,"value":"lxcqbmpnxvmideif"},{"attributeID":93,"key":"FROM","taskID":9,"value":"3116760687@qq.com"},{"attributeID":94,"key":"TO","taskID":9,"value":"3116760687@qq.com"},{"attributeID":95,"key":"SUBJECT","taskID":9,"value":"remote:Tue Sep 12 14:44:47 CST 2017"},{"attributeID":96,"key":"CONTENT","taskID":9,"value":"CONTENT-1"},{"attributeID":97,"key":"SMTP_SERVER","taskID":9,"value":"smtp.qq.com"}]
+[INFO ]2017-09-12 14:44:54  linkJsonStr=[{"fromTaskID":8,"linkID":51,"toTaskID":9}]
+[ERROR]2017-09-12 14:44:54  submitTaskflow  :
+com.alibaba.fastjson.JSONException: syntax error, expect }, actual ,
+	at com.alibaba.fastjson.parser.DefaultJSONParser.accept(DefaultJSONParser.java:1317)
+	at com.alibaba.fastjson.parser.deserializer.AbstractDateDeserializer.deserialze(AbstractDateDeserializer.java:75)
+	at Fastjson_ASM_Taskflow_1.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:551)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:251)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:227)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:186)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:304)
+	at com.aspire.etl.flowengine.xmlrpc.Command.submitTaskflow(Command.java:1286)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.invoke(ReflectiveXmlRpcHandler.java:112)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.execute(ReflectiveXmlRpcHandler.java:103)
+	at org.apache.xmlrpc.server.XmlRpcServerWorker.execute(XmlRpcServerWorker.java:43)
+	at org.apache.xmlrpc.server.XmlRpcServer.execute(XmlRpcServer.java:83)
+	at org.apache.xmlrpc.server.XmlRpcStreamServer.execute(XmlRpcStreamServer.java:191)
+	at org.apache.xmlrpc.webserver.XmlRpcServletServer.execute(XmlRpcServletServer.java:104)
+	at org.apache.xmlrpc.webserver.XmlRpcServlet.doPost(XmlRpcServlet.java:191)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at org.apache.xmlrpc.webserver.ServletConnection.run(ServletConnection.java:53)
+	at org.apache.xmlrpc.util.ThreadPool$Poolable$1.run(ThreadPool.java:63)
+[INFO ]2017-09-12 14:48:28  alive
+[INFO ]2017-09-12 14:50:20  submitTaskflow()
+[INFO ]2017-09-12 14:50:20  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":12,"day":2,"hours":14,"minutes":49,"month":8,"seconds":31,"time":1505198971553,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-12 14:50:20  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_Sell_提数","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_Sell_提数","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_Sell_提数","taskAttrList":[],"taskID":8,"taskType":"Shell","taskflow":null,"taskflowID":5},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":9,"taskType":"EMAIL","taskflow":null,"taskflowID":5}]
+[INFO ]2017-09-12 14:50:20  taskAttributeJsonStr=[{"attributeID":81,"key":"Shell_WorkDir","taskID":8,"value":"/bin"},{"attributeID":82,"key":"Shell_Name","taskID":8,"value":"pwd"},{"attributeID":91,"key":"USER","taskID":9,"value":"3116760687@qq.com"},{"attributeID":92,"key":"PASSWORD","taskID":9,"value":"lxcqbmpnxvmideif"},{"attributeID":93,"key":"FROM","taskID":9,"value":"3116760687@qq.com"},{"attributeID":94,"key":"TO","taskID":9,"value":"3116760687@qq.com"},{"attributeID":95,"key":"SUBJECT","taskID":9,"value":"remote:Tue Sep 12 14:49:31 CST 2017"},{"attributeID":96,"key":"CONTENT","taskID":9,"value":"CONTENT-1"},{"attributeID":97,"key":"SMTP_SERVER","taskID":9,"value":"smtp.qq.com"}]
+[INFO ]2017-09-12 14:50:20  linkJsonStr=[{"fromTaskID":8,"linkID":51,"toTaskID":9}]
+[ERROR]2017-09-12 14:50:20  submitTaskflow  :
+com.alibaba.fastjson.JSONException: syntax error, expect }, actual ,
+	at com.alibaba.fastjson.parser.DefaultJSONParser.accept(DefaultJSONParser.java:1317)
+	at com.alibaba.fastjson.parser.deserializer.AbstractDateDeserializer.deserialze(AbstractDateDeserializer.java:75)
+	at Fastjson_ASM_Taskflow_1.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:551)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:251)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:227)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:186)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:304)
+	at com.aspire.etl.flowengine.xmlrpc.Command.submitTaskflow(Command.java:1286)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.invoke(ReflectiveXmlRpcHandler.java:112)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.execute(ReflectiveXmlRpcHandler.java:103)
+	at org.apache.xmlrpc.server.XmlRpcServerWorker.execute(XmlRpcServerWorker.java:43)
+	at org.apache.xmlrpc.server.XmlRpcServer.execute(XmlRpcServer.java:83)
+	at org.apache.xmlrpc.server.XmlRpcStreamServer.execute(XmlRpcStreamServer.java:191)
+	at org.apache.xmlrpc.webserver.XmlRpcServletServer.execute(XmlRpcServletServer.java:104)
+	at org.apache.xmlrpc.webserver.XmlRpcServlet.doPost(XmlRpcServlet.java:191)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at org.apache.xmlrpc.webserver.ServletConnection.run(ServletConnection.java:53)
+	at org.apache.xmlrpc.util.ThreadPool$Poolable$1.run(ThreadPool.java:63)
+[INFO ]2017-09-12 14:59:31  alive
+[INFO ]2017-09-12 15:01:41  submitTaskflow()
+[INFO ]2017-09-12 15:01:41  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoFlag":0,"statTime":1505199694317,"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-12 15:01:41  tasksJsonStr=[{"description":"DESC:Remote_Sell_提数","isRoot":1,"memo":"Memo:Remote_Sell_提数","plantime":0,"status":0,"suspend":0,"task":"Remote_Sell_提数","taskID":8,"taskType":"Shell","taskflowID":5,"xPos":0,"yPos":0},{"description":"DESC:Remote_邮件通知","isRoot":0,"memo":"Memo:Remote_邮件通知","plantime":0,"status":0,"suspend":0,"task":"Remote_邮件通知","taskID":9,"taskType":"EMAIL","taskflowID":5,"xPos":0,"yPos":0}]
+[INFO ]2017-09-12 15:01:41  taskAttributeJsonStr=[{"attributeID":81,"key":"Shell_WorkDir","taskID":8,"value":"/bin"},{"attributeID":82,"key":"Shell_Name","taskID":8,"value":"pwd"},{"attributeID":91,"key":"USER","taskID":9,"value":"3116760687@qq.com"},{"attributeID":92,"key":"PASSWORD","taskID":9,"value":"lxcqbmpnxvmideif"},{"attributeID":93,"key":"FROM","taskID":9,"value":"3116760687@qq.com"},{"attributeID":94,"key":"TO","taskID":9,"value":"3116760687@qq.com"},{"attributeID":95,"key":"SUBJECT","taskID":9,"value":"remote:Tue Sep 12 15:01:35 CST 2017"},{"attributeID":96,"key":"CONTENT","taskID":9,"value":"CONTENT-1"},{"attributeID":97,"key":"SMTP_SERVER","taskID":9,"value":"smtp.qq.com"}]
+[INFO ]2017-09-12 15:01:41  linkJsonStr=[{"fromTaskID":8,"linkID":51,"toTaskID":9}]
+[INFO ]2017-09-12 15:01:41  josn 转换用时 ====>20
+[INFO ]2017-09-12 15:01:41  存入内存用时 ====>0
+[ERROR]2017-09-12 15:01:41  submitTaskflow  :
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the addTaskflowTemplate-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION taskflow_test.nvl does not exist
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveTaskflowInfo(FlowMetaData.java:3334)
+	at com.aspire.etl.flowengine.xmlrpc.Command.submitTaskflow(Command.java:1313)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.invoke(ReflectiveXmlRpcHandler.java:112)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.execute(ReflectiveXmlRpcHandler.java:103)
+	at org.apache.xmlrpc.server.XmlRpcServerWorker.execute(XmlRpcServerWorker.java:43)
+	at org.apache.xmlrpc.server.XmlRpcServer.execute(XmlRpcServer.java:83)
+	at org.apache.xmlrpc.server.XmlRpcStreamServer.execute(XmlRpcStreamServer.java:191)
+	at org.apache.xmlrpc.webserver.XmlRpcServletServer.execute(XmlRpcServletServer.java:104)
+	at org.apache.xmlrpc.webserver.XmlRpcServlet.doPost(XmlRpcServlet.java:191)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at org.apache.xmlrpc.webserver.ServletConnection.run(ServletConnection.java:53)
+	at org.apache.xmlrpc.util.ThreadPool$Poolable$1.run(ThreadPool.java:63)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the addTaskflowTemplate-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION taskflow_test.nvl does not exist
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.insert(DBDaoImpl.java:361)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.saveTaskflowInfo(DBDaoImpl.java:67)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveTaskflowInfo(FlowMetaData.java:3322)
+	... 16 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION taskflow_test.nvl does not exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1062)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4208)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 23 more
+[INFO ]2017-09-12 16:15:50  alive
+[INFO ]2017-09-12 16:16:02  submitTaskflow()
+[INFO ]2017-09-12 16:16:02  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoFlag":0,"statTime":1505204156832,"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-12 16:16:02  tasksJsonStr=[{"description":"DESC:Remote_Sell_提数","isRoot":1,"memo":"Memo:Remote_Sell_提数","plantime":0,"status":0,"suspend":0,"task":"Remote_Sell_提数","taskID":8,"taskType":"Shell","taskflowID":5,"xPos":0,"yPos":0},{"description":"DESC:Remote_邮件通知","isRoot":0,"memo":"Memo:Remote_邮件通知","plantime":0,"status":0,"suspend":0,"task":"Remote_邮件通知","taskID":9,"taskType":"EMAIL","taskflowID":5,"xPos":0,"yPos":0}]
+[INFO ]2017-09-12 16:16:02  taskAttributeJsonStr=[{"attributeID":81,"key":"Shell_WorkDir","taskID":8,"value":"/bin"},{"attributeID":82,"key":"Shell_Name","taskID":8,"value":"pwd"},{"attributeID":91,"key":"USER","taskID":9,"value":"3116760687@qq.com"},{"attributeID":92,"key":"PASSWORD","taskID":9,"value":"lxcqbmpnxvmideif"},{"attributeID":93,"key":"FROM","taskID":9,"value":"3116760687@qq.com"},{"attributeID":94,"key":"TO","taskID":9,"value":"3116760687@qq.com"},{"attributeID":95,"key":"SUBJECT","taskID":9,"value":"remote:Tue Sep 12 16:15:57 CST 2017"},{"attributeID":96,"key":"CONTENT","taskID":9,"value":"CONTENT-1"},{"attributeID":97,"key":"SMTP_SERVER","taskID":9,"value":"smtp.qq.com"}]
+[INFO ]2017-09-12 16:16:02  linkJsonStr=[{"fromTaskID":8,"linkID":51,"toTaskID":9}]
+[INFO ]2017-09-12 16:16:02  josn 转换用时 ====>395
+[INFO ]2017-09-12 16:16:02  存入内存用时 ====>1
+[INFO ]2017-09-12 16:16:02  存入数据库用时 ====>118
+[INFO ]2017-09-12 16:16:02  startTaskflow Remote_Task_Flow
+[INFO ]2017-09-12 16:16:02  启动流程用时 ====>74

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+    <name>Shell</name>
+    <description>执行shell脚本</description>
+    <category>第三方插件</category>
+    <classname>com.aspire.etl.plugins.ShellDialog</classname>
+    <library>ShellDialog.jar</library>
+    <large_icon>task_shell_48.png</large_icon>
+    <small_icon>task_shell_32.png</small_icon>		
+</plugin>

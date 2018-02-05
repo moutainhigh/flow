@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+    <name>Shell</name>
+    <description>执行shell脚本</description>
+    <category>常用JAVA插件</category>
+    <type>JAVA</type>
+    <classname>com.aspire.etl.plugins.Shell</classname>
+    <library>Shell.jar</library>
+</plugin>

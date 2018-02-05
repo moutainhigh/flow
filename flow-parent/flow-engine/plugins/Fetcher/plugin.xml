@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+    <name>DataFetch</name>
+    <description>DataFetcher</description>
+    <category>DataFetcher</category>
+    <type>JAVA</type>
+    <classname>com.aspire.etl.plugins.DataFetcher</classname>
+    <library>fetcher.jar</library>
+</plugin>

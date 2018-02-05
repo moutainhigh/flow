@@ -1,0 +1,605 @@
+/*
+ * FlowEngine.java
+ *
+ * Created on 2008-1-25 17:03:19 by luoqi
+ *
+ * Copyright (c) 2001-2008 ASPire Technologies, Inc.
+ * 6/F,IER BUILDING, SOUTH AREA,SHENZHEN HI-TECH INDUSTRIAL PARK Mail Box:11# 12#.
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * ASPire Technologies, Inc. ("Confidential Information").  You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Aspire.
+ */
+package com.aspire.etl.flowengine;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.net.Socket;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Vector;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.Lock;
+
+import org.apache.curator.framework.CuratorFramework;
+import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.retry.ExponentialBackoffRetry;
+import org.apache.log4j.Logger;
+import org.dom4j.DocumentException;
+import org.menagerie.DefaultZkSessionManager;
+import org.menagerie.ZkSessionManager;
+import org.menagerie.locks.ReentrantZkLock;
+
+import com.aspire.etl.flowdefine.Category;
+import com.aspire.etl.flowdefine.SysConfig;
+import com.aspire.etl.flowdefine.Task;
+import com.aspire.etl.flowdefine.TaskType;
+import com.aspire.etl.flowdefine.Taskflow;
+import com.aspire.etl.flowengine.xmlrpc.Server;
+import com.aspire.etl.flowmetadata.MetaDataException;
+import com.aspire.etl.flowmetadata.dao.FlowMetaData;
+import com.aspire.etl.tool.Utils;
+import com.aspire.etl.tool.XmlConfig;
+import com.aspire.flow.api.MasterSlaveApiFactory;
+import com.aspire.flow.api.data.MasterSlaveJobData;
+import com.aspire.flow.api.impl.MasterSlaveApiFactoryImpl;
+import com.aspire.flow.cluster.startup.BootStrap;
+import com.aspire.flow.entity.MasterSlaveJobSummary;
+import com.aspire.flow.exception.FlowException;
+import com.aspire.flow.helper.ReflectHelper;
+import com.aspire.flow.support.Config;
+
+import net.sf.json.JSONObject;
+
+/**
+ * @author 罗奇
+ * @since 2008-3-19
+ *        <p>
+ *        流程引擎的执行入口，server logger 用于记录服务器日志 流程初始化好后每个流程都会有一个同名logger，用于记录流程日志。
+ *        流程日志根据流程本身的设定，可以输出到文件，也可以输出到数据库。
+ * 
+ * @author 罗奇
+ * @since 2008-3-24
+ *        <p>
+ *        1.增加对java类组件引擎插件的处理
+ * 
+ * @author 罗奇
+ * @since 2008-3-25
+ *        <p>
+ *        1.重新安排目录结构，并改动配置文件初始化路径
+ * 
+ * @author 罗奇
+ * @since 2008-3-30
+ *        <p>
+ *        1.区分内部插件和外部插件，将外部插件的配置完全放在plugins目录下，不用修改系统已有的插件配置。
+ *        
+ * @author wuzhuokun
+ * @since 2008-5-22
+ *        <p>
+ *        1.增加rpc服务器。
+ *  
+ *         *        
+ * @author 罗奇，李宝钰
+ * @since 2009-7-1
+ *        <p>
+ *        1.修改有向图遍历算法，使流程图里的任务可并发运行，可设置并发数。
+ *        2.增加对流程大纲的支持。
+ *          属于流程大纲组的流程本身不运行。
+ *          
+ * @author 罗奇，李宝钰
+ * @since 2009-7-3 
+ *        <p>
+ *        1.修改start，stop等命令。start改为实际启动线程，stop改为实际停止线程。
+ *        2.增加suspend命令，功能：修改suspend标志位。
+ *        3.封装FlowEngine对象，有可能在设计器里直接调用它，方便调试。（待完善，需要考虑清楚引擎插件和设计器插件如何共处，暂时放着）
+ * @author 罗奇
+ * @since 2010-1-13 
+ *        <p>
+ *        1.修改首次运行才更新部署目录，预防因sysconfig表被人工锁定，无法修改导致引擎无法运行的bug。
+ *        2.增加一个隐藏可选配置<metadataPath>在FlowEngine.xml里,用于脱离DB来启动，仅仅用于debug。
+ *              
+ */
+public class FlowEngine extends AbstractConfig{
+	private static final String FLOW_ENGINE = "FlowEngine";
+
+	private static final String SERVER_XML = "./cfg/FlowEngine.xml";
+	
+	static FlowMetaData flowMetaData = null;
+	
+	private static int XMLRPC_PORT = 8080;
+	
+	private static String XMLRPC_USERNAME = "username";
+	
+	private static String XMLRPC_PASSWORD = "password";
+	/*private static String rootDir;
+
+	private static final String confDir;
+	private static final Properties properties;
+	private static final Config config;*/
+	static Logger log;
+	
+	//public static Map<String,TaskflowThread> taskflowThreadPool = new HashMap<String,TaskflowThread>(); 
+	public static ConcurrentHashMap<String,TaskflowThread> taskflowThreadPool = new ConcurrentHashMap<String,TaskflowThread>(); //使用currenthashmap确保线程安全 by chenhaitao 
+	static FlowEngine flowEngine = null;
+	
+	private boolean engineeringMode = false;
+
+	
+	static  int redoTimes = 0;
+		
+	private FlowEngine(){
+		
+	}
+	
+	public static FlowEngine getInstance(){
+		if(flowEngine==null){
+			flowEngine =  new FlowEngine();	
+		}
+		return flowEngine;
+	}
+	
+	/*static{
+			String userDir = System.getProperty("user.dir").replace("\\", "/");
+			// 用于本地测试
+			rootDir = userDir + "/target";
+			File confFile = new File(rootDir + "/conf");
+			if (!confFile.exists()) {
+				// 用于线上部署环境
+				rootDir = userDir.substring(0, userDir.lastIndexOf("/"));
+				confFile = new File(rootDir + "/conf");
+				if (!confFile.exists()) {
+					throw new FlowException(new IllegalArgumentException("can't find bin path."));
+				}
+			}
+			confDir = rootDir + "/conf";
+			properties = new Properties();
+			loadProperties();
+			config = new Config();
+			config.setPort(getPort());
+			config.setZookeeperAddresses(getZookeeperAddresses());
+			config.setNodeModel(properties.getProperty("node.mode", "masterSlave"));
+			config.setProperties(properties);
+	}*/
+	/**
+	 * @param args
+	 * @throws Exception
+	 */
+	public static void main(String[] args) throws Exception {
+		
+
+//        DBTools tool = new DBTools();
+//        tool.executeUpdate("DELETE FROM RPT_LINK WHERE ID_LINK IN (51)");  
+//        tool.executeUpdate("DELETE FROM RPT_TASK_ATTRIBUTE WHERE ID_TASK IN (8, 9)");
+//        tool.executeUpdate("DELETE FROM RPT_TASK_TEMPLATE WHERE ID_TASK IN (8, 9)");
+//        tool.executeUpdate("DELETE FROM RPT_TASK WHERE ID_TASK IN (8, 9)");
+//        tool.executeUpdate("DELETE FROM RPT_TASKFLOW_TEMPLATE WHERE ID_TASKFLOW = 5");
+//        tool.executeUpdate("DELETE FROM RPT_TASKFLOW WHERE ID_TASKFLOW = 5");
+//        tool.close();  
+		
+		XmlConfig config = new XmlConfig(SERVER_XML);
+		
+		FlowEngine flowEngine = FlowEngine.getInstance();
+		Task.LOGDIR = config.readSingleNodeValue("//config/logDir");
+		flowEngine.init(config.readSingleNodeValue("//config/jdbc/driver")
+				, config.readSingleNodeValue("//config/jdbc/user")
+				, config.readSingleNodeValue("//config/jdbc/password")
+				, config.readSingleNodeValue("//config/jdbc/url")
+				, config.readSingleNodeValue("//config/level"));
+		String st = config.readSingleNodeValue("//config/redoTimes");
+		redoTimes =Integer.valueOf(st.isEmpty()?"0":st);
+		flowEngine.start();
+	}
+	
+
+	/*private static void loadProperties() {
+		try {
+			File confFile = new File(confDir);
+			if (!confFile.exists()) {
+				throw new FlowException(new IllegalArgumentException("can't find conf path."));
+			}
+			File[] propertiesFiles = confFile.listFiles();
+			for (File propertiesFile : propertiesFiles) {
+				if (propertiesFile.getName().endsWith(".properties")) {
+					properties.load(new FileInputStream(propertiesFile));
+				}
+			}
+		} catch (IOException e) {
+			throw new FlowException(e);
+		}
+	}
+	
+	public static String getPort(){
+		return properties.getProperty("listen.port");
+	}
+	public static String getZookeeperAddresses() {
+		return properties.getProperty("zookeeper.addresses", "localhost:2181");
+	}*/
+	public void start() throws Exception{
+		/*ZkSessionManager sessionManager = new DefaultZkSessionManager("192.168.98.143:2181",3000); 
+		Lock myLock = new ReentrantZkLock("/test-locks",sessionManager);*/
+		//TODO DY RCP接口disable掉
+		log.info("检查引擎是否已启动");	
+		/*if(flowEngine.isStarted()){
+			log.error("已经有引擎启动了,默认只允许单个引擎");	
+			return;
+		}*/
+		
+		log.info("加载引擎插件");
+		initExternalPlugins();
+
+		//TODO DY RCP接口disable掉
+		//初始化zk,服务端配置信息
+		init();
+		//log.info("启动监听器");
+		startRpcServer();
+		log.info("将服务端注册到zk..");
+		/*将服务端注册到zk by chenhaitao 2017-10-30*/
+		BootStrap.setConfig(config);
+		BootStrap.start();
+		/*将流程添加或更新到zk*/
+		//myLock.lock();//添加分布式锁,只允许一台机器将任务流添加到zk
+		/*log.info("开始将数据库中的任务流添加到zk...");
+		log.info("从元数据库中搜索出未被禁用的流程。大纲组的流程除外。");
+		List<Taskflow> taskflowList = flowMetaData.queryAllSuspendNoTaskflowAndNotInOutlineGroup();
+		MasterSlaveJobSummary jobSummary = new MasterSlaveJobSummary();
+		CuratorFramework client = CuratorFrameworkFactory.newClient("192.168.98.143:2181", 60000, 15000, new ExponentialBackoffRetry(1000, Integer.MAX_VALUE));
+		client.start();
+		for (Taskflow taskflow : taskflowList) {
+			Vector<Object> populateParam = new Vector<Object>();
+			jobSummary.setFlowId(taskflow.getTaskflowID() + "");
+			jobSummary.setStatus(taskflow.getStatus() + "");
+			jobSummary.setGroupName(taskflow.getTaskflowID() + "");
+			jobSummary.setJobOperation("Start");
+			jobSummary.setExcuteStatus("start");
+			populateParam.add(JSONObject.fromObject(taskflow).toString());
+			jobSummary.setParams(populateParam);
+			MasterSlaveApiFactory masterSlaveApiFactory = new MasterSlaveApiFactoryImpl(client);
+			MasterSlaveJobData masterSlaveJobData = masterSlaveApiFactory.jobApi().getJob(jobSummary.getFlowId(), jobSummary.getJobName());
+	        MasterSlaveJobData.Data data;
+	        if (masterSlaveJobData == null) {
+	            data = new MasterSlaveJobData.Data();
+	        } else {
+	            data = masterSlaveJobData.getData();
+	        }
+	        ReflectHelper.copyFieldValuesSkipNull(jobSummary, data);
+	        masterSlaveApiFactory.jobApi().saveJob(jobSummary.getFlowId(), jobSummary.getJobName(), data);
+		}
+		log.info("任务流添加到zk结束...");*/
+		log.info("启动引擎");
+		//startServer(); //具体的执行job任务应为分布式负载均衡执行,不应该由单一一台机器执行
+		
+		//写部署目录
+		//为防止人为的锁住RPT_SYS_CONFIG表，导致启动失败，采用线程方式来更新。
+		Thread updateProgPath = new Thread(){
+			public void run(){
+				try{
+					String path = System.getProperty("user.dir");
+					if(path != null && !"".equals(path)){
+						path = path.substring(0, path.lastIndexOf(System.getProperty("file.separator")));
+					}
+					SysConfig sc = flowMetaData.querySysConfig("SYS_PROG_PATH");
+					if(sc.getConfigValue() == null||sc.getConfigValue()==""){
+						log.info("首次运行更新部署目录");
+						sc.setConfigValue(path);
+						flowMetaData.update(sc);
+					}
+				}catch (Exception e){
+				}
+			}
+		};
+		updateProgPath.start();
+		
+		log.info("启动完毕");
+	}
+
+	private boolean isStarted() {
+		//判断是否有引擎启用
+		try{
+			String IP = "";
+			Socket socket = null;
+			if(engineeringMode){
+				IP = "127.0.0.1";
+				socket = new Socket(IP, Integer.parseInt(flowMetaData.querySysConfigValue("XMLRPC_PORT")));
+			}else{
+				
+				IP = flowMetaData.querySysConfigValue("SYS_COMPUTER_IP");
+				socket = new Socket(IP, Integer.parseInt(flowMetaData.querySysConfigValue("XMLRPC_PORT")));
+			}
+			if(socket.isConnected()){
+				//连得上,引擎已经启动了,退出
+				System.out.println("已经有引擎启动了(" + IP + ":" + flowMetaData.querySysConfigValue("XMLRPC_PORT") + "),默认只允许单个引擎");
+				
+				return true;
+			}else{
+				return false;
+			}
+		}catch(Exception e){
+			return false;
+			//正常,可以启动
+		}
+	}
+	
+
+	public void init(String dbDriver, String dbUser, String dbPassword,
+			String dbURL, String logLevel) throws FileNotFoundException, DocumentException {
+		log = Utils.initFileLog(FLOW_ENGINE, Task.LOGDIR , FLOW_ENGINE, logLevel);
+		log.info("\n\n");
+		log.info("开始启动引擎......");
+		
+		log.info("初始化元数据库");
+
+		try {
+			FlowMetaData.init(dbDriver, dbUser, dbPassword, dbURL + "?useUnicode=true&amp;characterEncoding=utf-8");
+			flowMetaData = FlowMetaData.getInstance();
+			
+			//加载基础元数据
+			flowMetaData.loadBasicInfo();
+
+			// 加载全部流程
+			flowMetaData.loadAllTaskflowInfo();
+			
+			
+			//硬编码加载task attribut
+			//flowMetaData.insert(new TaskAttribute (1, 2, "attr-1-key", "attr-1-value"));
+			
+			//TODO DY 硬编码修改任务信息
+			//flowMetaData.updateTaskStatus(2, Task.READY);
+			//flowMetaData.updateTaskStatus(3, Task.READY);
+			flowMetaData.updateStatTimeOfTaskflow(4, new Date());
+
+		} catch (MetaDataException e) {
+			log.error(e);
+			e.printStackTrace();
+		} catch (Exception e) {
+			log.error(e);
+			e.printStackTrace();
+		}
+		
+	}	
+	
+	//TODO DY deprecated，考虑删除
+	@Deprecated
+	private void init2(String logLevel,String ip, String port, String db_alias,String metadataPath) throws FileNotFoundException, DocumentException {
+			
+		// 在流程日志没有初始化好之前，先初始化一个主程序logger	
+		log = Utils.initFileLog(FLOW_ENGINE, "./log", FLOW_ENGINE, logLevel);
+		log.info("\n\n");
+		log.info("开始启动引擎......");
+		
+		try {
+			//FlowMetaData.init("oracle.jdbc.driver.OracleDriver", "report_1", "report_1", "jdbc:oracle:thin:@10.1.3.105:1521:ora9i");
+			log.info("初始化元数据库");
+			if(metadataPath==null||metadataPath.equals("")){
+				FlowMetaData.init(ip,port,db_alias);
+			}else{
+				engineeringMode = true;
+				System.out.println("打开了工程模式，实际运行时不能基于文件系统，必须连接元数据库！");
+				log.warn("打开了工程模式，实际运行时不能基于文件系统，必须连接元数据库！");
+				FlowMetaData.init(metadataPath);
+			}
+			flowMetaData = FlowMetaData.getInstance();
+			
+			//加载基础元数据
+			flowMetaData.loadBasicInfo();
+
+			// 加载全部流程
+			flowMetaData.loadAllTaskflowInfo();
+			
+			if(engineeringMode){
+				updateAllTaskflowToSingelTask();
+			}
+
+		} catch (MetaDataException e) {
+			log.error(e);
+			e.printStackTrace();
+		} catch (Exception e) {
+			log.error(e);
+			e.printStackTrace();
+		}
+	}
+	
+	private void startRpcServer() throws Exception {
+		Server rpc = new Server(config);
+		try{
+			XMLRPC_PORT = Integer.parseInt(flowMetaData.querySysConfigValue("XMLRPC_PORT"));
+			log.info("监听端口："+XMLRPC_PORT);
+		}catch(Exception e){
+			log.error(e);
+			log.warn("读取XMLRPC_PORT失败,系统将使用默认值" + XMLRPC_PORT);
+		}
+		if(flowMetaData.querySysConfigValue("XMLRPC_USERNAME") == null)
+			log.warn("读取XMLRPC_USERNAME,系统将使用默认值" + XMLRPC_USERNAME);
+		else
+			XMLRPC_USERNAME = flowMetaData.querySysConfigValue("XMLRPC_USERNAME");
+		if(flowMetaData.querySysConfigValue("XMLRPC_PASSWORD") == null)
+			log.warn("读取XMLRPC_PASSWORD,系统将使用默认值" + XMLRPC_PASSWORD);
+		else
+			XMLRPC_PASSWORD = flowMetaData.querySysConfigValue("XMLRPC_PASSWORD");
+		rpc.init(XMLRPC_PORT, XMLRPC_USERNAME, XMLRPC_PASSWORD);
+		
+		rpc.start();
+	}
+	
+	private void initExternalPlugins() throws FileNotFoundException,
+			DocumentException {
+		File[] childDirArray = Utils.scanChildDir("./plugins");
+
+		// 逐个读取plugin.xml
+		for (File pluginDir : childDirArray) {
+			File[] pluginFileArray = pluginDir.listFiles(new FilenameFilter() {
+				public boolean accept(File f, String name) {
+					if (name.equalsIgnoreCase("plugin.xml")) {
+						return true;
+					}
+					return false;
+				}
+			});
+
+			if (pluginFileArray != null && pluginFileArray.length !=0 ) {
+				if (pluginFileArray[0] != null) {
+					String pluginFile = pluginFileArray[0].getAbsolutePath();
+
+					XmlConfig pluginFileConfig = new XmlConfig(pluginFile);
+					String name = pluginFileConfig
+							.readSingleNodeValue("//plugin/name");
+					String description = pluginFileConfig
+							.readSingleNodeValue("//plugin/description");
+					String category = pluginFileConfig
+							.readSingleNodeValue("//plugin/category");
+					String type = pluginFileConfig
+							.readSingleNodeValue("//plugin/type");
+					String classname = pluginFileConfig
+							.readSingleNodeValue("//plugin/classname");
+					String library = pluginFileConfig
+							.readSingleNodeValue("//plugin/library");
+
+					TaskType taskTypeBean = flowMetaData.queryTaskType(name);
+					if (taskTypeBean == null) {
+						TaskType tmpTaskType = new TaskType();
+						tmpTaskType.setTaskTypeID(Utils.getRandomIntValue());
+						tmpTaskType.setTaskType(name);
+
+						Category categoryBean = flowMetaData
+								.queryCategory(category);
+						if (categoryBean == null) {
+							// 如果分类不存在,新建一个临时Category
+							Category tmpCategory = new Category();
+							tmpCategory.setID(Utils.getRandomIntValue());
+							tmpCategory.setName(category);
+							tmpCategory.setOrder(99);
+
+							// 保存到内存，但是不保存到元数据库里
+							flowMetaData.insert(tmpCategory);
+
+							tmpTaskType.setCategoryID(tmpCategory.getID());
+						} else {
+							// 如果分类已存在
+							tmpTaskType.setCategoryID(categoryBean.getID());
+						}
+						tmpTaskType.setDescription(description);
+						tmpTaskType.setEnginePlugin(classname);
+						tmpTaskType.setEnginePluginJar(pluginDir.getPath()+"/"+library);						
+						tmpTaskType.setEnginePluginType(type);
+
+						// 保存到内存，但是不保存到元数据库里
+						flowMetaData.insert(tmpTaskType);
+					} else {
+						String msg = "元数据库里已经有名称为\"" + name + "\"的插件，请将你的插件改名！";
+						log.error(msg);
+						System.out.println(msg);
+						System.exit(0);
+					}
+				}
+
+			}
+		}
+	}
+	private void initLoggerForAllTaskflow(){
+		//查所有流程
+		List<Taskflow> taskflowList = flowMetaData.queryAllTaskflow();	
+		log.info("初始化了"+taskflowList.size()+"个流程。");
+		// 为每个流程初始化一个logger
+		MyConfigurator.configure(taskflowList,flowMetaData);
+		
+	}
+	
+	private void updateAllTaskflowToSingelTask(){
+		//查所有流程
+		List<Taskflow> taskflowList = flowMetaData.queryAllTaskflow();	
+		log.info("将所有流程都临时改为单任务执行的模式！");
+		// 为每个流程初始化一个logger
+		for (Taskflow taskflow : taskflowList) {
+			taskflow.setThreadnum(1);
+		}		
+	}
+	private void startServer() {
+		log.info("为每一个流程都准备好logger");
+		initLoggerForAllTaskflow();
+		
+		// 查所有不属于大纲流程組的非禁用流程
+		log.info("从元数据库中搜索出未被禁用的流程。大纲组的流程除外。");
+		List<Taskflow> taskflowList = flowMetaData.queryAllSuspendNoTaskflowAndNotInOutlineGroup();		
+		
+		// 每个流程启动一个线程
+		for (Taskflow taskflow : taskflowList) {
+			if(taskflow.getStatus()==Taskflow.STOPPED){
+				log.info(taskflow.getTaskflow()+"流程状态是STOPPED，引擎不自动启动该流程，请手工start");
+			}else{
+				log.info("启动流程"+taskflow.getTaskflow());
+				startNewTaskflowThread(taskflow);
+			}
+			
+		}
+
+	}
+	
+	public TaskflowThread startNewTaskflowThread(String taskflowName) {
+		Taskflow taskflowToStart = flowMetaData.queryTaskflow(taskflowName);
+		if(taskflowToStart!=null){					
+			return startNewTaskflowThread(taskflowToStart);
+		}else{
+			return null;
+		}
+	}
+												
+	private TaskflowThread startNewTaskflowThread(Taskflow taskflow) {
+		TaskflowThread taskflowContext = null;
+		try {
+			/*线程从线程缓存中获取,没必要每次都new一个线程 by chenhaitao 2017-10-23*/
+			//taskflowContext = new TaskflowThread(taskflow);
+			 taskflowContext = taskflowThreadPool.get(taskflow.getTaskflow());
+			//taskflowContext = taskflowThreadPool.get(taskflow.getTaskflowID() + "");
+			//如果线程存在并且存活
+			if(taskflowContext == null || !taskflowContext.isAlive()){
+				taskflowContext = new TaskflowThread(taskflow);
+				TaskflowThread taskFlowThread = taskflowThreadPool.putIfAbsent(taskflow.getTaskflow(), taskflowContext);
+				if(taskFlowThread != null){
+					taskflowContext = taskFlowThread;
+				}
+			}
+			taskflowContext.setName(taskflow.getTaskflow());
+			taskflowContext
+			.setUncaughtExceptionHandler(new SimpleThreadExceptionHandler());
+			
+			//将这个流程下所有STOPPED的任务的改为READY
+			flowMetaData.resetTaskStatusByTaskflowID(taskflow.getTaskflowID(),Task.STOPPED,Task.READY);
+			/*long id = taskflowContext.getId();
+			log.info("threadID:" + id);*/
+			taskflowContext.start();
+			
+			//每当为一个流程启动启动一个新线程，就放入Map中，以后可以用流程名找出它对应的线程对象句柄。
+			//taskflowThreadPool.put(taskflow.getTaskflow(), taskflowContext);
+			
+		} catch (Exception e) {
+			log.error("流程" + taskflow + "启动失败！" + e);
+			e.printStackTrace();
+		}
+		return taskflowContext;
+	}
+
+	class SimpleThreadExceptionHandler implements
+			Thread.UncaughtExceptionHandler {
+
+		public void uncaughtException(Thread t, Throwable e) {
+			System.out.printf("UncaughtException: [%s]%s at line %d of  %s %n", t.getName(), e
+					.toString(), e.getStackTrace()[0].getLineNumber(), e
+					.getStackTrace()[0].getFileName());
+
+			log.error(e);
+		}
+
+	}
+
+	public static Logger getLog() {
+		return log;
+	}
+}

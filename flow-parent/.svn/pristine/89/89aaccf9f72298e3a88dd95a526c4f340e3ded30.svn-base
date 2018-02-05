@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+    <name>EMAIL</name>
+    <description>邮件发送</description>
+    <category>网络插件</category>
+    <classname>com.aspire.etl.plugins.EmailDialog</classname>
+    <library>EmailDialog.jar</library>
+    <large_icon>task_email_48.png</large_icon>
+    <small_icon>task_email_32.png</small_icon>		
+</plugin>

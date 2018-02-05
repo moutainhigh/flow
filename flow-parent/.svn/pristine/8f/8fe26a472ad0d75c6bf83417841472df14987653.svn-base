@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="GBK"?>
+<RoleRights>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>5</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>6</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>7</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>8</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>9</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>18</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>17</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>16</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>15</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>24</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>19</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>2</roleID>
+  <rightID>1</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>21</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>10</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>2</roleID>
+  <rightID>2</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>20</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>1</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>2</roleID>
+  <rightID>3</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>23</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>2</roleID>
+  <rightID>4</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>22</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>3</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>2</roleID>
+  <rightID>16</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>2</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>11</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>5</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>4</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>7</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>6</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>9</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>8</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>2</roleID>
+  <rightID>5</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>2</roleID>
+  <rightID>6</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>10</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>11</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>12</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>22</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>14</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>23</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>13</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>24</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>16</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>15</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>18</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>17</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>20</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>3</roleID>
+  <rightID>21</rightID>
+</RoleRight>
+<RoleRight>
+  <roleID>1</roleID>
+  <rightID>19</rightID>
+</RoleRight>
+</RoleRights>

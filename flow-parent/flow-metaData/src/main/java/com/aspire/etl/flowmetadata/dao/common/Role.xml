@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<Roles>
+<Role>
+  <ID>1</ID>
+  <name>admin</name>
+  <description>管理员</description>
+</Role>
+<Role>
+  <ID>2</ID>
+  <name>test</name>
+  <description>测试</description>
+</Role>
+<Role>
+  <ID>3</ID>
+  <name>develop</name>
+  <description>开发</description>
+</Role>
+</Roles>

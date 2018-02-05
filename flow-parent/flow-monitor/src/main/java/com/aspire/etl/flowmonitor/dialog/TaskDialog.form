@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jPanel1" alignment="0" max="32767" attributes="1"/>
+                          <Component id="jPanel4" alignment="0" min="0" max="32767" attributes="1"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel4">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="&#x4efb;&#x52a1;&#x4fe1;&#x606f;"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="PlantimeL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="NameL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="PerformanceidL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="DescriptionL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="AlertsourceIDL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="1">
+                                          <Component id="PlantimeTF" min="-2" pref="60" max="-2" attributes="1"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="isRootL" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="isRootCB" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="AlertsourceIDTF" alignment="0" pref="329" max="32767" attributes="1"/>
+                                      <Component id="PerformanceidTF" alignment="0" pref="329" max="32767" attributes="1"/>
+                                      <Component id="DescriptionTF" alignment="0" pref="329" max="32767" attributes="1"/>
+                                      <Component id="NameTF" alignment="0" pref="329" max="32767" attributes="1"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="taskTypeL" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="94" max="32767" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="isSynInputCB" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="taskTypeL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="isSynInputCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="NameL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NameTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="AlertsourceIDTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="AlertsourceIDL" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="PerformanceidL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="PerformanceidTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="DescriptionTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="DescriptionL" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="PlantimeL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="PlantimeTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="isRootL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="isRootCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="7" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="NameL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x4efb;&#x52a1;&#x540d;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="NameTF">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="&#x4efb;&#x52a1;&#x540d;,&#x4e0d;&#x53ef;&#x4ee5;&#x8f93;&#x5165;&#x4e2d;&#x6587;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="caretUpdate" listener="javax.swing.event.CaretListener" parameters="javax.swing.event.CaretEvent" handler="NameTFCaretUpdate"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="DescriptionL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x63cf;&#x8ff0;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="DescriptionTF">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="&#x63cf;&#x8ff0;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="PlantimeL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x6240;&#x9700;&#x65f6;&#x95f4;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="PlantimeTF">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="&#x9884;&#x8ba1;&#x8fd0;&#x884c;&#x6240;&#x9700;&#x65f6;&#x95f4;   &#x7cbe;&#x786e;&#x5230; &#x5206;&#x949f;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="AlertsourceIDL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x544a;&#x8b66;ID&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="AlertsourceIDTF">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="&#x544a;&#x8b66;ID"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="PerformanceidL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x6027;&#x80fd;ID&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="PerformanceidTF">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="&#x6027;&#x80fd;ID"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="isRootL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x662f;&#x5426;&#x662f;&#x6839;&#x8282;&#x70b9;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="isRootCB">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                <EmptyBorder bottom="0" left="0" right="0" top="0"/>
+              </Border>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
+            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+              <Insets value="[0, 0, 0, 0]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="taskTypeL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x4efb;&#x52a1;&#x7c7b;&#x578b;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x5728;&#x4fdd;&#x5b58;&#x4e4b;&#x524d;&#x8bf7;&#x586b;&#x5199;&#x52a8;&#x6001;&#x53c2;&#x6570;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x52a8;&#x6001;&#x53c2;&#x6570;..."/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="isSynInputCB">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="isSynInputCBActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x662f;&#x5426;&#x8fdb;&#x884c;&#x540c;&#x6b65;&#x8f93;&#x5165;&#xff1a;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x4fdd;&#x5b58;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x53d6;&#x6d88;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="&#x6700;&#x8fd1;&#x4e00;&#x6b21;&#x8fd0;&#x884c;&#x4fe1;&#x606f;"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="isSuspendedL" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="isSuspendedCB" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="statusL" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="statusLValue" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="216" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="isSuspendedL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="isSuspendedCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="statusL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="statusLValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="isSuspendedL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x662f;&#x5426;&#x6302;&#x8d77;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="isSuspendedCB">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="&#x662f;&#x5426;&#x6302;&#x8d77;"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                <EmptyBorder bottom="0" left="0" right="0" top="0"/>
+              </Border>
+            </Property>
+            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+              <Insets value="[0, 0, 0, 0]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="statusL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x8fd0;&#x884c;&#x72b6;&#x6001;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="statusLValue">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="12"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.aspirecn.flow</groupId>
+		<artifactId>flow-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>flowui-common</artifactId>
+	<dependencies>
+		<dependency>
+			<groupId>com.aspirecn.flow</groupId>
+			<artifactId>flow-metaData</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.netbeans.lib.awtextra</groupId>
+			<artifactId>AbsoluteLayout</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.swinglabs</groupId>
+			<artifactId>swing-layout</artifactId>
+		</dependency>
+	</dependencies>
+</project>

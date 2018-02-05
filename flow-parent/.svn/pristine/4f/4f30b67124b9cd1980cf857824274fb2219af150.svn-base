@@ -1,0 +1,67 @@
+[INFO ]2017-09-19 15:43:19  startTaskflow(Remote_Task_Flow)
+[INFO ]2017-09-19 15:43:19  初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-19 15:43:19  线程启动。
+[INFO ]2017-09-19 15:43:19  按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-19 15:43:19  isDone=false
+[DEBUG]2017-09-19 15:43:19  正常执行:
+[DEBUG]2017-09-19 15:43:19  统计结束时间:2017-09-19 15:45:18晚于当前系统时间：2017-09-19 15:43:19,流程不能运行。
+[DEBUG]2017-09-19 15:43:19  系统时间小于统计结束时间
+[DEBUG]2017-09-19 15:43:19  将流程的状态改为QUEUE
+[DEBUG]2017-09-19 15:44:19  isDone=false
+[DEBUG]2017-09-19 15:44:19  正常执行:
+[DEBUG]2017-09-19 15:44:19  统计结束时间:2017-09-19 15:45:18晚于当前系统时间：2017-09-19 15:44:19,流程不能运行。
+[DEBUG]2017-09-19 15:44:19  系统时间小于统计结束时间
+[DEBUG]2017-09-19 15:44:19  将流程的状态改为QUEUE
+[DEBUG]2017-09-19 15:45:19  isDone=false
+[DEBUG]2017-09-19 15:45:19  正常执行:
+[DEBUG]2017-09-19 15:45:19  统计结束时间:2017-09-19 15:45:18小于当前系统时间：2017-09-19 15:45:19
+[DEBUG]2017-09-19 15:45:19  
+----------------taskflow---------------
+|taskflow    = Remote_Task_Flow
+|description = DESC: Remote_Task
+|stepType    = MI
+|step        = 2
+|statTime    = 2017-09-19 15:43:18
+|suspend     = 0
+|status      = QUEUE
+|--------------------------------------
+|redoFlag      = 0
+|sceneStatTime = null
+|redoStartTime = null
+|redoEndTime   = null
+---------------------------------------
+
+[DEBUG]2017-09-19 15:45:19  将流程的状态置为RUNNING
+[INFO ]2017-09-19 15:45:19  开始选取可运行的任务列表，直到流程里所有任务都成功
+[DEBUG]2017-09-19 15:45:19  查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-19 15:45:19  将任务"DESC:Remote_Sell_提数"的状态标示为QUEUE
+[DEBUG]2017-09-19 15:45:19  任务Remote_Sell_提数放入线程池排队
+[INFO ]2017-09-19 15:45:19  开始执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-19 15:45:19  将任务"DESC:Remote_Sell_提数"的状态标示为running
+[DEBUG]2017-09-19 15:45:19  Shell_WorkDir:/bin
+[DEBUG]2017-09-19 15:45:19  command:[/bin/pwd]
+[DEBUG]2017-09-19 15:45:19  ErrorStream>
+[DEBUG]2017-09-19 15:45:19  InputStream>/Users/chenhaitao/Documents/workspace/account6/flow-parent/flow-engine
+[INFO ]2017-09-19 15:45:19  完成执行任务：ID="8",name="Remote_Sell_提数",DESC:Remote_Sell_提数"
+[DEBUG]2017-09-19 15:45:49  接着再选可运行的任务
+[DEBUG]2017-09-19 15:45:49  查出当前流程中所有满足可运行条件的任务列表
+[INFO ]2017-09-19 15:45:49  将任务"DESC:Remote_邮件通知"的状态标示为QUEUE
+[DEBUG]2017-09-19 15:45:49  任务Remote_邮件通知放入线程池排队
+[INFO ]2017-09-19 15:45:49  开始执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[DEBUG]2017-09-19 15:45:49  将任务"DESC:Remote_邮件通知"的状态标示为running
+[DEBUG]2017-09-19 15:45:49  Email.execute()... map ={OAM_JDBC_LAYOUT=insert into OAM_ALERT_INFO (HOSTIP, SOURCE, APPENDID, DESCRIPTION, OCCURTIME, CURRENTLY) values ('%X{HOSTIP}', '%X{SOURCE}', '%X{APPENDID}', '%m', sysdate, %X{CURRENTLY}), ENDTIME=20170919154518, SYS_RUN_FLAG=0, TASKFLOW=Remote_Task_Flow, DB_CONNINFO_PORT=9002, STEP_TYPE=MI, FROM=3116760687@qq.com, FLOW_SLEEP_TIME=60, SYS_LOG_PATH=./log, SYS_DB_ALIAS=REPORT, CONSOLE_LEVEL=INFO, ALERT_ID=, PERFORMANCE_ID=, SYS_SECURE_PORT=9000, TASK_TYPE=EMAIL, TASK_EXEC=com.aspire.etl.plugins.Email, FILE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASK}], %m%n, SMTP_SERVER=smtp.qq.com, FILELOGLEVEL=DEBUG, CONTENT=CONTENT-1, SYS_PROVINCE=ETL_BAS, SYS_LOG_TO_OAM=1, MEMO=Meno: Remote_Task, STATTIME=20170919154318, SYS_COMPUTER_IP=10.1.3.7, JDBC_LAYOUT=insert into RPT_LOG (TASKFLOW,TASK, REDO_FLAG, LOGLEVEL, DESCRIPTION, STATTIME, ENDTIME,OCCURTIME) values ('%X{TASKFLOW}', '%X{TASK}', %X{REDO_FLAG},'%.5p', '%m', to_date('%X{STATTIME}', 'yyyy-mm-dd hh24:mi:ss'), to_date('%X{ENDTIME}', 'yyyy-mm-dd hh24:mi:ss'),sysdate), TASK_TRY_SLEEP_TIME=60, TASK=Remote_邮件通知, SYS_INTERVAL=0, REDO_FLAG=0, SYS_PROG_PATH=/Users/chenhaitao/Downloads/flowng, FLOW_ID=5, USER=3116760687@qq.com, TASK_EXEC_TYPE=JAVA, TASKID=9, SYS_LOG_PORT=9001, ETL_BAS_VERSION=ETL_BAS2.0.0.0, PASSWORD=lxcqbmpnxvmideif, DB_ALIAS_LIST=ETL_BAS,REPORT, TASK_SLEEP_TIME=1, CONSOLE_LAYOUT=[%-5p]%d{yyyy-MM-dd HH:mm:ss}-[%X{TASKFLOW}]-[%X{TASK}], %m%n, SELECT_TASK_INTERVAL=30, SUBJECT=remote:Tue Sep 19 15:43:19 CST 2017, TO=3116760687@qq.com, DBLOGLEVEL=OFF, SYS_GSS_IP=10.1.3.7, XMLRPC_PORT=9090}
+[INFO ]2017-09-19 15:45:52  完成执行任务：ID="9",name="Remote_邮件通知",DESC:Remote_邮件通知"
+[INFO ]2017-09-19 16:12:11  startTaskflow(Remote_Task_Flow)
+[INFO ]2017-09-19 16:12:11  初始化任务线程池,最大并发任务数：1
+[INFO ]2017-09-19 16:12:11  线程启动。
+[INFO ]2017-09-19 16:12:11  按流程周期循环处理，直到收到Console发来的停止命令，线程退出。
+[DEBUG]2017-09-19 16:12:11  isDone=false
+[DEBUG]2017-09-19 16:12:11  正常执行:
+[DEBUG]2017-09-19 16:12:11  统计结束时间:2017-09-19 16:14:10晚于当前系统时间：2017-09-19 16:12:11,流程不能运行。
+[DEBUG]2017-09-19 16:12:11  系统时间小于统计结束时间
+[DEBUG]2017-09-19 16:12:11  将流程的状态改为QUEUE
+[DEBUG]2017-09-19 16:13:11  isDone=false
+[DEBUG]2017-09-19 16:13:11  正常执行:
+[DEBUG]2017-09-19 16:13:11  统计结束时间:2017-09-19 16:14:10晚于当前系统时间：2017-09-19 16:13:11,流程不能运行。
+[DEBUG]2017-09-19 16:13:11  系统时间小于统计结束时间
+[DEBUG]2017-09-19 16:13:11  将流程的状态改为QUEUE

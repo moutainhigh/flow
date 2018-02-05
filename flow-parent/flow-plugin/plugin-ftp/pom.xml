@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.aspirecn.flow</groupId>
+		<artifactId>flow-plugin</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>plugin-ftp</artifactId>
+	<dependencies>
+		<dependency>
+			<groupId>com.aspirecn.flow</groupId>
+			<artifactId>flow-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.aspirecn.flow</groupId>
+			<artifactId>flow-metaData</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/ch.ethz.ganymed/ganymed-ssh2 -->
+		<dependency>
+			<groupId>ch.ethz.ganymed</groupId>
+			<artifactId>ganymed-ssh2</artifactId>
+			<version>build210</version>
+		</dependency>
+
+	</dependencies>
+</project>

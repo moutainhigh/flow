@@ -1,0 +1,292 @@
+[INFO ]2017-11-07 11:36:14  submitTaskflow()
+[INFO ]2017-11-07 11:36:14  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":7,"day":2,"hours":11,"minutes":36,"month":10,"seconds":12,"time":1510025772361,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":9,"threadnum":1}
+[INFO ]2017-11-07 11:36:14  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_FTP_上传文件","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_FTP_上传文件","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_FTP_上传文件","taskAttrList":[],"taskID":16,"taskType":"Ftp","taskflow":null,"taskflowID":9},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":17,"taskType":"EMAIL","taskflow":null,"taskflowID":9}]
+[INFO ]2017-11-07 11:36:14  taskAttributeJsonStr=[{"attributeID":85,"key":"Shell_WorkDir","taskID":16,"value":"/bin"},{"attributeID":86,"key":"Shell_Name","taskID":16,"value":"pwd"},{"attributeID":106,"key":"USER","taskID":17,"value":"3116760687@qq.com"},{"attributeID":107,"key":"PASSWORD","taskID":17,"value":"lxcqbmpnxvmideif"},{"attributeID":108,"key":"FROM","taskID":17,"value":"3116760687@qq.com"},{"attributeID":109,"key":"TO","taskID":17,"value":"3116760687@qq.com"},{"attributeID":110,"key":"SUBJECT","taskID":17,"value":"remote:Tue Nov 07 11:36:12 CST 2017"},{"attributeID":111,"key":"CONTENT","taskID":17,"value":"CONTENT-1"},{"attributeID":105,"key":"SMTP_SERVER","taskID":17,"value":"smtp.qq.com"}]
+[INFO ]2017-11-07 11:36:14  linkJsonStr=[{"fromTaskID":16,"linkID":54,"toTaskID":17}]
+[INFO ]2017-11-07 11:36:14  josn 转换用时 ====>162
+[INFO ]2017-11-07 11:36:14  存入内存用时 ====>1
+[INFO ]2017-11-07 11:36:14  存入数据库用时 ====>97
+[INFO ]2017-11-07 11:36:14  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 11:36:14  从数据库查出流程用时= 0
+[INFO ]2017-11-07 11:36:14  线程:null
+[INFO ]2017-11-07 11:36:14  logger为: org.apache.log4j.Logger@49752126
+[INFO ]2017-11-07 11:36:14  appender为: null
+[INFO ]2017-11-07 11:36:14  启动流程用时 ====>33
+[INFO ]2017-11-07 11:51:51  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 11:51:51  从数据库查出流程用时= 0
+[INFO ]2017-11-07 11:51:51  线程:Thread[Remote_Task_Flow,5,XML-RPC]
+[INFO ]2017-11-07 11:51:51  logger为: org.apache.log4j.Logger@49752126
+[INFO ]2017-11-07 11:51:51  appender为: org.apache.log4j.DailyRollingFileAppender@2369a2cf
+[INFO ]2017-11-07 11:51:51  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 11:51:51  从数据库查出流程用时= 0
+[INFO ]2017-11-07 11:51:51  线程:null
+[INFO ]2017-11-07 11:51:51  logger为: org.apache.log4j.Logger@262fb27d
+[INFO ]2017-11-07 11:51:51  appender为: null
+[INFO ]2017-11-07 11:54:51  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 11:54:51  从数据库查出流程用时= 0
+[INFO ]2017-11-07 11:54:51  线程:Thread[Remote_Task_Flow,5,XML-RPC]
+[INFO ]2017-11-07 11:54:51  logger为: org.apache.log4j.Logger@262fb27d
+[INFO ]2017-11-07 11:54:51  appender为: org.apache.log4j.DailyRollingFileAppender@442bb319
+[INFO ]2017-11-07 11:54:51  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 11:54:51  从数据库查出流程用时= 0
+[INFO ]2017-11-07 11:54:51  线程:Thread[Remote_Task_Flow,5,XML-RPC]
+[INFO ]2017-11-07 11:54:51  logger为: org.apache.log4j.Logger@49752126
+[INFO ]2017-11-07 11:54:51  appender为: org.apache.log4j.DailyRollingFileAppender@2369a2cf
+[INFO ]2017-11-07 11:56:42  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 11:56:42  从数据库查出流程用时= 0
+[INFO ]2017-11-07 11:56:42  线程:null
+[INFO ]2017-11-07 11:56:42  logger为: org.apache.log4j.Logger@6d9b6066
+[INFO ]2017-11-07 11:56:42  appender为: null
+[INFO ]2017-11-07 11:56:42  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 11:56:42  从数据库查出流程用时= 0
+[INFO ]2017-11-07 11:56:42  线程:Thread[Remote_Task_Flow,5,XML-RPC]
+[INFO ]2017-11-07 11:56:42  logger为: org.apache.log4j.Logger@6d9b6066
+[INFO ]2017-11-07 11:56:42  appender为: org.apache.log4j.DailyRollingFileAppender@56a99130
+[INFO ]2017-11-07 15:50:50  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 15:50:57  从数据库查出流程用时= 7111
+[INFO ]2017-11-07 15:50:57  线程:null
+[INFO ]2017-11-07 15:50:57  logger为: org.apache.log4j.Logger@75ca7042
+[INFO ]2017-11-07 15:50:57  appender为: null
+[INFO ]2017-11-07 15:51:14  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 15:51:22  从数据库查出流程用时= 7699
+[INFO ]2017-11-07 15:51:22  线程:Thread[Remote_Task_Flow,5,XML-RPC]
+[INFO ]2017-11-07 15:51:22  logger为: org.apache.log4j.Logger@75ca7042
+[INFO ]2017-11-07 15:51:22  appender为: org.apache.log4j.DailyRollingFileAppender@72aa4424
+[INFO ]2017-11-07 15:53:20  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 15:53:20  从数据库查出流程用时= 0
+[INFO ]2017-11-07 15:53:20  线程:null
+[INFO ]2017-11-07 15:53:20  logger为: org.apache.log4j.Logger@462b96fe
+[INFO ]2017-11-07 15:53:20  appender为: null
+[INFO ]2017-11-07 15:53:20  startTaskflow Remote_Task_Flow
+[INFO ]2017-11-07 15:53:20  从数据库查出流程用时= 0
+[INFO ]2017-11-07 15:53:20  线程:Thread[Remote_Task_Flow,5,XML-RPC]
+[INFO ]2017-11-07 15:53:20  logger为: org.apache.log4j.Logger@462b96fe
+[INFO ]2017-11-07 15:53:20  appender为: org.apache.log4j.DailyRollingFileAppender@133b32a0
+[INFO ]2017-11-07 16:07:09  startTaskflow 8
+[INFO ]2017-11-07 16:07:09  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:07:09  startTaskflow 9
+[INFO ]2017-11-07 16:07:09  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:19:14  startTaskflow 8
+[INFO ]2017-11-07 16:19:14  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:19:14  startTaskflow 9
+[INFO ]2017-11-07 16:19:14  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:22:26  startTaskflow 8
+[INFO ]2017-11-07 16:27:51  startTaskflow 8
+[INFO ]2017-11-07 16:27:51  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:27:51  线程:null
+[INFO ]2017-11-07 16:27:51  logger为: org.apache.log4j.Logger@5039ddf2
+[INFO ]2017-11-07 16:27:51  appender为: null
+[INFO ]2017-11-07 16:27:51  startTaskflow 9
+[INFO ]2017-11-07 16:27:51  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:27:51  线程:null
+[INFO ]2017-11-07 16:27:51  logger为: org.apache.log4j.Logger@4b94bd67
+[INFO ]2017-11-07 16:27:51  appender为: null
+[INFO ]2017-11-07 16:32:07  startTaskflow 8
+[INFO ]2017-11-07 16:32:22  从数据库查出流程用时= 12841
+[INFO ]2017-11-07 16:32:22  线程:null
+[INFO ]2017-11-07 16:32:22  logger为: org.apache.log4j.Logger@3e1f6add
+[INFO ]2017-11-07 16:32:22  appender为: null
+[INFO ]2017-11-07 16:41:46  submitTaskflow()
+[INFO ]2017-11-07 16:41:46  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":7,"day":2,"hours":16,"minutes":41,"month":10,"seconds":44,"time":1510044104719,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"9","taskflowID":9,"threadnum":1}
+[INFO ]2017-11-07 16:41:46  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_FTP_上传文件","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_FTP_上传文件","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_FTP_上传文件","taskAttrList":[],"taskID":16,"taskType":"Ftp","taskflow":null,"taskflowID":9},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":17,"taskType":"EMAIL","taskflow":null,"taskflowID":9}]
+[INFO ]2017-11-07 16:41:46  taskAttributeJsonStr=[{"attributeID":85,"key":"Shell_WorkDir","taskID":16,"value":"/bin"},{"attributeID":86,"key":"Shell_Name","taskID":16,"value":"pwd"},{"attributeID":106,"key":"USER","taskID":17,"value":"3116760687@qq.com"},{"attributeID":107,"key":"PASSWORD","taskID":17,"value":"lxcqbmpnxvmideif"},{"attributeID":108,"key":"FROM","taskID":17,"value":"3116760687@qq.com"},{"attributeID":109,"key":"TO","taskID":17,"value":"3116760687@qq.com"},{"attributeID":110,"key":"SUBJECT","taskID":17,"value":"remote:Tue Nov 07 16:41:45 CST 2017"},{"attributeID":111,"key":"CONTENT","taskID":17,"value":"CONTENT-1"},{"attributeID":105,"key":"SMTP_SERVER","taskID":17,"value":"smtp.qq.com"}]
+[INFO ]2017-11-07 16:41:46  linkJsonStr=[{"fromTaskID":16,"linkID":54,"toTaskID":17}]
+[INFO ]2017-11-07 16:41:46  josn 转换用时 ====>174
+[INFO ]2017-11-07 16:41:46  存入内存用时 ====>0
+[INFO ]2017-11-07 16:41:47  存入数据库用时 ====>67
+[INFO ]2017-11-07 16:41:47  startTaskflow 9
+[INFO ]2017-11-07 16:41:47  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:41:47  线程:null
+[INFO ]2017-11-07 16:41:47  logger为: org.apache.log4j.Logger@36f91cf8
+[INFO ]2017-11-07 16:41:47  appender为: null
+[INFO ]2017-11-07 16:41:47  启动流程用时 ====>12
+[INFO ]2017-11-07 16:48:22  submitTaskflow()
+[INFO ]2017-11-07 16:48:22  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":7,"day":2,"hours":16,"minutes":48,"month":10,"seconds":20,"time":1510044500574,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"10","taskflowID":10,"threadnum":1}
+[INFO ]2017-11-07 16:48:22  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_FTP_上传文件","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_FTP_上传文件","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_FTP_上传文件","taskAttrList":[],"taskID":17,"taskType":"Ftp","taskflow":null,"taskflowID":10},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":18,"taskType":"EMAIL","taskflow":null,"taskflowID":10}]
+[INFO ]2017-11-07 16:48:22  taskAttributeJsonStr=[{"attributeID":86,"key":"Shell_WorkDir","taskID":17,"value":"/bin"},{"attributeID":87,"key":"Shell_Name","taskID":17,"value":"pwd"},{"attributeID":107,"key":"USER","taskID":18,"value":"3116760687@qq.com"},{"attributeID":108,"key":"PASSWORD","taskID":18,"value":"lxcqbmpnxvmideif"},{"attributeID":109,"key":"FROM","taskID":18,"value":"3116760687@qq.com"},{"attributeID":110,"key":"TO","taskID":18,"value":"3116760687@qq.com"},{"attributeID":111,"key":"SUBJECT","taskID":18,"value":"remote:Tue Nov 07 16:48:20 CST 2017"},{"attributeID":112,"key":"CONTENT","taskID":18,"value":"CONTENT-1"},{"attributeID":106,"key":"SMTP_SERVER","taskID":18,"value":"smtp.qq.com"}]
+[INFO ]2017-11-07 16:48:22  linkJsonStr=[{"fromTaskID":17,"linkID":55,"toTaskID":18}]
+[INFO ]2017-11-07 16:48:22  josn 转换用时 ====>7
+[INFO ]2017-11-07 16:48:22  存入内存用时 ====>0
+[INFO ]2017-11-07 16:48:22  存入数据库用时 ====>18
+[INFO ]2017-11-07 16:48:22  startTaskflow 10
+[INFO ]2017-11-07 16:48:22  从数据库查出流程用时= 1
+[INFO ]2017-11-07 16:48:22  线程:null
+[INFO ]2017-11-07 16:48:22  logger为: org.apache.log4j.Logger@3032116d
+[INFO ]2017-11-07 16:48:22  appender为: null
+[INFO ]2017-11-07 16:48:22  启动流程用时 ====>2
+[INFO ]2017-11-07 16:52:18  submitTaskflow()
+[INFO ]2017-11-07 16:52:18  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":7,"day":2,"hours":16,"minutes":52,"month":10,"seconds":16,"time":1510044736864,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"10","taskflowID":10,"threadnum":1}
+[INFO ]2017-11-07 16:52:18  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_FTP_上传文件","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_FTP_上传文件","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_FTP_上传文件","taskAttrList":[],"taskID":17,"taskType":"Ftp","taskflow":null,"taskflowID":10},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":18,"taskType":"EMAIL","taskflow":null,"taskflowID":10}]
+[INFO ]2017-11-07 16:52:18  taskAttributeJsonStr=[{"attributeID":86,"key":"Shell_WorkDir","taskID":17,"value":"/bin"},{"attributeID":87,"key":"Shell_Name","taskID":17,"value":"pwd"},{"attributeID":107,"key":"USER","taskID":18,"value":"3116760687@qq.com"},{"attributeID":108,"key":"PASSWORD","taskID":18,"value":"lxcqbmpnxvmideif"},{"attributeID":109,"key":"FROM","taskID":18,"value":"3116760687@qq.com"},{"attributeID":110,"key":"TO","taskID":18,"value":"3116760687@qq.com"},{"attributeID":111,"key":"SUBJECT","taskID":18,"value":"remote:Tue Nov 07 16:52:17 CST 2017"},{"attributeID":112,"key":"CONTENT","taskID":18,"value":"CONTENT-1"},{"attributeID":106,"key":"SMTP_SERVER","taskID":18,"value":"smtp.qq.com"}]
+[INFO ]2017-11-07 16:52:18  linkJsonStr=[{"fromTaskID":17,"linkID":55,"toTaskID":18}]
+[INFO ]2017-11-07 16:52:18  josn 转换用时 ====>156
+[INFO ]2017-11-07 16:52:18  存入内存用时 ====>0
+[INFO ]2017-11-07 16:52:18  存入数据库用时 ====>69
+[INFO ]2017-11-07 16:52:18  startTaskflow 10
+[INFO ]2017-11-07 16:52:18  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:52:18  线程:null
+[INFO ]2017-11-07 16:52:18  logger为: org.apache.log4j.Logger@1d183b7a
+[INFO ]2017-11-07 16:52:18  appender为: null
+[INFO ]2017-11-07 16:52:18  启动流程用时 ====>19
+[INFO ]2017-11-07 16:55:01  submitTaskflow()
+[INFO ]2017-11-07 16:55:01  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":7,"day":2,"hours":16,"minutes":54,"month":10,"seconds":59,"time":1510044899536,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"11","taskflowID":11,"threadnum":1}
+[INFO ]2017-11-07 16:55:01  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_FTP_上传文件","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_FTP_上传文件","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_FTP_上传文件","taskAttrList":[],"taskID":19,"taskType":"Ftp","taskflow":null,"taskflowID":11},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":20,"taskType":"EMAIL","taskflow":null,"taskflowID":11}]
+[INFO ]2017-11-07 16:55:01  taskAttributeJsonStr=[{"attributeID":88,"key":"Shell_WorkDir","taskID":19,"value":"/bin"},{"attributeID":89,"key":"Shell_Name","taskID":19,"value":"pwd"},{"attributeID":114,"key":"USER","taskID":20,"value":"3116760687@qq.com"},{"attributeID":115,"key":"PASSWORD","taskID":20,"value":"lxcqbmpnxvmideif"},{"attributeID":116,"key":"FROM","taskID":20,"value":"3116760687@qq.com"},{"attributeID":117,"key":"TO","taskID":20,"value":"3116760687@qq.com"},{"attributeID":118,"key":"SUBJECT","taskID":20,"value":"remote:Tue Nov 07 16:54:59 CST 2017"},{"attributeID":119,"key":"CONTENT","taskID":20,"value":"CONTENT-1"},{"attributeID":113,"key":"SMTP_SERVER","taskID":20,"value":"smtp.qq.com"}]
+[INFO ]2017-11-07 16:55:01  linkJsonStr=[{"fromTaskID":19,"linkID":56,"toTaskID":20}]
+[INFO ]2017-11-07 16:55:01  josn 转换用时 ====>10
+[INFO ]2017-11-07 16:55:01  存入内存用时 ====>0
+[INFO ]2017-11-07 16:55:01  存入数据库用时 ====>52
+[INFO ]2017-11-07 16:55:01  startTaskflow 11
+[INFO ]2017-11-07 16:55:01  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:55:01  线程:null
+[INFO ]2017-11-07 16:55:01  logger为: org.apache.log4j.Logger@10eee031
+[INFO ]2017-11-07 16:55:01  appender为: null
+[INFO ]2017-11-07 16:55:01  启动流程用时 ====>2
+[INFO ]2017-11-07 16:58:40  startTaskflow 10
+[INFO ]2017-11-07 16:58:40  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:58:40  线程:Thread[10,5,XML-RPC]
+[INFO ]2017-11-07 16:58:40  logger为: org.apache.log4j.Logger@1d183b7a
+[INFO ]2017-11-07 16:58:40  appender为: org.apache.log4j.DailyRollingFileAppender@2300869c
+[INFO ]2017-11-07 16:58:40  startTaskflow 11
+[INFO ]2017-11-07 16:58:40  从数据库查出流程用时= 0
+[INFO ]2017-11-07 16:58:40  线程:Thread[11,5,XML-RPC]
+[INFO ]2017-11-07 16:58:40  logger为: org.apache.log4j.Logger@10eee031
+[INFO ]2017-11-07 16:58:40  appender为: org.apache.log4j.DailyRollingFileAppender@3d51d1e3
+[INFO ]2017-11-07 17:32:49  startTaskflow 10
+[INFO ]2017-11-07 17:32:49  从数据库查出流程用时= 0
+[INFO ]2017-11-07 17:32:49  线程:null
+[INFO ]2017-11-07 17:32:49  logger为: org.apache.log4j.Logger@4f4b6485
+[INFO ]2017-11-07 17:32:49  appender为: null
+[INFO ]2017-11-07 17:32:54  startTaskflow 11
+[INFO ]2017-11-07 17:32:54  从数据库查出流程用时= 5
+[INFO ]2017-11-07 17:32:54  线程:null
+[INFO ]2017-11-07 17:32:54  logger为: org.apache.log4j.Logger@9d48fb5
+[INFO ]2017-11-07 17:32:54  appender为: null
+[INFO ]2017-11-07 17:50:02  startTaskflow 10
+[INFO ]2017-11-07 17:50:02  从数据库查出流程用时= 0
+[INFO ]2017-11-07 17:50:02  线程:null
+[INFO ]2017-11-07 17:50:02  logger为: org.apache.log4j.Logger@55c9311f
+[INFO ]2017-11-07 17:50:02  appender为: null
+[INFO ]2017-11-07 17:50:35  startTaskflow 11
+[INFO ]2017-11-07 17:50:35  从数据库查出流程用时= 0
+[INFO ]2017-11-07 17:50:35  线程:null
+[INFO ]2017-11-07 17:50:35  logger为: org.apache.log4j.Logger@78ad2515
+[INFO ]2017-11-07 17:50:35  appender为: null
+[INFO ]2017-11-07 18:27:50  startTaskflow 10
+[INFO ]2017-11-07 18:27:50  从数据库查出流程用时= 0
+[INFO ]2017-11-07 18:27:50  线程:null
+[INFO ]2017-11-07 18:27:50  logger为: org.apache.log4j.Logger@b38f6a5
+[INFO ]2017-11-07 18:27:50  appender为: null
+[INFO ]2017-11-07 18:28:17  startTaskflow 11
+[INFO ]2017-11-07 18:28:17  从数据库查出流程用时= 0
+[INFO ]2017-11-07 18:28:17  线程:null
+[INFO ]2017-11-07 18:28:17  logger为: org.apache.log4j.Logger@710d8112
+[INFO ]2017-11-07 18:28:17  appender为: null
+[INFO ]2017-11-07 18:34:01  startTaskflow 10
+[INFO ]2017-11-07 18:34:01  从数据库查出流程用时= 0
+[INFO ]2017-11-07 18:34:01  线程:null
+[INFO ]2017-11-07 18:34:01  logger为: org.apache.log4j.Logger@5bda1281
+[INFO ]2017-11-07 18:34:01  appender为: null
+[INFO ]2017-11-07 18:34:08  startTaskflow 11
+[INFO ]2017-11-07 18:34:08  从数据库查出流程用时= 0
+[INFO ]2017-11-07 18:34:08  线程:null
+[INFO ]2017-11-07 18:34:08  logger为: org.apache.log4j.Logger@53062b46
+[INFO ]2017-11-07 18:34:08  appender为: null
+[INFO ]2017-11-07 18:52:38  startTaskflow 10
+[INFO ]2017-11-07 18:52:38  从数据库查出流程用时= 0
+[INFO ]2017-11-07 18:52:38  线程:null
+[INFO ]2017-11-07 18:52:38  logger为: org.apache.log4j.Logger@11bcccf7
+[INFO ]2017-11-07 18:52:38  appender为: null
+[INFO ]2017-11-07 18:56:07  startTaskflow 11
+[INFO ]2017-11-07 18:56:07  从数据库查出流程用时= 1
+[INFO ]2017-11-07 18:56:07  线程:null
+[INFO ]2017-11-07 18:56:07  logger为: org.apache.log4j.Logger@53b81331
+[INFO ]2017-11-07 18:56:07  appender为: null
+[INFO ]2017-11-07 18:56:08  startTaskflow 10
+[INFO ]2017-11-07 18:56:08  从数据库查出流程用时= 0
+[INFO ]2017-11-07 18:56:08  线程:null
+[INFO ]2017-11-07 18:56:08  logger为: org.apache.log4j.Logger@4d656747
+[INFO ]2017-11-07 18:56:08  appender为: null
+[INFO ]2017-11-07 19:01:19  startTaskflow 10
+[INFO ]2017-11-07 19:01:19  从数据库查出流程用时= 0
+[INFO ]2017-11-07 19:01:19  线程:null
+[INFO ]2017-11-07 19:01:19  logger为: org.apache.log4j.Logger@1d85c740
+[INFO ]2017-11-07 19:01:19  appender为: null
+[INFO ]2017-11-07 19:01:20  startTaskflow 11
+[INFO ]2017-11-07 19:01:20  从数据库查出流程用时= 0
+[INFO ]2017-11-07 19:01:20  线程:null
+[INFO ]2017-11-07 19:01:20  logger为: org.apache.log4j.Logger@1c5d860c
+[INFO ]2017-11-07 19:01:20  appender为: null
+[INFO ]2017-11-07 19:15:19  startTaskflow 10
+[INFO ]2017-11-07 19:15:19  从数据库查出流程用时= 0
+[INFO ]2017-11-07 19:15:19  线程:null
+[INFO ]2017-11-07 19:15:19  logger为: org.apache.log4j.Logger@53b81331
+[INFO ]2017-11-07 19:15:19  appender为: null
+[INFO ]2017-11-07 19:15:20  startTaskflow 11
+[INFO ]2017-11-07 19:15:20  从数据库查出流程用时= 3
+[INFO ]2017-11-07 19:15:20  线程:null
+[INFO ]2017-11-07 19:15:20  logger为: org.apache.log4j.Logger@4d656747
+[INFO ]2017-11-07 19:15:20  appender为: null
+[INFO ]2017-11-07 19:30:38  submitTaskflow()
+[INFO ]2017-11-07 19:30:38  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":7,"day":2,"hours":19,"minutes":30,"month":10,"seconds":37,"time":1510054237585,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"12","taskflowID":12,"threadnum":1}
+[INFO ]2017-11-07 19:30:38  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_FTP_上传文件","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_FTP_上传文件","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_FTP_上传文件","taskAttrList":[],"taskID":21,"taskType":"Ftp","taskflow":null,"taskflowID":12},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":22,"taskType":"EMAIL","taskflow":null,"taskflowID":12}]
+[INFO ]2017-11-07 19:30:38  taskAttributeJsonStr=[{"attributeID":90,"key":"Shell_WorkDir","taskID":21,"value":"/bin"},{"attributeID":91,"key":"Shell_Name","taskID":21,"value":"pwd"},{"attributeID":121,"key":"USER","taskID":22,"value":"3116760687@qq.com"},{"attributeID":122,"key":"PASSWORD","taskID":22,"value":"lxcqbmpnxvmideif"},{"attributeID":123,"key":"FROM","taskID":22,"value":"3116760687@qq.com"},{"attributeID":124,"key":"TO","taskID":22,"value":"3116760687@qq.com"},{"attributeID":125,"key":"SUBJECT","taskID":22,"value":"remote:Tue Nov 07 19:30:37 CST 2017"},{"attributeID":126,"key":"CONTENT","taskID":22,"value":"CONTENT-1"},{"attributeID":120,"key":"SMTP_SERVER","taskID":22,"value":"smtp.qq.com"}]
+[INFO ]2017-11-07 19:30:38  linkJsonStr=[{"fromTaskID":21,"linkID":57,"toTaskID":22}]
+[INFO ]2017-11-07 19:30:39  josn 转换用时 ====>165
+[INFO ]2017-11-07 19:30:39  存入内存用时 ====>0
+[INFO ]2017-11-07 19:30:39  存入数据库用时 ====>71
+[INFO ]2017-11-07 19:30:39  startTaskflow 12
+[INFO ]2017-11-07 19:30:39  从数据库查出流程用时= 0
+[INFO ]2017-11-07 19:30:39  线程:null
+[INFO ]2017-11-07 19:30:39  logger为: org.apache.log4j.Logger@46b9dbb7
+[INFO ]2017-11-07 19:30:39  appender为: null
+[INFO ]2017-11-07 19:30:39  启动流程用时 ====>19
+[INFO ]2017-11-07 19:33:37  submitTaskflow()
+[INFO ]2017-11-07 19:33:37  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoEndTime":null,"redoFlag":0,"redoStartTime":null,"runEndTime":null,"runStartTime":null,"sceneStatTime":null,"statTime":{"date":7,"day":2,"hours":19,"minutes":27,"month":10,"seconds":47,"time":1510054067735,"timezoneOffset":-480,"year":117},"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"12","taskflowID":12,"threadnum":1}
+[INFO ]2017-11-07 19:33:37  tasksJsonStr=[{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_FTP_上传文件","isRoot":1,"memberTaskflow":null,"memo":"Memo:Remote_FTP_上传文件","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_FTP_上传文件","taskAttrList":[],"taskID":21,"taskType":"Ftp","taskflow":null,"taskflowID":12},{"XPos":0,"YPos":0,"alertID":"","description":"DESC:Remote_邮件通知","isRoot":0,"memberTaskflow":null,"memo":"Memo:Remote_邮件通知","performanceID":"","plantime":0,"runEndTime":null,"runStartTime":null,"status":0,"suspend":0,"task":"Remote_邮件通知","taskAttrList":[],"taskID":22,"taskType":"EMAIL","taskflow":null,"taskflowID":12}]
+[INFO ]2017-11-07 19:33:37  taskAttributeJsonStr=[{"attributeID":90,"key":"Shell_WorkDir","taskID":21,"value":"/bin"},{"attributeID":91,"key":"Shell_Name","taskID":21,"value":"pwd"},{"attributeID":121,"key":"USER","taskID":22,"value":"3116760687@qq.com"},{"attributeID":122,"key":"PASSWORD","taskID":22,"value":"lxcqbmpnxvmideif"},{"attributeID":123,"key":"FROM","taskID":22,"value":"3116760687@qq.com"},{"attributeID":124,"key":"TO","taskID":22,"value":"3116760687@qq.com"},{"attributeID":125,"key":"SUBJECT","taskID":22,"value":"remote:Tue Nov 07 19:27:48 CST 2017"},{"attributeID":126,"key":"CONTENT","taskID":22,"value":"CONTENT-1"},{"attributeID":120,"key":"SMTP_SERVER","taskID":22,"value":"smtp.qq.com"}]
+[INFO ]2017-11-07 19:33:37  linkJsonStr=[{"fromTaskID":21,"linkID":57,"toTaskID":22}]
+[INFO ]2017-11-07 19:33:37  josn 转换用时 ====>7
+[INFO ]2017-11-07 19:33:37  存入内存用时 ====>0
+[INFO ]2017-11-07 19:33:37  startTaskflow 10
+[INFO ]2017-11-07 19:33:37  存入数据库用时 ====>98
+[INFO ]2017-11-07 19:33:37  从数据库查出流程用时= 55
+[INFO ]2017-11-07 19:33:37  startTaskflow 12
+[INFO ]2017-11-07 19:33:37  线程:null
+[INFO ]2017-11-07 19:33:37  从数据库查出流程用时= 0
+[INFO ]2017-11-07 19:33:37  logger为: org.apache.log4j.Logger@4b785a8a
+[INFO ]2017-11-07 19:33:37  线程:Thread[12,5,XML-RPC]
+[INFO ]2017-11-07 19:33:37  appender为: null
+[INFO ]2017-11-07 19:33:37  logger为: org.apache.log4j.Logger@46b9dbb7
+[INFO ]2017-11-07 19:33:37  appender为: org.apache.log4j.DailyRollingFileAppender@52a19813
+[INFO ]2017-11-07 19:33:37  启动流程用时 ====>2
+[INFO ]2017-11-07 20:15:51  startTaskflow 10
+[INFO ]2017-11-07 20:15:51  从数据库查出流程用时= 0
+[INFO ]2017-11-07 20:15:51  线程:null
+[INFO ]2017-11-07 20:15:51  logger为: org.apache.log4j.Logger@2ab2cbf1
+[INFO ]2017-11-07 20:15:51  appender为: null
+[INFO ]2017-11-07 20:15:51  startTaskflow 11
+[INFO ]2017-11-07 20:15:51  从数据库查出流程用时= 0
+[INFO ]2017-11-07 20:15:51  线程:null
+[INFO ]2017-11-07 20:15:51  logger为: org.apache.log4j.Logger@1c5d860c
+[INFO ]2017-11-07 20:15:51  appender为: null
+[INFO ]2017-11-07 20:15:54  startTaskflow 12
+[INFO ]2017-11-07 20:15:54  从数据库查出流程用时= 0
+[INFO ]2017-11-07 20:15:54  线程:null
+[INFO ]2017-11-07 20:15:54  logger为: org.apache.log4j.Logger@515c12df
+[INFO ]2017-11-07 20:15:54  appender为: null
+[INFO ]2017-11-07 20:18:08  startTaskflow 12
+[INFO ]2017-11-07 20:18:08  从数据库查出流程用时= 0
+[INFO ]2017-11-07 20:18:08  线程:null
+[INFO ]2017-11-07 20:18:08  logger为: org.apache.log4j.Logger@7340ca5c
+[INFO ]2017-11-07 20:18:08  appender为: null
+[INFO ]2017-11-07 20:21:19  startTaskflow 12
+[INFO ]2017-11-07 20:21:19  从数据库查出流程用时= 0
+[INFO ]2017-11-07 20:21:19  线程:null
+[INFO ]2017-11-07 20:21:19  logger为: org.apache.log4j.Logger@1a2a9b6a
+[INFO ]2017-11-07 20:21:19  appender为: null
+[INFO ]2017-11-07 20:21:19  startTaskflow 10
+[INFO ]2017-11-07 20:21:19  从数据库查出流程用时= 5
+[INFO ]2017-11-07 20:21:19  线程:null
+[INFO ]2017-11-07 20:21:19  logger为: org.apache.log4j.Logger@44be7e3e
+[INFO ]2017-11-07 20:21:19  appender为: null

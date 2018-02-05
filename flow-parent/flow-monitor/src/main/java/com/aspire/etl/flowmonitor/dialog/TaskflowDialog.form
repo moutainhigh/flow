@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.3" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jPanel3" alignment="0" max="32767" attributes="1"/>
+                          <Component id="jPanel1" alignment="0" max="32767" attributes="1"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="20" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="&#x6d41;&#x7a0b;"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="statTimeL1" min="-2" max="-2" attributes="0"/>
+                      <Component id="fileLogLevelL" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="statTimeL" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="dbLogLevelL" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="fileLogLevelRB1" min="-2" max="-2" attributes="0"/>
+                              <Component id="dbLogLevelRB1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="dbLogLevelRB2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fileLogLevelRB2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="fileLogLevelRB3" min="-2" max="-2" attributes="0"/>
+                              <Component id="dbLogLevelRB3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="dbLogLevelRB4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="dbLogLevelRB5" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="1">
+                                  <Component id="fileLogLevelRB4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="fileLogLevelRB5" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="dbLogLevelRB6" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="fileLogLevelRB6" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="1">
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Component id="statTimeTF" min="-2" pref="230" max="-2" attributes="1"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="threadnumL" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="cbThreadnum" pref="133" max="32767" attributes="1"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="taskflowName" min="-2" pref="259" max="-2" attributes="1"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="stepTypeL" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="stepTypeLValue" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="stepTypeL1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="stepValue" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="statTimeL1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="taskflowName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stepTypeL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stepTypeLValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stepTypeL1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stepValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="statTimeTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="statTimeL" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="threadnumL" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbThreadnum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="14" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="fileLogLevelRB1" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="fileLogLevelRB2" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="fileLogLevelRB3" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="dbLogLevelRB2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dbLogLevelL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dbLogLevelRB3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="dbLogLevelRB1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="fileLogLevelRB4" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="fileLogLevelRB6" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="fileLogLevelRB5" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                  <Component id="dbLogLevelRB5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dbLogLevelRB4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="dbLogLevelRB6" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="74" pref="74" max="74" attributes="0"/>
+                  <Component id="fileLogLevelL" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="27" pref="27" max="27" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="statTimeL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x5f53;&#x524d;&#x8fdb;&#x5ea6;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="statTimeTF">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x7edf;&#x8ba1;&#x65f6;&#x95f4;,&#x8f93;&#x5165;&#x65f6;&#x8bf7;&#x4f7f;&#x7528;&#x534a;&#x89d2;&#x8f93;&#x5165;&#x65f6;&#x95f4;,&#x683c;&#x5f0f;&#x5fc5;&#x987b;&#x4e3a; yyyy-MM-dd HH:mm:ss"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="statTimeTFMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="threadnumL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x7ebf;&#x7a0b;&#x6570;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="fileLogLevelL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x6587;&#x4ef6;&#x65e5;&#x5fd7;&#x7ea7;&#x522b;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="dbLogLevelL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x6570;&#x636e;&#x5e93;&#x65e5;&#x5fd7;&#x7ea7;&#x522b;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="fileLogLevelRB6">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="OFF"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x8bb0;&#x5f55;&#x6587;&#x4ef6;&#x65e5;&#x5fd7;&#x7ea7;&#x522b;&#xff0c;&#x6700;&#x5c0f;&#x4e3a;0&#xff0c;&#x6700;&#x5927;&#x4e3a;3&#xff0c;0&#x8868;&#x793a;&#x4e0d;&#x5199;&#x5230;&#x6587;&#x4ef6;&#xff0c;1&#x8868;&#x793a;&#x5199;&#x8fd0;&#x884c;&#x65e5;&#x5fd7;&#x5230;&#x6587;&#x4ef6;,2&#x8868;&#x793a;&#x5199;&#x9519;&#x8bef;&#x65e5;&#x5fd7;&#x5230;&#x6587;&#x4ef6;&#xff0c;3&#x8868;&#x793a;&#x5199;debug&#x65e5;&#x5fd7;&#x5230;&#x6587;&#x4ef6;(def:2)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="fileLogLevelRB2">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="selected" type="boolean" value="true"/>
+            <Property name="text" type="java.lang.String" value="INFO"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="fileLogLevelRB4">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="ERROR"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="fileLogLevelRB1">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="DEBUG"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="dbLogLevelRB6">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup2"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="OFF"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x8bb0;&#x5f55;DB&#x65e5;&#x5fd7;&#x7ea7;&#x522b;&#xff0c;&#x6700;&#x5c0f;&#x4e3a;0&#xff0c;&#x6700;&#x5927;&#x4e3a;3&#xff0c;0&#x8868;&#x793a;&#x4e0d;&#x5199;&#x5230;&#x6570;&#x636e;&#x5e93;&#xff0c;1&#x8868;&#x793a;&#x5199;&#x8fd0;&#x884c;&#x65e5;&#x5fd7;&#x5230;&#x6570;&#x636e;&#x5e93;,2&#x8868;&#x793a;&#x5199;&#x9519;&#x8bef;&#x65e5;&#x5fd7;&#x5230;&#x6570;&#x636e;&#x5e93;&#xff0c;3&#x8868;&#x793a;&#x5199;debug&#x65e5;&#x5fd7;&#x5230;&#x6570;&#x636e;&#x5e93;(def:0)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="dbLogLevelRB2">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup2"/>
+            </Property>
+            <Property name="selected" type="boolean" value="true"/>
+            <Property name="text" type="java.lang.String" value="INFO"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="dbLogLevelRB4">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup2"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="ERROR"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="dbLogLevelRB1">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup2"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="DEBUG"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="fileLogLevelRB3">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="WARN"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="dbLogLevelRB3">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup2"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="WARN"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="fileLogLevelRB5">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="FATAL"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="dbLogLevelRB5">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup2"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="FATAL"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbThreadnum">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="&#x7ebf;&#x7a0b;&#x6570;&#xff0c;&#x53ea;&#x53ef;&#x4ee5;&#x8f93;&#x5165;&#x6570;&#x5b57;"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox()"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="//&#x5e76;&#x53d1;&#x6570;&#x9009;&#x9879;&#x521d;&#x59cb;&#x5316;"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cbThreadnum.addItem(&quot;1&quot;);&#xa;cbThreadnum.addItem(&quot;2&quot;);&#xa;cbThreadnum.addItem(&quot;4&quot;);&#xa;cbThreadnum.addItem(&quot;6&quot;);&#xa;cbThreadnum.addItem(&quot;8&quot;);"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stepTypeL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x5468;&#x671f;&#x7c7b;&#x578b;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stepTypeLValue">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x65e5;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="taskflowName">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x7edf;&#x8ba1;&#x65f6;&#x95f4;,&#x8f93;&#x5165;&#x65f6;&#x8bf7;&#x4f7f;&#x7528;&#x534a;&#x89d2;&#x8f93;&#x5165;&#x65f6;&#x95f4;,&#x683c;&#x5f0f;&#x5fc5;&#x987b;&#x4e3a; yyyy-MM-dd HH:mm:ss"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="taskflowNameMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="taskflowNameActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="statTimeL1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x6d41;&#x7a0b;&#x540d;&#x79f0;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stepTypeL1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x5468;&#x671f;&#x6b65;&#x957f;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stepValue">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x786e;&#x8ba4;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x53d6;&#x6d88;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel3">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="&#x6700;&#x8fd1;&#x4e00;&#x6b21;&#x8fd0;&#x884c;&#x4fe1;&#x606f;"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="runStartTimeL" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="runEndTimeL" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="runStartTimeLValue" min="-2" max="-2" attributes="0"/>
+                              <Component id="runEndTimeLValue" pref="117" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="runEndTimeL1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="redoStartTimeValue" pref="117" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="runStartTimeL1" min="-2" max="-2" attributes="0"/>
+                      <Component id="isSuspendedL" min="-2" max="-2" attributes="0"/>
+                      <Component id="statusL1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="isSuspendedLValue" min="-2" max="-2" attributes="0"/>
+                      <Component id="statusLValue1" min="-2" max="-2" attributes="0"/>
+                      <Component id="redoEndTimeValue" min="-2" pref="168" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="runStartTimeL" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="isSuspendedLValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="runStartTimeLValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="runEndTimeL" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="statusLValue1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="runEndTimeLValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="isSuspendedL" linkSize="1" min="-2" pref="15" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="statusL1" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="7" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="runEndTimeL1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="redoStartTimeValue" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="runStartTimeL1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="redoEndTimeValue" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="runStartTimeL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x8fd0;&#x884c;&#x5f00;&#x59cb;&#x65f6;&#x95f4;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="runEndTimeL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x8fd0;&#x884c;&#x7ed3;&#x675f;&#x65f6;&#x95f4;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="isSuspendedL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x662f;&#x5426;&#x6302;&#x8d77;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="statusL1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x8fd0;&#x884c;&#x72b6;&#x6001;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="statusLValue1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="READY"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="runStartTimeLValue">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2008-04-25 10:32:30"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="runEndTimeLValue">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2008-04-25 10:32:32"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="isSuspendedLValue">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="TRUE"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="runEndTimeL1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x91cd;&#x505a;&#x5f00;&#x59cb;&#x65f6;&#x95f4;&#xff1a;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="redoStartTimeValue">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2008-04-25 10:32:32"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="redoEndTimeValue">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2008-04-25 10:32:32"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="runStartTimeL1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x91cd;&#x505a;&#x7ed3;&#x675f;&#x65f6;&#x95f4;&#xff1a;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

@@ -1,0 +1,11 @@
+[INFO ]2017-10-10 11:30:09  alive
+[INFO ]2017-10-10 11:30:10  submitTaskflow()
+[INFO ]2017-10-10 11:30:10  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task1","fileLogLevel":"DEBUG","groupID":0,"memo":"Meno: Remote_Task1","redoFlag":0,"statTime":1507606209569,"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow1","taskflowID":6,"threadnum":1}
+[INFO ]2017-10-10 11:30:10  tasksJsonStr=[{"description":"DESC:Remote_Sell_提数10","isRoot":1,"memo":"Memo:Remote_Sell_提数10","plantime":0,"status":0,"suspend":0,"task":"Remote_Sell_提数10","taskID":10,"taskType":"Shell","taskflowID":6,"xPos":0,"yPos":0},{"description":"DESC:Remote_邮件通知11","isRoot":0,"memo":"Memo:Remote_邮件通知11","plantime":0,"status":0,"suspend":0,"task":"Remote_邮件通知11","taskID":11,"taskType":"EMAIL","taskflowID":6,"xPos":0,"yPos":0}]
+[INFO ]2017-10-10 11:30:10  taskAttributeJsonStr=[{"attributeID":83,"key":"Shell_WorkDir","taskID":10,"value":"/bin"},{"attributeID":84,"key":"Shell_Name","taskID":10,"value":"pwd"},{"attributeID":98,"key":"USER","taskID":11,"value":"3116760687@qq.com"},{"attributeID":99,"key":"PASSWORD","taskID":11,"value":"lxcqbmpnxvmideif"},{"attributeID":100,"key":"FROM","taskID":11,"value":"3116760687@qq.com"},{"attributeID":101,"key":"TO","taskID":11,"value":"3116760687@qq.com"},{"attributeID":102,"key":"SUBJECT","taskID":11,"value":"remote:Tue Oct 10 11:30:09 CST 2017"},{"attributeID":103,"key":"CONTENT","taskID":11,"value":"CONTENT-1"},{"attributeID":104,"key":"SMTP_SERVER","taskID":11,"value":"smtp.qq.com"}]
+[INFO ]2017-10-10 11:30:10  linkJsonStr=[{"fromTaskID":10,"linkID":51,"toTaskID":11}]
+[INFO ]2017-10-10 11:30:10  josn 转换用时 ====>315
+[INFO ]2017-10-10 11:30:10  存入内存用时 ====>1
+[INFO ]2017-10-10 11:30:10  存入数据库用时 ====>79
+[INFO ]2017-10-10 11:30:10  startTaskflow Remote_Task_Flow1
+[INFO ]2017-10-10 11:30:10  启动流程用时 ====>1

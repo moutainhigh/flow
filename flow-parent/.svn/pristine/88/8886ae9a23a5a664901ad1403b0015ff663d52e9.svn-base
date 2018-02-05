@@ -1,0 +1,14 @@
+package com.aspire.etl.flowengine;
+
+import com.aspire.etl.flowmetadata.dao.FlowMetaData;
+
+public class Test {
+	public static void main(String[] args) {
+		try {
+			FlowMetaData flowMetaData = FlowMetaData.getInstance();
+			System.out.println(flowMetaData);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

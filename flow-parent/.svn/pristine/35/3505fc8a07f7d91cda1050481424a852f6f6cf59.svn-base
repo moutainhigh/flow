@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<TaskflowGroups>
+	<TaskflowGroup>
+		<groupID>0</groupID>
+		<groupName>outline</groupName>
+		<groupOrder>1</groupOrder>
+		<groupDesc>大纲组</groupDesc>
+	</TaskflowGroup>
+	<TaskflowGroup>
+		<groupID>1</groupID>
+		<groupName>default</groupName>
+		<groupOrder>1</groupOrder>
+		<groupDesc>默认组</groupDesc>
+	</TaskflowGroup>
+</TaskflowGroups>

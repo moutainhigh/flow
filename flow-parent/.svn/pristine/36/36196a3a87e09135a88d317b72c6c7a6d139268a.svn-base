@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="report">
+
+
+	
+	<select id="getPackageBody" resultClass="java.util.HashMap" >
+	   <![CDATA[
+		select name,line,text from user_source  WHERE TYPE = 'PACKAGE BODY' and name <> 'COMMON' order by name,line
+	   ]]>
+	</select>
+	
+	
+	<select id="getUserObjects" resultClass="java.util.HashMap" >
+	   <![CDATA[
+		select distinct object_name from user_objects
+	   ]]>
+	</select>
+	
+</sqlMap>

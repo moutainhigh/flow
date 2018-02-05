@@ -1,0 +1,121 @@
+[INFO ]2017-09-19 15:43:18  alive
+[INFO ]2017-09-19 15:43:19  submitTaskflow()
+[INFO ]2017-09-19 15:43:19  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoFlag":0,"statTime":1505806998561,"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-19 15:43:19  tasksJsonStr=[{"description":"DESC:Remote_Sell_提数","isRoot":1,"memo":"Memo:Remote_Sell_提数","plantime":0,"status":0,"suspend":0,"task":"Remote_Sell_提数","taskID":8,"taskType":"Shell","taskflowID":5,"xPos":0,"yPos":0},{"description":"DESC:Remote_邮件通知","isRoot":0,"memo":"Memo:Remote_邮件通知","plantime":0,"status":0,"suspend":0,"task":"Remote_邮件通知","taskID":9,"taskType":"EMAIL","taskflowID":5,"xPos":0,"yPos":0}]
+[INFO ]2017-09-19 15:43:19  taskAttributeJsonStr=[{"attributeID":81,"key":"Shell_WorkDir","taskID":8,"value":"/bin"},{"attributeID":82,"key":"Shell_Name","taskID":8,"value":"pwd"},{"attributeID":91,"key":"USER","taskID":9,"value":"3116760687@qq.com"},{"attributeID":92,"key":"PASSWORD","taskID":9,"value":"lxcqbmpnxvmideif"},{"attributeID":93,"key":"FROM","taskID":9,"value":"3116760687@qq.com"},{"attributeID":94,"key":"TO","taskID":9,"value":"3116760687@qq.com"},{"attributeID":95,"key":"SUBJECT","taskID":9,"value":"remote:Tue Sep 19 15:43:19 CST 2017"},{"attributeID":96,"key":"CONTENT","taskID":9,"value":"CONTENT-1"},{"attributeID":97,"key":"SMTP_SERVER","taskID":9,"value":"smtp.qq.com"}]
+[INFO ]2017-09-19 15:43:19  linkJsonStr=[{"fromTaskID":8,"linkID":51,"toTaskID":9}]
+[INFO ]2017-09-19 15:43:19  josn 转换用时 ====>287
+[INFO ]2017-09-19 15:43:19  存入内存用时 ====>0
+[INFO ]2017-09-19 15:43:19  存入数据库用时 ====>57
+[INFO ]2017-09-19 15:43:19  startTaskflow Remote_Task_Flow
+[INFO ]2017-09-19 15:43:19  启动流程用时 ====>24
+[INFO ]2017-09-19 16:12:10  alive
+[INFO ]2017-09-19 16:12:11  submitTaskflow()
+[INFO ]2017-09-19 16:12:11  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":1,"memo":"Meno: Remote_Task","redoFlag":0,"statTime":1505808730842,"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-19 16:12:11  tasksJsonStr=[{"description":"DESC:Remote_Sell_提数","isRoot":1,"memo":"Memo:Remote_Sell_提数","plantime":0,"status":0,"suspend":0,"task":"Remote_Sell_提数","taskID":8,"taskType":"Shell","taskflowID":5,"xPos":0,"yPos":0},{"description":"DESC:Remote_邮件通知","isRoot":0,"memo":"Memo:Remote_邮件通知","plantime":0,"status":0,"suspend":0,"task":"Remote_邮件通知","taskID":9,"taskType":"EMAIL","taskflowID":5,"xPos":0,"yPos":0}]
+[INFO ]2017-09-19 16:12:11  taskAttributeJsonStr=[{"attributeID":81,"key":"Shell_WorkDir","taskID":8,"value":"/bin"},{"attributeID":82,"key":"Shell_Name","taskID":8,"value":"pwd"},{"attributeID":91,"key":"USER","taskID":9,"value":"3116760687@qq.com"},{"attributeID":92,"key":"PASSWORD","taskID":9,"value":"lxcqbmpnxvmideif"},{"attributeID":93,"key":"FROM","taskID":9,"value":"3116760687@qq.com"},{"attributeID":94,"key":"TO","taskID":9,"value":"3116760687@qq.com"},{"attributeID":95,"key":"SUBJECT","taskID":9,"value":"remote:Tue Sep 19 16:12:11 CST 2017"},{"attributeID":96,"key":"CONTENT","taskID":9,"value":"CONTENT-1"},{"attributeID":97,"key":"SMTP_SERVER","taskID":9,"value":"smtp.qq.com"}]
+[INFO ]2017-09-19 16:12:11  linkJsonStr=[{"fromTaskID":8,"linkID":51,"toTaskID":9}]
+[INFO ]2017-09-19 16:12:11  josn 转换用时 ====>322
+[INFO ]2017-09-19 16:12:11  存入内存用时 ====>0
+[INFO ]2017-09-19 16:12:11  存入数据库用时 ====>84
+[INFO ]2017-09-19 16:12:11  startTaskflow Remote_Task_Flow
+[INFO ]2017-09-19 16:12:11  启动流程用时 ====>23
+[INFO ]2017-09-19 16:16:46  alive
+[INFO ]2017-09-19 16:16:46  submitTaskflow()
+[INFO ]2017-09-19 16:16:46  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task","fileLogLevel":"DEBUG","groupID":0,"memo":"Meno: Remote_Task","redoFlag":0,"statTime":1505809006211,"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-19 16:16:46  tasksJsonStr=[{"description":"DESC:Remote_Sell_提数","isRoot":1,"memo":"Memo:Remote_Sell_提数","plantime":0,"status":0,"suspend":0,"task":"Remote_Sell_提数","taskID":8,"taskType":"Shell","taskflowID":5,"xPos":0,"yPos":0},{"description":"DESC:Remote_邮件通知","isRoot":0,"memo":"Memo:Remote_邮件通知","plantime":0,"status":0,"suspend":0,"task":"Remote_邮件通知","taskID":9,"taskType":"EMAIL","taskflowID":5,"xPos":0,"yPos":0}]
+[INFO ]2017-09-19 16:16:46  taskAttributeJsonStr=[{"attributeID":81,"key":"Shell_WorkDir","taskID":8,"value":"/bin"},{"attributeID":82,"key":"Shell_Name","taskID":8,"value":"pwd"},{"attributeID":91,"key":"USER","taskID":9,"value":"3116760687@qq.com"},{"attributeID":92,"key":"PASSWORD","taskID":9,"value":"lxcqbmpnxvmideif"},{"attributeID":93,"key":"FROM","taskID":9,"value":"3116760687@qq.com"},{"attributeID":94,"key":"TO","taskID":9,"value":"3116760687@qq.com"},{"attributeID":95,"key":"SUBJECT","taskID":9,"value":"remote:Tue Sep 19 16:16:46 CST 2017"},{"attributeID":96,"key":"CONTENT","taskID":9,"value":"CONTENT-1"},{"attributeID":97,"key":"SMTP_SERVER","taskID":9,"value":"smtp.qq.com"}]
+[INFO ]2017-09-19 16:16:46  linkJsonStr=[{"fromTaskID":8,"linkID":51,"toTaskID":9}]
+[INFO ]2017-09-19 16:16:47  josn 转换用时 ====>337
+[INFO ]2017-09-19 16:16:47  存入内存用时 ====>0
+[INFO ]2017-09-19 16:16:47  存入数据库用时 ====>82
+[INFO ]2017-09-19 16:16:47  startTaskflow Remote_Task_Flow
+[INFO ]2017-09-19 16:16:47  启动流程用时 ====>0
+[INFO ]2017-09-19 20:55:23  alive
+[INFO ]2017-09-19 20:55:24  submitTaskflow()
+[INFO ]2017-09-19 20:55:24  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task1","fileLogLevel":"DEBUG","groupID":0,"memo":"Meno: Remote_Task1","redoFlag":0,"statTime":1505825724016,"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-19 20:55:24  tasksJsonStr=[{"description":"DESC:Remote_Sell_提数10","isRoot":1,"memo":"Memo:Remote_Sell_提数10","plantime":0,"status":0,"suspend":0,"task":"Remote_Sell_提数10","taskID":10,"taskType":"Shell","taskflowID":5,"xPos":0,"yPos":0},{"description":"DESC:Remote_邮件通知11","isRoot":0,"memo":"Memo:Remote_邮件通知11","plantime":0,"status":0,"suspend":0,"task":"Remote_邮件通知11","taskID":11,"taskType":"EMAIL","taskflowID":5,"xPos":0,"yPos":0}]
+[INFO ]2017-09-19 20:55:24  taskAttributeJsonStr=[{"attributeID":81,"key":"Shell_WorkDir","taskID":10,"value":"/bin"},{"attributeID":82,"key":"Shell_Name","taskID":10,"value":"pwd"},{"attributeID":91,"key":"USER","taskID":11,"value":"3116760687@qq.com"},{"attributeID":92,"key":"PASSWORD","taskID":11,"value":"lxcqbmpnxvmideif"},{"attributeID":93,"key":"FROM","taskID":11,"value":"3116760687@qq.com"},{"attributeID":94,"key":"TO","taskID":11,"value":"3116760687@qq.com"},{"attributeID":95,"key":"SUBJECT","taskID":11,"value":"remote:Tue Sep 19 20:55:24 CST 2017"},{"attributeID":96,"key":"CONTENT","taskID":11,"value":"CONTENT-1"},{"attributeID":97,"key":"SMTP_SERVER","taskID":11,"value":"smtp.qq.com"}]
+[INFO ]2017-09-19 20:55:24  linkJsonStr=[{"fromTaskID":10,"linkID":51,"toTaskID":11}]
+[INFO ]2017-09-19 20:55:24  josn 转换用时 ====>319
+[INFO ]2017-09-19 20:55:24  存入内存用时 ====>1
+[ERROR]2017-09-19 20:55:24  submitTaskflow  :
+com.aspire.etl.flowmetadata.MetaDataException: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the addTaskAttribute-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '81' for key 'PRIMARY'
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveTaskflowInfo(FlowMetaData.java:3337)
+	at com.aspire.etl.flowengine.xmlrpc.Command.submitTaskflow(Command.java:1313)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.invoke(ReflectiveXmlRpcHandler.java:112)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.execute(ReflectiveXmlRpcHandler.java:103)
+	at org.apache.xmlrpc.server.XmlRpcServerWorker.execute(XmlRpcServerWorker.java:43)
+	at org.apache.xmlrpc.server.XmlRpcServer.execute(XmlRpcServer.java:83)
+	at org.apache.xmlrpc.server.XmlRpcStreamServer.execute(XmlRpcStreamServer.java:191)
+	at org.apache.xmlrpc.webserver.XmlRpcServletServer.execute(XmlRpcServletServer.java:104)
+	at org.apache.xmlrpc.webserver.XmlRpcServlet.doPost(XmlRpcServlet.java:191)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at org.apache.xmlrpc.webserver.ServletConnection.run(ServletConnection.java:53)
+	at org.apache.xmlrpc.util.ThreadPool$Poolable$1.run(ThreadPool.java:63)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in ibatis.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the addTaskAttribute-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '81' for key 'PRIMARY'
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.update(SqlMapExecutorDelegate.java:457)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.update(SqlMapSessionImpl.java:90)
+	at com.ibatis.sqlmap.engine.impl.SqlMapClientImpl.update(SqlMapClientImpl.java:66)
+	at com.aspire.etl.tool.SqlMapUtil.executeUpdate(SqlMapUtil.java:48)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.insert(DBDaoImpl.java:357)
+	at com.aspire.etl.flowmetadata.dao.DBDaoImpl.updateTaskflowInfo(DBDaoImpl.java:296)
+	at com.aspire.etl.flowmetadata.dao.FlowMetaData.saveTaskflowInfo(FlowMetaData.java:3329)
+	... 16 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '81' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1049)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4208)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4140)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2597)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2758)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2826)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 23 more
+[INFO ]2017-09-19 20:59:39  alive
+[INFO ]2017-09-19 20:59:40  submitTaskflow()
+[INFO ]2017-09-19 20:59:40  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task1","fileLogLevel":"DEBUG","groupID":0,"memo":"Meno: Remote_Task1","redoFlag":0,"statTime":1505825979797,"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow","taskflowID":5,"threadnum":1}
+[INFO ]2017-09-19 20:59:40  tasksJsonStr=[{"description":"DESC:Remote_Sell_提数10","isRoot":1,"memo":"Memo:Remote_Sell_提数10","plantime":0,"status":0,"suspend":0,"task":"Remote_Sell_提数10","taskID":10,"taskType":"Shell","taskflowID":5,"xPos":0,"yPos":0},{"description":"DESC:Remote_邮件通知11","isRoot":0,"memo":"Memo:Remote_邮件通知11","plantime":0,"status":0,"suspend":0,"task":"Remote_邮件通知11","taskID":11,"taskType":"EMAIL","taskflowID":5,"xPos":0,"yPos":0}]
+[INFO ]2017-09-19 20:59:40  taskAttributeJsonStr=[{"attributeID":83,"key":"Shell_WorkDir","taskID":10,"value":"/bin"},{"attributeID":84,"key":"Shell_Name","taskID":10,"value":"pwd"},{"attributeID":98,"key":"USER","taskID":11,"value":"3116760687@qq.com"},{"attributeID":99,"key":"PASSWORD","taskID":11,"value":"lxcqbmpnxvmideif"},{"attributeID":100,"key":"FROM","taskID":11,"value":"3116760687@qq.com"},{"attributeID":101,"key":"TO","taskID":11,"value":"3116760687@qq.com"},{"attributeID":102,"key":"SUBJECT","taskID":11,"value":"remote:Tue Sep 19 20:59:40 CST 2017"},{"attributeID":103,"key":"CONTENT","taskID":11,"value":"CONTENT-1"},{"attributeID":104,"key":"SMTP_SERVER","taskID":11,"value":"smtp.qq.com"}]
+[INFO ]2017-09-19 20:59:40  linkJsonStr=[{"fromTaskID":10,"linkID":51,"toTaskID":11}]
+[INFO ]2017-09-19 20:59:40  josn 转换用时 ====>357
+[INFO ]2017-09-19 20:59:40  存入内存用时 ====>1
+[INFO ]2017-09-19 20:59:40  存入数据库用时 ====>126
+[INFO ]2017-09-19 20:59:40  startTaskflow Remote_Task_Flow
+[INFO ]2017-09-19 20:59:40  启动流程用时 ====>0
+[INFO ]2017-09-19 21:03:07  alive
+[INFO ]2017-09-19 21:03:08  submitTaskflow()
+[INFO ]2017-09-19 21:03:08  flowJsonStr={"dbLogLevel":"OFF","description":"DESC: Remote_Task1","fileLogLevel":"DEBUG","groupID":0,"memo":"Meno: Remote_Task1","redoFlag":0,"statTime":1505826187543,"status":0,"step":2,"stepType":"MI","suspend":0,"taskflow":"Remote_Task_Flow1","taskflowID":6,"threadnum":1}
+[INFO ]2017-09-19 21:03:08  tasksJsonStr=[{"description":"DESC:Remote_Sell_提数10","isRoot":1,"memo":"Memo:Remote_Sell_提数10","plantime":0,"status":0,"suspend":0,"task":"Remote_Sell_提数10","taskID":10,"taskType":"Shell","taskflowID":6,"xPos":0,"yPos":0},{"description":"DESC:Remote_邮件通知11","isRoot":0,"memo":"Memo:Remote_邮件通知11","plantime":0,"status":0,"suspend":0,"task":"Remote_邮件通知11","taskID":11,"taskType":"EMAIL","taskflowID":6,"xPos":0,"yPos":0}]
+[INFO ]2017-09-19 21:03:08  taskAttributeJsonStr=[{"attributeID":83,"key":"Shell_WorkDir","taskID":10,"value":"/bin"},{"attributeID":84,"key":"Shell_Name","taskID":10,"value":"pwd"},{"attributeID":98,"key":"USER","taskID":11,"value":"3116760687@qq.com"},{"attributeID":99,"key":"PASSWORD","taskID":11,"value":"lxcqbmpnxvmideif"},{"attributeID":100,"key":"FROM","taskID":11,"value":"3116760687@qq.com"},{"attributeID":101,"key":"TO","taskID":11,"value":"3116760687@qq.com"},{"attributeID":102,"key":"SUBJECT","taskID":11,"value":"remote:Tue Sep 19 21:03:07 CST 2017"},{"attributeID":103,"key":"CONTENT","taskID":11,"value":"CONTENT-1"},{"attributeID":104,"key":"SMTP_SERVER","taskID":11,"value":"smtp.qq.com"}]
+[INFO ]2017-09-19 21:03:08  linkJsonStr=[{"fromTaskID":10,"linkID":51,"toTaskID":11}]
+[INFO ]2017-09-19 21:03:08  josn 转换用时 ====>300
+[INFO ]2017-09-19 21:03:08  存入内存用时 ====>0
+[INFO ]2017-09-19 21:03:08  存入数据库用时 ====>58
+[INFO ]2017-09-19 21:03:08  startTaskflow Remote_Task_Flow1
+[INFO ]2017-09-19 21:03:08  启动流程用时 ====>1
